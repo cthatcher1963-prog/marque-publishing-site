@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marque Publishing — Chris Thatcher (Crest version)</title>
+<meta name="description" content="Marque Publishing is the home of Chris Thatcher's writing. Three books are in the works — follow along.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ───────────────────────────────────────────
+   Marque Publishing — Design tokens
+   Palette: Ink / Brass / Oxblood / Paper
+   ─────────────────────────────────────────── */
+:root {
+  /* Brand palette — light mode */
+  --ink:          #15212E;
+  --brass:        #B68A4E;
+  --brass-hover:  #A07A42;
+  --brass-soft:   rgba(182, 138, 78, 0.12);
+  --oxblood:      #7C2A33;
+  --paper:        #FBFAF7;
+  --paper-alt:    #F4F1EB;
+  --paper-footer: #EDEAE4;
+
+  /* Semantic mappings */
+  --bg:           var(--paper);
+  --bg-alt:       var(--paper-alt);
+  --bg-footer:    var(--paper-footer);
+  --text:         var(--ink);
+  --text-muted:   #4A5968;
+  --text-subtle:  #7A8694;
+  --accent:       var(--brass);
+  --accent-hover: var(--brass-hover);
+  --accent-soft:  var(--brass-soft);
+  --border:       rgba(21, 33, 46, 0.10);
+  --card-bg:      #FFFFFF;
+  --card-shadow:  0 1px 3px rgba(21, 33, 46, 0.06);
+  --badge-bg:     #EDE8E0;
+  --badge-text:   #5A6570;
+  --placeholder-bg: #E8E3DB;
+
+  /* Typography */
+  --serif:  'Cormorant', 'EB Garamond', Georgia, serif;
+  --sans:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Spacing */
+  --section-pad: clamp(4rem, 8vw, 7rem);
+  --container:   min(68rem, 90vw);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:           #0E1820;
+    --bg-alt:       #141F2A;
+    --bg-footer:    #0A1218;
+    --text:         #E8E4DC;
+    --text-muted:   #9AA4AE;
+    --text-subtle:  #5E6A76;
+    --accent:       #CDA465;
+    --accent-hover: #DBBA80;
+    --accent-soft:  rgba(205, 164, 101, 0.12);
+    --border:       rgba(232, 228, 220, 0.08);
+    --card-bg:      #1A2630;
+    --card-shadow:  0 1px 3px rgba(0, 0, 0, 0.3);
+    --badge-bg:     #1E2B38;
+    --badge-text:   #8A94A0;
+    --placeholder-bg: #1E2B38;
+    --oxblood:      #C45A64;
+  }
+}
+
+
+/* ───────────────────────────────────────────
+   Reset & base
+   ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img { display: block; max-width: 100%; }
+a   { color: inherit; text-decoration: none; }
+
+
+/* ───────────────────────────────────────────
+   Layout helpers
+   ─────────────────────────────────────────── */
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: var(--section-pad);
+}
+
+
+/* ───────────────────────────────────────────
+   Navigation
+   ─────────────────────────────────────────── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+}
+
+/* Wordmark with diamond lozenge */
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+}
+
+.wordmark-diamond {
+  flex-shrink: 0;
+}
+
+.wordmark-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.wordmark-name {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.wordmark-sub {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* Mobile hamburger */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  margin: 5px 0;
+  transition: transform 0.3s, opacity 0.3s;
+  border-radius: 1px;
+}
+
+@media (max-width: 640px) {
+  .nav-toggle { display: block; }
+
+  .nav-links {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open {
+    max-height: 15rem;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+}
+
+
+/* ───────────────────────────────────────────
+   Hero
+   ─────────────────────────────────────────── */
+.hero {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.hero-kicker {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 32rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.link-secondary {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.link-secondary:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Author photo */
+.hero-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 5;
+  background: var(--placeholder-bg);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-frame svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.25;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-photo { order: -1; }
+
+  .photo-frame {
+    max-width: 260px;
+    margin-inline: auto;
+  }
+
+  .hero-sub { margin-inline: auto; }
+  .hero-actions { justify-content: center; }
+}
+
+
+/* ───────────────────────────────────────────
+   Decorative divider — dagger device
+   ─────────────────────────────────────────── */
+.dagger-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.dagger-line {
+  width: 3rem;
+  height: 1px;
+  background: var(--border);
+}
+
+
+/* ───────────────────────────────────────────
+   "In the works" — book roadmap
+   ─────────────────────────────────────────── */
+.works {
+  background: var(--bg-alt);
+}
+
+.works-header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.works-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.works-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.book-card {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  gap: 1.25rem;
+  align-items: start;
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.75rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 33, 46, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  .book-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.book-num {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+  padding-top: 0.2rem;
+}
+
+.book-body h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.book-body .book-subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.book-body p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.book-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  white-space: nowrap;
+  margin-top: 0.15rem;
+}
+
+.book-badge.up-first {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* Future slot */
+.book-card.future {
+  border: 2px dashed var(--border);
+  background: transparent;
+  box-shadow: none;
+}
+
+.book-card.future:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.book-card.future .book-num { color: var(--text-subtle); }
+.book-card.future .book-body h3 { color: var(--text-subtle); font-weight: 500; }
+.book-card.future .book-body p { color: var(--text-subtle); }
+
+/* Book card with cover image */
+.book-card.has-cover {
+  grid-template-columns: 3.5rem auto 1fr auto;
+}
+
+.book-cover {
+  width: 110px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(21, 33, 46, 0.15);
+  flex-shrink: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .book-cover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 640px) {
+  .book-card {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .book-card.has-cover {
+    grid-template-columns: 1fr;
+  }
+  .book-cover {
+    width: 90px;
+    justify-self: center;
+  }
+  .book-num { font-size: 1.1rem; }
+  .book-badge { justify-self: start; }
+}
+
+
+/* ───────────────────────────────────────────
+   About section
+   ─────────────────────────────────────────── */
+.about-content {
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.about-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/* ───────────────────────────────────────────
+   Newsletter / "Follow along"
+   ─────────────────────────────────────────── */
+.newsletter {
+  background: var(--bg-alt);
+}
+
+.newsletter-inner {
+  max-width: 36rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.newsletter-inner h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+}
+
+.newsletter-inner p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.signup-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.signup-form input[type="email"] {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.signup-form input[type="email"]::placeholder {
+  color: var(--text-subtle);
+}
+
+.signup-form input[type="email"]:focus {
+  border-color: var(--accent);
+}
+
+.signup-form button {
+  padding: 0.85rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.signup-form button:hover {
+  background: var(--accent-hover);
+}
+
+.signup-note {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .signup-form { flex-direction: column; }
+}
+
+
+/* ───────────────────────────────────────────
+   Footer
+   ─────────────────────────────────────────── */
+.site-footer {
+  background: var(--bg-footer);
+  border-top: 1px solid var(--border);
+  padding-block: 2.5rem;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-left .wordmark-name {
+  font-size: 1rem;
+}
+
+.footer-left .wordmark-sub {
+  font-size: 0.55rem;
+}
+
+.footer-year {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+
+/* ───────────────────────────────────────────
+   Animations
+   ─────────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ─── Navigation ─── -->
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a href="#" class="wordmark">
+      <!-- Crest / shield mark -->
+      <svg class="wordmark-diamond" width="28" height="34" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 0 L43 4 L40 8 L37 4 Z" fill="var(--accent)"/>
+        <path d="M6 10 L6 58 Q6 78 40 96 Q74 78 74 58 L74 10 Z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/>
+        <path d="M14 17 L14 55 Q14 72 40 87 Q66 72 66 55 L66 17 Z" fill="none" stroke="var(--accent)" stroke-width="1.2"/>
+        <text x="40" y="58" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="36" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#works">The work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#follow">Follow along</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ─── Hero ─── -->
+<section class="hero container">
+  <div class="hero-grid">
+    <div class="hero-copy fade-in">
+      <p class="hero-kicker">Writer</p>
+      <h1>I write about the things I'm passionate about.</h1>
+      <p class="hero-sub">Three books are in the works — cybersecurity, a historical thriller, and poker. Stick around and I'll let you know when the first one's ready.</p>
+      <div class="hero-actions">
+        <a href="#follow" class="btn-primary">Follow along</a>
+        <a href="#about" class="link-secondary">About me</a>
+      </div>
+    </div>
+    <div class="hero-photo fade-in">
+      <div class="photo-frame">
+        <img src="author.jpg" alt="Chris Thatcher">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Dagger divider ─── -->
+<div class="dagger-divider">
+  <span class="dagger-line"></span>
+  <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="8" y1="0" x2="8" y2="8" stroke="var(--accent)" stroke-width="1.5"/>
+    <line x1="3" y1="8" x2="13" y2="8" stroke="var(--accent)" stroke-width="1.5"/>
+    <line x1="8" y1="8" x2="8" y2="25" stroke="var(--accent)" stroke-width="1.5"/>
+    <path d="M8 28 L6 24 L10 24 Z" fill="var(--accent)"/>
+  </svg>
+  <span class="dagger-line"></span>
+</div>
+
+
+<!-- ─── In the works ─── -->
+<section id="works" class="works section-pad">
+  <div class="container">
+    <div class="works-header fade-in">
+      <h2>In the works</h2>
+      <p>Three very different books, one common thread — I couldn't stop thinking about them until I started writing.</p>
+    </div>
+
+    <div class="book-list">
+
+      <div class="book-card has-cover fade-in">
+        <span class="book-num">01</span>
+        <img class="book-cover" src="cyber-risk-cover.jpg" alt="Cyber Risk is Business Risk book cover">
+        <div class="book-body">
+          <h3>Cyber risk is business risk</h3>
+          <p class="book-subtitle">You can delegate the decision, but not the liability</p>
+          <p>Three decades in the field, distilled into the security decisions that actually matter — written for the people who have to make them.</p>
+        </div>
+        <span class="book-badge up-first">Up first</span>
+      </div>
+
+      <div class="book-card fade-in">
+        <span class="book-num">02</span>
+        <div class="book-body">
+          <h3>The treasure hunter's legacy</h3>
+          <p>A retired Marine turned security expert is pulled into the hunt for a pirate's three-hundred-year-old secret — from a sea cave in the Canary Islands to the back streets of Havana. Book one of a trilogy.</p>
+        </div>
+        <span class="book-badge">In progress</span>
+      </div>
+
+      <div class="book-card fade-in">
+        <span class="book-num">03</span>
+        <div class="book-body">
+          <h3>Deal me in</h3>
+          <p>The poker math that actually wins hands — written for players who'd rather enjoy the game than memorize a chart.</p>
+        </div>
+        <span class="book-badge">On the way</span>
+      </div>
+
+      <div class="book-card future fade-in">
+        <span class="book-num">+</span>
+        <div class="book-body">
+          <h3>Whatever comes next</h3>
+          <p>New ideas are always brewing. The list is meant to grow.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── About ─── -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-content fade-in">
+      <h2>A few words about me</h2>
+      <p>I spent roughly thirty years in cybersecurity — advising executives, building programs, and trying to make complicated things plain. Somewhere along the way I realized I had more to say than a whitepaper could hold.</p>
+      <p>So I started writing. Not just about security, but about the stories and ideas that wouldn't leave me alone: a thriller set in the Canary Islands, a poker book for people who play for fun, and whatever shows up next. The common thread is simple — if it keeps me up at night, there's probably a book in it.</p>
+      <p>This site is the start. Nothing's published yet, and I'm fine with that. If you want a note when the first book is ready, the signup below is the place.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Newsletter ─── -->
+<section id="follow" class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Be the first to know</h2>
+      <p>A note when the first book is ready, nothing else that isn't worth your time.</p>
+      <form class="signup-form" onsubmit="handleSignup(event)">
+        <input type="email" placeholder="Your email" required aria-label="Email address">
+        <button type="submit">Follow along</button>
+      </form>
+      <p class="signup-note">No spam — just the things worth sharing.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="#" class="wordmark">
+        <svg class="wordmark-diamond" width="20" height="24" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 10 L6 58 Q6 78 40 96 Q74 78 74 58 L74 10 Z" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round"/>
+          <path d="M14 17 L14 55 Q14 72 40 87 Q66 72 66 55 L66 17 Z" fill="none" stroke="var(--accent)" stroke-width="1.2"/>
+          <text x="40" y="58" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="36" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#works">The work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#follow">Follow along</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+<script>
+// ─── Scroll-triggered fade-in ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ─── Newsletter placeholder handler ───
+function handleSignup(e) {
+  e.preventDefault();
+  const input = e.target.querySelector('input[type="email"]');
+  const btn = e.target.querySelector('button');
+
+  // TODO: Wire to your newsletter platform (Mailchimp, ConvertKit, Substack, etc.)
+  btn.textContent = 'Thank you!';
+  btn.disabled = true;
+  input.disabled = true;
+  input.value = '';
+
+  setTimeout(() => {
+    btn.textContent = 'Follow along';
+    btn.disabled = false;
+    input.disabled = false;
+  }, 3000);
+}
+
+// ─── Close mobile nav on link click ───
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
