@@ -1,0 +1,5 @@
+# Marque Publishing — Cloudflare Pages config
+# Deploy ONLY the site/ folder. Never deploy the project root:
+# it contains private business documents (growth plan, punch lists).
+name = "marque-publishing"
+pages_build_output_dir = "site"
