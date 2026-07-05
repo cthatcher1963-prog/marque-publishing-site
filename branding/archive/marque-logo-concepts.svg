@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1120 1560" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1120" height="1560" fill="#FBFAF7"/>
+
+  <!-- Header -->
+  <text x="560" y="62" text-anchor="middle" font-size="13" letter-spacing="6" fill="#B68A4E">IDENTITY EXPLORATION</text>
+  <text x="560" y="106" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="40" letter-spacing="2" fill="#15212E">Marque Publishing</text>
+  <text x="560" y="134" text-anchor="middle" font-size="12" letter-spacing="5" fill="#7A8089">SIX LOGO CONCEPTS</text>
+  <line x1="60" y1="156" x2="1060" y2="156" stroke="#D8D2C6" stroke-width="1"/>
+
+  <!-- row dividers (vertical) -->
+  <line x1="560" y1="200" x2="560" y2="470" stroke="#E6E0D4" stroke-width="1"/>
+  <line x1="560" y1="660" x2="560" y2="930" stroke="#E6E0D4" stroke-width="1"/>
+  <line x1="560" y1="1120" x2="560" y2="1390" stroke="#E6E0D4" stroke-width="1"/>
+
+  <!-- ============ 01 THE SEAL (cx310 my280) ============ -->
+  <circle cx="310" cy="280" r="70" fill="none" stroke="#15212E" stroke-width="2.5"/>
+  <circle cx="310" cy="280" r="62" fill="none" stroke="#B68A4E" stroke-width="1"/>
+  <polygon points="310,210 316,218 310,226 304,218" fill="#B68A4E"/>
+  <circle cx="248" cy="280" r="2.2" fill="#B68A4E"/>
+  <circle cx="372" cy="280" r="2.2" fill="#B68A4E"/>
+  <text x="310" y="304" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="66" font-weight="600" fill="#15212E">M</text>
+  <text x="310" y="430" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" letter-spacing="5" fill="#15212E">MARQUE</text>
+  <line x1="244" y1="442" x2="376" y2="442" stroke="#B68A4E" stroke-width="1"/>
+  <text x="310" y="463" text-anchor="middle" font-size="11" letter-spacing="5" fill="#7A8089">PUBLISHING</text>
+  <text x="310" y="514" text-anchor="middle" font-size="13" letter-spacing="2.5" font-weight="600" fill="#15212E">01 · THE SEAL</text>
+  <text x="310" y="537" text-anchor="middle" font-size="12" fill="#7A8089">A sealed commission — authority with a buried edge.</text>
+
+  <!-- ============ 02 THE HALLMARK (cx810 my280) ============ -->
+  <path d="M810,208 L862,280 L810,352 L758,280 Z" fill="none" stroke="#15212E" stroke-width="2.5"/>
+  <path d="M810,221 L849,280 L810,339 L771,280 Z" fill="none" stroke="#B68A4E" stroke-width="1"/>
+  <text x="810" y="302" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="52" font-weight="600" fill="#15212E">M</text>
+  <text x="810" y="430" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" letter-spacing="5" fill="#15212E">MARQUE</text>
+  <line x1="744" y1="442" x2="876" y2="442" stroke="#B68A4E" stroke-width="1"/>
+  <text x="810" y="463" text-anchor="middle" font-size="11" letter-spacing="5" fill="#7A8089">PUBLISHING</text>
+  <text x="810" y="514" text-anchor="middle" font-size="13" letter-spacing="2.5" font-weight="600" fill="#15212E">02 · THE HALLMARK</text>
+  <text x="810" y="537" text-anchor="middle" font-size="12" fill="#7A8089">A stamped maker's mark. Make your mark.</text>
+
+  <!-- ============ 03 TRUE NORTH (cx310 my740) ============ -->
+  <path d="M310,662 L325,725 L388,740 L325,755 L310,818 L295,755 L232,740 L295,725 Z" fill="#15212E"/>
+  <path d="M310,662 L325,725 L310,740 L295,725 Z" fill="#B68A4E"/>
+  <circle cx="310" cy="740" r="5" fill="#FBFAF7" stroke="#15212E" stroke-width="1.5"/>
+  <text x="310" y="890" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" letter-spacing="5" fill="#15212E">MARQUE</text>
+  <line x1="244" y1="902" x2="376" y2="902" stroke="#B68A4E" stroke-width="1"/>
+  <text x="310" y="923" text-anchor="middle" font-size="11" letter-spacing="5" fill="#7A8089">PUBLISHING</text>
+  <text x="310" y="974" text-anchor="middle" font-size="13" letter-spacing="2.5" font-weight="600" fill="#15212E">03 · TRUE NORTH</text>
+  <text x="310" y="997" text-anchor="middle" font-size="12" fill="#7A8089">A compass-needle 'M' — navigation and treasure.</text>
+
+  <!-- ============ 04 THE DAGGER (cx810 my740) ============ -->
+  <polygon points="810,662 816,670 810,678 804,670" fill="#7C2A33"/>
+  <rect x="806" y="676" width="8" height="30" fill="#7C2A33"/>
+  <rect x="762" y="704" width="96" height="8" fill="#7C2A33"/>
+  <polygon points="803,712 817,712 810,826" fill="#7C2A33"/>
+  <line x1="810" y1="718" x2="810" y2="812" stroke="#FBFAF7" stroke-width="1.4"/>
+  <text x="810" y="890" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" letter-spacing="5" fill="#15212E">MARQUE</text>
+  <line x1="744" y1="902" x2="876" y2="902" stroke="#7C2A33" stroke-width="1"/>
+  <text x="810" y="923" text-anchor="middle" font-size="11" letter-spacing="5" fill="#7A8089">PUBLISHING</text>
+  <text x="810" y="974" text-anchor="middle" font-size="13" letter-spacing="2.5" font-weight="600" fill="#15212E">04 · THE DAGGER</text>
+  <text x="810" y="997" text-anchor="middle" font-size="12" fill="#7A8089">The editor's dagger, doubling as a blade.</text>
+
+  <!-- ============ 05 THE IMPRINT (cx310 my1200) ============ -->
+  <text x="305" y="1242" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="120" font-weight="600" fill="#15212E">M</text>
+  <polygon points="332,1150 356,1136 360,1145 336,1159" fill="#B68A4E"/>
+  <text x="310" y="1350" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" letter-spacing="5" fill="#15212E">MARQUE</text>
+  <line x1="244" y1="1362" x2="376" y2="1362" stroke="#B68A4E" stroke-width="1"/>
+  <text x="310" y="1383" text-anchor="middle" font-size="11" letter-spacing="5" fill="#7A8089">PUBLISHING</text>
+  <text x="310" y="1434" text-anchor="middle" font-size="13" letter-spacing="2.5" font-weight="600" fill="#15212E">05 · THE IMPRINT</text>
+  <text x="310" y="1457" text-anchor="middle" font-size="12" fill="#7A8089">Type-led; the accent is the 'marque.'</text>
+
+  <!-- ============ 06 PEN & PRIVATEER (cx810 my1200) ============ -->
+  <path d="M770,1152 C812,1170 842,1210 854,1252 L847,1254 C835,1214 806,1178 765,1161 Z" fill="#15212E"/>
+  <line x1="768" y1="1150" x2="754" y2="1140" stroke="#B68A4E" stroke-width="1.6"/>
+  <line x1="774" y1="1157" x2="758" y2="1150" stroke="#B68A4E" stroke-width="1.6"/>
+  <line x1="763" y1="1145" x2="751" y2="1136" stroke="#B68A4E" stroke-width="1.6"/>
+  <polygon points="770,1148 775,1153 770,1158 765,1153" fill="#B68A4E"/>
+  <circle cx="853" cy="1252" r="2.6" fill="#B68A4E"/>
+  <text x="810" y="1350" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" letter-spacing="5" fill="#15212E">MARQUE</text>
+  <line x1="744" y1="1362" x2="876" y2="1362" stroke="#B68A4E" stroke-width="1"/>
+  <text x="810" y="1383" text-anchor="middle" font-size="11" letter-spacing="5" fill="#7A8089">PUBLISHING</text>
+  <text x="810" y="1434" text-anchor="middle" font-size="13" letter-spacing="2.5" font-weight="600" fill="#15212E">06 · PEN &amp; PRIVATEER</text>
+  <text x="810" y="1457" text-anchor="middle" font-size="12" fill="#7A8089">The quill that's also a cutlass.</text>
+
+  <!-- Footer -->
+  <line x1="60" y1="1502" x2="1060" y2="1502" stroke="#D8D2C6" stroke-width="1"/>
+  <text x="560" y="1530" text-anchor="middle" font-size="11" letter-spacing="1" fill="#7A8089">Ink #15212E · Brass #B68A4E · Oxblood #7C2A33 — every mark also works in solid black.</text>
+</svg>

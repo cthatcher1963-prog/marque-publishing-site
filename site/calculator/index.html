@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Self-Publishing Cost Calculator — Marque Publishing</title>
+<meta name="description" content="Estimate what self-publishing your book will really cost. Built on Amazon KDP's current 2026 print pricing. A free tool from Marque Publishing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+<div class="calc-wrap">
+
+  <div class="calc-head">
+    <h1>What Will Self-Publishing Your Book <span>Really Cost?</span></h1>
+    <p class="sub">Put your numbers in, and watch the math work itself out. Built on Amazon
+      KDP&rsquo;s current 2026 print pricing.</p>
+  </div>
+
+  <div class="modes" role="tablist" aria-label="Costing model">
+    <button id="m-pod" class="active" role="tab" aria-selected="true" onclick="setMode('pod')">Sell on Amazon</button>
+    <button id="m-run" role="tab" aria-selected="false" onclick="setMode('run')">Print &amp; sell yourself</button>
+  </div>
+
+  <div class="panel">
+    <!-- INPUTS -->
+    <div class="col">
+      <div class="card">
+        <h2>Your Book</h2>
+
+        <div class="field">
+          <label for="pages">Page count
+            <span class="hint">How many pages your finished book has.</span></label>
+          <div class="inputbox"><input type="number" id="pages" min="24" max="828" value="300"></div>
+        </div>
+
+        <div class="field">
+          <label for="ink">Interior ink
+            <span class="hint">Black &amp; white is cheapest. Color costs more per page.</span></label>
+          <select id="ink">
+            <option value="bw">Black &amp; white</option>
+            <option value="std">Standard color</option>
+            <option value="prem">Premium color</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="trim">Trim size
+            <span class="hint">&ldquo;Regular&rdquo; covers most novels (up to 6&times;9 in).</span></label>
+          <select id="trim">
+            <option value="reg">Regular (up to 6&times;9 in)</option>
+            <option value="lg">Large (bigger than 6&times;9 in)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="price">Sale price
+            <span class="hint">What a reader pays for one copy.</span></label>
+          <div class="inputbox"><span class="pre">$</span><input type="number" id="price" min="0" step="0.01" value="14.99"></div>
+        </div>
+
+        <div class="field">
+          <label for="copies" id="copies-label">How many copies do you expect to sell?</label>
+          <div class="inputbox"><input type="number" id="copies" min="1" value="500"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Up-Front Investment</h2>
+        <p class="card-note">What you spend before the first copy sells. Typical 2026 ranges
+          are shown &mdash; edit any figure to match your plan, or set it to 0 if you&rsquo;ll do it yourself.</p>
+
+        <div class="fields2">
+          <div class="field">
+            <label for="ed">Editing
+              <span class="hint">Proofread ~$300 &middot; copyedit ~$1,000 &middot; developmental $2,000+</span></label>
+            <div class="inputbox"><span class="pre">$</span><input type="number" id="ed" min="0" step="50" value="1000"></div>
+          </div>
+
+          <div class="field">
+            <label for="cover">Cover design
+              <span class="hint">Budget ~$150 &middot; custom $500&ndash;$1,200</span></label>
+            <div class="inputbox"><span class="pre">$</span><input type="number" id="cover" min="0" step="50" value="600"></div>
+          </div>
+
+          <div class="field">
+            <label for="fmt">Interior formatting
+              <span class="hint">DIY tools ~$150 &middot; pro up to $500</span></label>
+            <div class="inputbox"><span class="pre">$</span><input type="number" id="fmt" min="0" step="25" value="150"></div>
+          </div>
+
+          <div class="field">
+            <label for="isbn">ISBN
+              <span class="hint">Free on Amazon &middot; your own $125</span></label>
+            <div class="inputbox"><span class="pre">$</span><input type="number" id="isbn" min="0" step="5" value="0"></div>
+          </div>
+
+          <div class="field">
+            <label for="mktg">Marketing &amp; launch
+              <span class="hint">Ads, review copies, mailing list&hellip;</span></label>
+            <div class="inputbox"><span class="pre">$</span><input type="number" id="mktg" min="0" step="50" value="0"></div>
+          </div>
+
+          <div class="field">
+            <label for="other">Anything else
+              <span class="hint">Copyright, proof copies, website&hellip;</span></label>
+            <div class="inputbox"><span class="pre">$</span><input type="number" id="other" min="0" step="25" value="0"></div>
+          </div>
+        </div>
+
+        <div class="subtotal"><span>Total up-front investment</span><span class="amt" id="invest-total">$0</span></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="card results-card">
+      <h2 id="res-title">If You Sell on Amazon</h2>
+      <div class="results" id="results"></div>
+      <div class="note" id="note"></div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <h3>Want A Hand With The Parts in Between?</h3>
+    <p>Marque Publishing helps independent authors with editing, cover design, formatting,
+      and getting a book onto Amazon. <a href="../about.html">Get in touch &rarr;</a></p>
+  </div>
+
+  <p class="foot">
+    Estimates only, for the U.S. Amazon.com marketplace. Printing rates and the 60% paperback
+    royalty are from KDP&rsquo;s published 2026 figures; service costs are typical market ranges
+    and will vary by provider. Your actual costs and royalty rate may vary by marketplace,
+    distribution choice, and discounts.
+    Source: <a href="https://kdp.amazon.com/en_US/help/topic/G201834340" target="_blank" rel="noopener">KDP Paperback Printing Cost</a>.
+  </p>
+</div>
+
+<script src="calculator.js"></script>
+</body>
+</html>

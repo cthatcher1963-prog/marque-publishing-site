@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>86,000 Firewalls, 194 Countries, and One Uncomfortable Question For Your Board — Marque Publishing</title>
+<meta name="description" content="FortiBleed exposed admin credentials for 73,000+ firewalls worldwide. It wasn't a zero-day — it was credential hygiene at civilizational scale. What boards need to ask.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="86,000 Firewalls, 194 Countries, and One Uncomfortable Question For Your Board">
+<meta property="og:description" content="FortiBleed exposed 73,000+ firewall credentials. It wasn't a zero-day — it was a hygiene failure.">
+<meta property="og:url" content="https://www.marquepublishing.com/site/blog/fortibleed.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/site/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/site/blog/fortibleed.html">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+/* ─── Blog post styles ─── */
+.post-header {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.post-category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.post-date {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
+.post-meta-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+}
+.post-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+.post-subtitle {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.article-prose {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+.article-prose p {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.article-prose h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.article-prose h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+.article-prose strong {
+  font-weight: 600;
+  color: var(--text);
+}
+.article-prose em {
+  font-style: italic;
+}
+.article-prose ol, .article-prose ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+.article-prose ol li, .article-prose ul li {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.article-prose .lead {
+  font-size: 1.25rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+.post-author {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+.post-author .photo-frame {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.post-author-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.post-author p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .post-author {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .post-author .photo-frame {
+    margin-inline: auto;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ─── Navigation ─── -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ─── Article ─── -->
+<article class="section-pad" id="main-content">
+  <div class="container">
+
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">June 2026</time>
+      </div>
+      <h1>86,000 Firewalls, 194 Countries, and One Uncomfortable Question For Your Board</h1>
+    </header>
+
+    <div class="article-prose fade-in">
+      <p class="lead">On June 16, a security researcher named Volodymyr Diachenko found an open directory sitting on the public internet. Inside it: verified administrator credentials — in cleartext — for more than 73,000 Fortinet firewalls spread across 194 countries. The affected organizations read like a who's who of the Fortune Global 500. Chevron. Samsung. AT&T. Mercedes-Benz. PwC. Oracle. Government agencies in dozens of countries.</p>
+
+      <p>They're calling it FortiBleed.</p>
+
+      <p>The name undersells it.</p>
+
+      <p>The attack itself wasn't sophisticated. Threat actors scanned the internet for Fortinet devices, tried passwords harvested from earlier breaches against each one, and logged every successful hit. No zero-day. No nation-state toolkit. Just credential stuffing at industrial scale against devices that were supposed to be the front door lock.</p>
+
+      <p>That's the part that should bother executives.</p>
+
+      <h2>The Question Nobody Wants to Ask</h2>
+
+      <p>In my experience, boards handle novel threats reasonably well. A new vulnerability with a catchy name gets briefed, money gets allocated, people feel like they're responding.</p>
+
+      <p>What boards handle poorly is the realization that the basics weren't covered.</p>
+
+      <p>FortiBleed isn't a story about a clever attacker. It's a story about 73,000 organizations that left default or reused credentials on their perimeter firewalls — the single device most responsible for keeping unauthorized traffic out of their networks. When half the publicly exposed Fortigate devices on the internet turn out to be compromised, that's not a vulnerability. That's a hygiene failure at civilizational scale.</p>
+
+      <p>The uncomfortable question for your board: Are we one of the 73,000?</p>
+
+      <p>And if your CISO can't answer that in under five minutes, you have a different problem.</p>
+
+      <h2>This is a Three Questions Moment</h2>
+
+      <p>I talk about the Three Questions framework in <em>Cyber Risk Is Business Risk</em> because they cut through the noise in exactly this kind of situation:</p>
+
+      <p><em>What do we have?</em> Does your organization run Fortinet devices on its perimeter? How many? Are they internet-facing? Your asset inventory either answers this instantly or it doesn't — and the speed of that answer tells you more about your security posture than any maturity score.</p>
+
+      <p><em>What are we doing to protect it?</em> Were those devices patched? Were default credentials changed? Is there multi-factor authentication on administrative access? These aren't advanced questions. They're the equivalent of asking whether the office doors are locked at night.</p>
+
+      <p><em>What happens if we fail?</em> With verified admin credentials in the wild, an attacker doesn't need to break in. They walk in. They have the keys. From there it's lateral movement, data exfiltration, ransomware — pick your nightmare. The exposed data included Kerberos hashes, which means domain-level compromise is on the table.</p>
+
+      <h2>Compliance Checked the Box. Security Didn't.</h2>
+
+      <p>Here's what I'd bet happened at a lot of those 73,000 organizations. Somebody bought the Fortinet devices. Somebody configured them. An auditor checked a box that said "perimeter firewall deployed."</p>
+
+      <p>And then nobody circled back to ask whether the credentials were rotated, whether the firmware was current, whether the device was actually doing what it was supposed to do.</p>
+
+      <p>This is the gap between compliance and security that I keep hammering on. Compliance asks "do you have a firewall?" Security asks "is your firewall actually protecting you right now?" Those are fundamentally different questions, and FortiBleed just demonstrated the cost of confusing them — across 194 countries, on a stage nobody wanted.</p>
+
+      <h2>What Executives Should Do This Week</h2>
+
+      <p>If you're a CEO, CFO, or board member reading this, here's what I'd want to know before Friday.</p>
+
+      <p><strong>Ask your CISO: "Are we running Fortinet devices, and have we checked against the FortiBleed indicators of compromise?"</strong> That's a yes-or-no question. If the answer takes more than a day, your asset management needs work.</p>
+
+      <p><strong>Then ask the harder one: "What's our process for ensuring that security devices themselves stay secure?"</strong> Firewalls, VPN concentrators, identity providers — these are the infrastructure that everything else depends on. If they're not getting priority attention, your security program has a foundation problem.</p>
+
+      <p><strong>And the one that matters most: "How would we know if someone had already used compromised credentials to get inside?"</strong> The FortiBleed data has been circulating since at least early June. The window for exploitation is already open.</p>
+
+      <h2>The Board Conversation</h2>
+
+      <p>FortiBleed is going to come up in board meetings this quarter. When it does, resist the temptation to make it a Fortinet problem. Fortinet makes the devices; your team is responsible for configuring and maintaining them. Every vendor product in your environment carries this same risk if the basics aren't maintained.</p>
+
+      <p>The real board conversation isn't "should we replace Fortinet?"</p>
+
+      <p>It's "do we have visibility into the security posture of our own infrastructure, and are we investing enough in the boring work of credential management, patching, and asset inventory?"</p>
+
+      <p>Not a sexy budget line item. But 73,000 organizations just learned what happens when you skip it.</p>
+    
+    </div>
+
+
+    <!-- ─── Author bio ─── -->
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ─── Newsletter ─── -->
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get The Free Guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+
+</body>
+</html>

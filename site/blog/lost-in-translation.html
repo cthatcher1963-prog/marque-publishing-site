@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost in Translation: Why Security Leaders Struggle to Get The Buy-In They've Earned — Marque Publishing</title>
+<meta name="description" content="The gap between what security teams measure and what executives act on isn't a technical problem. It's a translation problem — and it's costing organizations more than they realize.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="Lost in Translation: Why Security Leaders Struggle to Get The Buy-In They've Earned">
+<meta property="og:description" content="The gap between what security teams measure and what executives act on isn't a technical problem. It's a translation problem.">
+<meta property="og:url" content="https://www.marquepublishing.com/site/blog/lost-in-translation.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/site/og-image.png">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+/* ─── Blog post styles ─── */
+.post-header {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.post-category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
+
+.post-meta-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+}
+
+.post-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.post-subtitle {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ─── Article prose ─── */
+.article-prose {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.article-prose p {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.article-prose h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.article-prose h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.article-prose strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article-prose em {
+  font-style: italic;
+}
+
+.article-prose ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.article-prose ol li {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.article-prose .lead {
+  font-size: 1.25rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ─── Translation table ─── */
+.translation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.translation-table thead th {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: left;
+  padding: 1rem 1.25rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.translation-table tbody td {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.translation-table tbody td:first-child {
+  color: var(--text-muted);
+  font-style: italic;
+  width: 40%;
+}
+
+.translation-table tbody td:last-child {
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .translation-table {
+    font-size: 0.85rem;
+  }
+  .translation-table thead th,
+  .translation-table tbody td {
+    padding: 0.75rem;
+  }
+}
+
+/* ─── Playbook items ─── */
+.playbook-item {
+  margin-bottom: 2rem;
+}
+
+.playbook-item h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+/* ─── Author bio at end ─── */
+.post-author {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.post-author .photo-frame {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.post-author-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.post-author p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ─── Back link ─── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .post-author {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .post-author .photo-frame {
+    margin-inline: auto;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ─── Navigation ─── -->
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ─── Article ─── -->
+<article class="section-pad" id="main-content">
+  <div class="container">
+
+    <a href="../blog.html" class="back-link fade-in">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      All posts
+    </a>
+
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Thought leadership</span>
+        <span class="post-meta-divider"></span>
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <span class="post-date">June 2026</span>
+      </div>
+      <h1>Lost in Translation: Why Security Leaders Struggle to Get The Buy-In They've Earned</h1>
+    </header>
+
+    <div class="article-prose fade-in">
+      <p class="lead">You walk into the boardroom with a clear picture of where the organization is exposed. You've done the work. You know what's at stake.</p>
+
+      <p>Twenty minutes later, the CFO is checking messages under the table, the CEO has pivoted to a revenue question, and the budget you needed comes back trimmed by a third.</p>
+
+      <p>You didn't lose the room because the risk isn't real. You lost it because the language didn't connect.</p>
+
+      <p>In my experience, the gap between what security teams measure and what executives act on is almost never a technical problem. It's a translation problem — and it costs organizations more than most of them will ever calculate.</p>
+
+      <h2>Two Audiences, Two Frequencies</h2>
+
+      <p>Security professionals are trained to think in threat vectors, exposure windows, and control frameworks. That precision is what makes them exceptional at their jobs. But precision in the wrong language is just noise to the person who needs to authorize the investment.</p>
+
+      <p>Boards and executive teams think in risk, revenue continuity, competitive positioning, and fiduciary exposure. They are not indifferent to security — they are deeply invested in outcomes. What they lack is a translator.</p>
+
+      <p>When a CISO presents in technical terms to a business audience, something worse happens than a failed communication. The room walks out believing security is an IT cost center. That framing has real budget consequences — I've watched it happen at three different Fortune 500 companies in the last two years alone.</p>
+
+      <h2>Same Facts, Different Conversation</h2>
+
+      <p>The translation gap isn't about dumbing things down. It's about reframing accurate information in the terms that drive executive decisions.</p>
+
+      <p>"We're seeing increased adversarial use of AI in phishing campaigns" becomes: the convincingness of deceptive emails targeting our employees has risen sharply, and the cost of a single successful account compromise averages $4.5M industry-wide.</p>
+
+      <p>"Our vulnerability remediation SLA is 14 days for critical findings" becomes: we close the window of exposure on our most dangerous weaknesses within two weeks — before most attackers can operationalize them.</p>
+
+      <p>"We've implemented zero trust network segmentation" becomes: we've restructured our environment so that a single breach can no longer move laterally and take down the whole business — the way NotPetya cost Maersk $300M in ten days.</p>
+
+      <p>"We need to fund an AI-augmented SOC capability" becomes: attackers are now finding and exploiting vulnerabilities in hours, not months. Our current detection capability operates on a timeline that no longer matches the threat.</p>
+
+      <p>"We completed a third-party risk assessment of our top 20 vendors" becomes: we reviewed the outside organizations with the deepest access to our systems. Three carried risk we weren't comfortable with — we've addressed two and are negotiating with the third.</p>
+
+      <p>"Our mean time to detect is 48 hours" becomes: on average, we identify an active threat within two days. Every hour of undetected intrusion increases breach cost by an estimated $75K. We have a roadmap to cut that window in half.</p>
+
+      <p>"We've deployed EDR across 94% of endpoints" becomes: nearly all of our devices now have the ability to detect and contain an attack in real time. The remaining 6% are our highest-priority remediation item this quarter.</p>
+
+      <p>"AI is expanding our attack surface through shadow model usage" becomes: employees are using AI tools outside our approved stack — sharing sensitive data with systems we don't control and can't audit. We need a policy decision from this room.</p>
+
+      <p>Nothing in the right-hand versions is fabricated or overstated. Every reframe is grounded in the same operational reality as the technical version. The difference is whether the board walks out understanding why it matters to <em>them</em>.</p>
+
+      <h2>Why the Gap Keeps Getting Wider</h2>
+
+      <p>I've been watching this problem get structurally worse for a decade, and three forces are driving it.</p>
+
+      <p>The threat surface expanded faster than organizational communication norms. Security teams grew in technical sophistication while boardroom expectations stayed anchored to compliance checkboxes. Meanwhile, security metrics were designed to measure technical performance, not business impact — MTTD and patch SLAs are operationally meaningful, but they are not boardroom currency.</p>
+
+      <p>And then AI compressed the timeline on everything. Threat actors who once needed months to operationalize a vulnerability now need hours. The urgency is real. But it only lands if you express it in terms of business disruption — not CVE counts.</p>
+
+      <p>The organizations getting this right aren't just better protected. They're making faster decisions and allocating capital more precisely, treating security as a competitive variable rather than a tax.</p>
+
+      <h2>How to Close It</h2>
+
+      <p><strong>Lead with what was protected, not what was done.</strong> Boards don't need a status report on security activities. They need to understand what exposure existed, what was done about it, and what would have happened otherwise. Every update should be framed around business outcomes.</p>
+
+      <p><strong>Translate risk into dollars — and be specific.</strong> NotPetya cost Maersk over $300 million in ten days. The average cost of a ransomware incident now exceeds $4.5 million when downtime, remediation, and reputational impact are included. Even conservative, defensible estimates beat abstraction every time. Executives who live in financial language respond immediately when risk is quantified.</p>
+
+      <p><strong>Structure every update as: Risk. Timeline. Ask.</strong> What is the risk and what does it cost the business if it materializes? When is this relevant — current exposure or emerging? What decision do you need from this room? That structure respects their time and positions them as decision-makers rather than an audience. I lay out this approach in detail in <em>Cyber Risk Is Business Risk</em> — it maps directly to the Three Questions framework.</p>
+
+      <p><strong>Name what AI is changing — with specifics.</strong> AI is not a future threat. Adversarial use of AI in phishing, vulnerability discovery, and social engineering is measurable and current. Anchor it to business scenarios the room can visualize: an employee sharing sensitive data with an unsanctioned AI tool, a deepfake voice call authorizing a wire transfer, an AI-generated email that bypasses every filter you have.</p>
+
+      <p><strong>Turn compliance into competitive positioning.</strong> Compliance framed as overhead is overhead. Compliance framed as the reason you can operate in regulated markets your competitors cannot is a revenue conversation. Same underlying fact. Entirely different strategic implication — and boards respond accordingly.</p>
+
+      <h2>The Cost of Bad Translation</h2>
+
+      <p>This gap has direct, measurable consequences. When boards don't understand risk in business terms, they underinvest. When they underinvest, organizations are exposed in ways that are entirely preventable. And when a breach occurs — at current threat velocity, the question is increasingly <em>when</em> — the post-mortem almost always reveals the same story: the security team knew, raised the issue, and couldn't get traction.</p>
+
+      <p>That is a failure of translation. Not expertise.</p>
+
+      <p>The most effective security leaders I work with are functionally bilingual. They speak threat operations fluently and they speak risk, capital allocation, and competitive consequence just as fluently. They understand that a board briefing is not a status update — it's a persuasion exercise built on credibility, and it requires a different vocabulary than the one that makes you effective in a SOC.</p>
+
+      <p>If you want the budget, the organizational alignment, and the executive partnership your program requires — particularly as AI reshapes what attackers can do and what defenders must build in response — close the language gap. Not by softening what you know. By translating it into what they need to hear.</p>
+
+      <p>The board conversation security demands right now isn't about patch cycles and threat feeds. It's about business continuity, fiduciary exposure, and the compounding cost of waiting.</p>
+    
+
+    </div>
+
+
+    <!-- ─── Author bio ─── -->
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is Global Head of Cybersecurity Sales at EPAM Systems, where he advises enterprise clients on translating cybersecurity risk into business strategy. He has been writing about emerging security threats for executive audiences since 2005.</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ─── Newsletter ─── -->
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Don't Miss A Post</h2>
+      <p>New essays and insights delivered to your inbox — no fluff, no spam.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Risk in Healthcare: What Every Clinician and Business Leader Should Know — Marque Publishing</title>
+<meta name="description" content="As healthcare organizations adopt AI to drive clinical insights and patient care, it introduces new dimensions of risk that go beyond traditional IT concerns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="AI Risk in Healthcare: What Every Clinician and Business Leader Should Know">
+<meta property="og:description" content="AI introduces new dimensions of risk that go beyond traditional IT concerns.">
+<meta property="og:url" content="https://www.marquepublishing.com/site/blog/ai-risk-in-healthcare.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/site/og-image.png">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+/* ─── Blog post styles ─── */
+.post-header {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.post-category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
+
+.post-meta-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+}
+
+.post-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+/* ─── Article prose ─── */
+.article-prose {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.article-prose p {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.article-prose h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.article-prose strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article-prose em {
+  font-style: italic;
+}
+
+.article-prose .lead {
+  font-size: 1.25rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ─── Author bio at end ─── */
+.post-author {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.post-author .photo-frame {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.post-author-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.post-author p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ─── Back link ─── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .post-author {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .post-author .photo-frame {
+    margin-inline: auto;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ─── Navigation ─── -->
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ─── Article ─── -->
+<article class="section-pad" id="main-content">
+  <div class="container">
+
+    <a href="../blog.html" class="back-link fade-in">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      All posts
+    </a>
+
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Thought leadership</span>
+        <span class="post-meta-divider"></span>
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <span class="post-date">April 2026</span>
+      </div>
+      <h1>AI Risk in Healthcare: What Every Clinician and Business Leader Should Know</h1>
+    </header>
+
+    <div class="article-prose fade-in">
+      <p class="lead">I spent most of last year working with three healthcare systems — two regional hospital networks and a large specialty practice group — on their AI security posture. Every single one had the same blind spot. They treated AI tools like they treated any other software purchase: run it through IT procurement, check the compliance box, deploy.</p>
+
+      <p>That approach is going to hurt people.</p>
+
+      <p>AI in healthcare is not another IT system. It's a fundamentally different category of risk, and the frameworks most health systems use to evaluate technology were never designed for it. I'm writing this because the gap between where healthcare AI adoption is right now and where healthcare AI governance is right now could get a patient killed — and I don't think enough clinical or business leaders understand how.</p>
+
+      <h2>These Systems Can Be Attacked in Ways Most Leaders Haven't Considered</h2>
+
+      <p>Traditional healthcare IT security focuses on keeping attackers out and keeping data in. Access controls, encryption, network segmentation — the standard playbook. AI systems introduce attack surfaces that don't fit that model.</p>
+
+      <p>Adversarial attacks manipulate the inputs an AI model receives — subtly altered imaging data, for example — to produce incorrect outputs. In a clinical context, that could mean a diagnostic model misreading a scan. Not because the model is broken, but because someone deliberately fed it data designed to fool it. Researchers at Harvard and MIT demonstrated this with dermatology classification models back in 2019, and the techniques have only gotten more sophisticated since then.</p>
+
+      <p>Data poisoning is the slower-burn version. An attacker — or even a well-meaning insider making bad data hygiene decisions — corrupts the training data that a model learns from. The model still runs. It still produces outputs. But those outputs are quietly biased in ways that may not surface for months. In healthcare, that could mean a clinical decision support tool systematically under-flagging a specific patient population.</p>
+
+      <p>And then there's data extraction. AI models can sometimes be reverse-engineered to reveal the training data they were built on. In healthcare, that training data is patient records. I worked one assessment where a vendor's model had been fine-tuned on a client's PHI — and the vendor's security architecture would have allowed a determined attacker to extract fragments of that data through repeated queries. The client had no idea.</p>
+
+      <h2>The Complexity Problem</h2>
+
+      <p>Here's what I keep running into: the people making purchasing and deployment decisions for AI tools in healthcare often don't have the technical depth to evaluate what they're buying.</p>
+
+      <p>That's not a criticism. A chief medical officer shouldn't need to understand transformer architectures. But right now, there's a dangerous gap between the complexity of these systems and the ability of decision-makers to assess their risk. A CMO or a VP of Operations evaluates a clinical AI tool based on the vendor's accuracy claims, maybe a pilot study, maybe a peer review. What they're not evaluating — because they can't — is the model's attack surface, its failure modes under distribution shift, or what happens to its performance when the patient population changes.</p>
+
+      <p>This is why I argue in <em>Cyber Risk Is Business Risk</em> that AI governance can't live solely inside IT or solely inside clinical leadership. It requires a cross-functional team that includes security, clinical informatics, legal, and operations — people who can collectively see the whole picture.</p>
+
+      <h2>Validation Has to Be Continuous, Not One-and-Done</h2>
+
+      <p>Most healthcare organizations validate an AI tool at deployment and then treat it like furniture. It sits there. It runs. Nobody checks whether it's still performing the way it did during evaluation.</p>
+
+      <p>That's a mistake. AI models drift. The data they encounter in production diverges from the data they were trained on — patient demographics shift, documentation practices change, new disease variants emerge. A model that performed at 94% accuracy during validation might be operating at 81% eighteen months later, and nobody notices because nobody is looking.</p>
+
+      <p>Every AI system touching clinical decisions needs continuous output monitoring — automated checks that flag when performance metrics degrade, when outputs start clustering differently, or when the model's confidence scores shift in patterns that suggest drift. And critically, clinicians need a clear mechanism to challenge an AI recommendation. Not just override it — challenge it, with a documented escalation path that feeds back into model governance.</p>
+
+      <p>If a clinician can't explain to a patient why an AI-assisted decision was made, and can't show an auditor the evidence trail behind it, the system isn't ready for clinical use. Full stop.</p>
+
+      <h2>The Attacker Is Using AI Too</h2>
+
+      <p>This is the part of the conversation that keeps me up at night.</p>
+
+      <p>While healthcare organizations are carefully piloting AI tools and running twelve-month evaluation cycles, threat actors are deploying AI offensively with no such constraints. AI-generated phishing campaigns targeting healthcare workers are already measurably harder to detect than their manually crafted predecessors — a 2024 study from Abnormal Security found that AI-generated phishing emails had a 60% higher click-through rate in healthcare settings.</p>
+
+      <p>Attackers are using AI to scan for vulnerabilities faster than defenders can patch them. They're using it to adapt attack patterns in real time, pivoting when they hit a control. And they're using it to craft social engineering attacks that are personalized to individual employees based on publicly available data.</p>
+
+      <p>The implication is stark: healthcare organizations need AI-powered defenses, not just AI-powered clinical tools. Your SOC needs machine learning models that can detect anomalous patterns across your network. Your email security needs AI that can identify AI-generated phishing. Your vulnerability management program needs AI-assisted prioritization. Defending a modern healthcare environment without AI in your security stack is like bringing a clipboard to a gunfight.</p>
+
+      <h2>The Regulatory Pressure Is Real and Accelerating</h2>
+
+      <p>HHS released updated guidance on AI in healthcare in late 2024. The EU AI Act classifies most clinical AI as high-risk, with mandatory conformity assessments. State-level legislation — Colorado's AI Act, California's proposed SB 1047 framework — is creating a patchwork of requirements that multi-state health systems are already struggling to track.</p>
+
+      <p>This is not a technical compliance exercise. When regulators come asking about your AI governance — and they will — they're going to want to see board-level accountability, documented risk assessments, continuous monitoring evidence, and incident response plans specific to AI failures. If your answer is "we rely on our vendors to handle that," you're going to have a very bad day.</p>
+
+      <p>Compliance in this space requires clinical, operational, legal, security, and technology leaders working together. Not in a quarterly meeting. Continuously.</p>
+
+      <h2>Humans Stay in the Loop. Period.</h2>
+
+      <p>I've heard executives talk about AI "replacing" clinical judgment. That framing is dangerous and wrong — at least for the foreseeable future.</p>
+
+      <p>AI in healthcare should augment clinical decision-making, not supplant it. Every AI-generated recommendation in a clinical setting needs a qualified human reviewing it before it reaches a patient. Not because the AI is always wrong — often it's quite good. But because when it is wrong, the consequences land on a person lying in a hospital bed, and that person deserves a clinician who looked at the evidence, not just a confidence score.</p>
+
+      <p>In my work, I push healthcare clients toward what I call a "trust but verify" model — use AI to surface insights, flag anomalies, accelerate workflows, but keep a clinician's judgment as the final gate on anything that touches patient care. The organizations getting this right are building that human checkpoint into their clinical workflows from day one, not bolting it on after a near-miss.</p>
+
+      <p>The technology is powerful. The risks are specific and serious. And the gap between adoption speed and governance maturity in healthcare is wider than in any other sector I work in. Close it — before a patient pays the price.</p>
+    
+
+    </div>
+
+
+    <!-- ─── Author bio ─── -->
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is Global Head of Cybersecurity Sales at EPAM Systems, where he advises enterprise clients on translating cybersecurity risk into business strategy. He has been writing about emerging security threats for executive audiences since 2005.</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ─── Newsletter ─── -->
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Don't Miss A Post</h2>
+      <p>New essays and insights delivered to your inbox — no fluff, no spam.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+
+</body>
+</html>

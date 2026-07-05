@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wild West of AI: Why Enterprises Need A Central Authority Before The Next Crisis Hits — Marque Publishing</title>
+<meta name="description" content="Across the business landscape, AI cowboys are deploying models and tools at breakneck speed, often without proper oversight, governance, or change management. The risks are mounting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="The Wild West of AI: Why Enterprises Need A Central Authority">
+<meta property="og:description" content="AI cowboys are deploying models at breakneck speed without proper oversight. The risks are mounting.">
+<meta property="og:url" content="https://www.marquepublishing.com/site/blog/wild-west-of-ai.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/site/og-image.png">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+/* ─── Blog post styles ─── */
+.post-header {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.post-category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
+
+.post-meta-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+}
+
+.post-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.post-subtitle {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ─── Article prose ─── */
+.article-prose {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.article-prose p {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.article-prose h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.article-prose h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.article-prose strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article-prose em {
+  font-style: italic;
+}
+
+.article-prose ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.article-prose ul li {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.article-prose .lead {
+  font-size: 1.25rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ─── Callout list ─── */
+.risk-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.risk-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.risk-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ─── Governance list ─── */
+.governance-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.governance-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.governance-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ─── Author bio at end ─── */
+.post-author {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.post-author .photo-frame {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.post-author-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.post-author p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* ─── Back link ─── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .post-author {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .post-author .photo-frame {
+    margin-inline: auto;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ─── Navigation ─── -->
+<nav class="site-nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ─── Article ─── -->
+<article class="section-pad" id="main-content">
+  <div class="container">
+
+    <a href="../blog.html" class="back-link fade-in">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      All posts
+    </a>
+
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Thought leadership</span>
+        <span class="post-meta-divider"></span>
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <span class="post-date">April 2026</span>
+      </div>
+      <h1>The Wild West of AI: Why Enterprises Need A Central Authority Before The Next Crisis Hits</h1>
+    </header>
+
+    <div class="article-prose fade-in">
+      <p class="lead">Last quarter, I sat across from a CTO who told me — with a straight face — that his organization had "maybe four or five" AI tools in production. We ran a discovery scan. The number was forty-three.</p>
+
+      <p>That gap should terrify every executive reading this.</p>
+
+      <p>Across almost every enterprise I advise, the same pattern plays out. Business units spin up AI tools on their own. Marketing adopts a content generator. HR plugs in a resume screener. Finance experiments with forecasting models. Nobody tells IT. Nobody tells legal. And nobody — nobody — is tracking what data flows into those systems or what comes out.</p>
+
+      <p>I call these teams AI cowboys, and they're not acting out of malice. They're acting out of enthusiasm, which in some ways is worse. Malice you can punish. Enthusiasm you have to channel.</p>
+
+      <h2>The Damage Is Already Happening</h2>
+
+      <p>This isn't a future-state warning. I've watched it unfold in real time.</p>
+
+      <p>In one engagement, a global retailer's AI-powered pricing engine — deployed by a business unit that never looped in risk management — slashed prices below cost on a holiday weekend. The damage hit $20 million before anyone noticed. The model was doing exactly what it was trained to do. The problem was that nobody outside that team had reviewed what it was trained to do.</p>
+
+      <p>I've seen a healthcare provider fined after clinical staff used an unapproved AI transcription tool that stored patient audio on servers that violated HIPAA. The staff didn't know. The vendor's marketing page said "HIPAA-compliant." The actual data processing agreement said otherwise.</p>
+
+      <p>Shadow AI — tools running outside IT's visibility — is the single fastest-growing risk category I encounter in enterprise assessments. In my experience, most organizations undercount their AI exposure by a factor of five or more. And every one of those uncounted tools is a potential compliance violation, data leak, or operational failure waiting to surface.</p>
+
+      <p>Model drift compounds the problem. An AI system that performed well at deployment can degrade over months as the data it encounters shifts away from its training set. Without monitoring, you don't find out until something goes wrong — a biased hiring recommendation, a clinical decision support tool that starts missing edge cases, a fraud detection model that stops catching new attack patterns.</p>
+
+      <h2>What a Central AI Authority Actually Does</h2>
+
+      <p>The fix isn't complicated to describe. It's hard to implement — but the concept is straightforward.</p>
+
+      <p>You need one team with enterprise-wide authority to discover, catalog, and govern every AI tool and initiative across the organization. Not a committee that meets quarterly. A standing function with teeth.</p>
+
+      <p>That authority does four things. First, it maps everything — every model, every tool, every data flow, every vendor relationship. You can't govern what you can't see, and right now most enterprises are flying blind. Second, it sets and enforces policy. Not guidelines. Policy — with technical controls that prevent violations rather than just detecting them after the fact. Third, it validates models on an ongoing basis, checking for drift, bias, and performance degradation before those issues reach patients or customers or regulators. Fourth, it owns incident response for AI failures, because when an AI system breaks, the playbook looks different from a traditional IT incident.</p>
+
+      <p>I dedicate an entire section to building this function in <em>Cyber Risk Is Business Risk</em>, because governance is where most AI programs either succeed or quietly fall apart.</p>
+
+      <h2>The Cultural Problem Underneath</h2>
+
+      <p>Here's what most governance frameworks miss: the cowboys don't want to be governed.</p>
+
+      <p>The teams deploying AI without oversight are often the most innovative people in the organization. They're the ones who figured out that a $50/month SaaS tool could automate a process that was costing them 200 hours a quarter. Telling them to stop isn't realistic — and it's not even desirable. You want that energy.</p>
+
+      <p>What you need is a governance model that channels it. In my experience, the organizations that get this right build fast-track approval processes — a way for teams to propose new AI tools and get a yes-or-no within days, not months. The ones that fail build bureaucratic gates that take so long to clear that people just go around them.</p>
+
+      <p>Governance without speed is just a compliance theater that trains your best people to hide what they're doing.</p>
+
+      <h2>Where This Ends If You Do Nothing</h2>
+
+      <p>I'll be direct: the financial and regulatory exposure from ungoverned AI adoption is already material at most large enterprises. It's just that the incidents haven't all surfaced yet.</p>
+
+      <p>When they do — and they will — the board isn't going to ask whether you had an innovation strategy. They're going to ask whether you had controls. And if the answer is that forty-three tools were running without anyone in risk management knowing about them, that's a career-defining moment for the CISO and the CTO alike.</p>
+
+      <p>Build the governance function now. Give it authority, staff it properly, and make it fast enough that people actually use it. That's the work.</p>
+    
+
+    </div>
+
+
+    <!-- ─── Author bio ─── -->
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is Global Head of Cybersecurity Sales at EPAM Systems, where he advises enterprise clients on translating cybersecurity risk into business strategy. He has been writing about emerging security threats for executive audiences since 2005.</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ─── Newsletter ─── -->
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Don't Miss A Post</h2>
+      <p>New essays and insights delivered to your inbox — no fluff, no spam.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+
+</body>
+</html>
