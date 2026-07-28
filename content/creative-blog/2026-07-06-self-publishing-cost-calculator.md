@@ -7,7 +7,7 @@ excerpt: POD or print run? KDP royalties or unit economics? I built a calculator
 download_url: /calculator/
 download_label: Self-Publishing Cost Calculator
 download_button: Open the calculator
-status: draft
+status: published
 ---
 When I started pricing out my first book, every answer I found was either a sales pitch or a forum thread from 2019. Nobody would just show me the math.
 

@@ -7,7 +7,7 @@ excerpt: Before you build anything with AI, it helps to know where you're starti
 download_url: /downloads/ai-readiness-self-assessment.pdf
 download_label: AI Readiness Self-Assessment (PDF)
 download_button: Download it free
-status: draft
+status: published
 ---
 "Where do I even start?" is the question I hear most from smart, busy people about AI. Not "is it useful" — everyone suspects it is. They just don't know their starting point.
 

@@ -97,3 +97,16 @@ Afternoon/evening: reply to every comment personally; watch analytics; celebrate
 ## What Chris owes the plan
 Author's note · two quotable lines · Lulu + KDP account actions (accounts, uploads, Publish button) · copy approvals · inner-circle outreach list · (nice-to-have) Jayden photo.
 Everything else is Claude's to build; Chris reviews and approves.
+
+
+---
+
+## Launch decision — updated July 9, 2026 (supersedes the solo-launch fallback)
+
+- **No solo-launch fallback.** Both *Creating with Claude* and *Cyber Risk* (CRBR) launch Saturday **July 18**.
+- **Two channels at launch:** (1) **Amazon / KDP** for both books; (2) **Website direct = Shopify storefront, fulfilled by Lulu Direct.** IngramSpark is post-launch, not a priority.
+- **Website buy-button plan:**
+  - **CWC:** Amazon button **+** Shopify (Lulu Direct) buttons — all live on the 18th.
+  - **CRBR:** **Amazon button live on the 18th** (Chris likes the buy-on-Amazon option even though low web traffic is expected). The **Shopify (Lulu Direct) direct-buy buttons are HELD until Chris receives the printed proof** — nothing sold direct until proofed.
+- **Status (Jul 9):** CRBR uploaded to KDP; paperback proof expected **Sun Jul 12**. Hardcover (KDP) + both Lulu covers waiting on cover wrappers from **Nam**; proofs ordered on receipt. Rule: nothing published until a proof is in hand.
+- **Buy links** don't exist until KDP listings publish → buttons are staged with placeholder links; go-live = drop the link + one deploy.

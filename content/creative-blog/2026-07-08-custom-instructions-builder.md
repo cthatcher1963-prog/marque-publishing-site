@@ -7,7 +7,7 @@ excerpt: Custom instructions are the highest-leverage five minutes in AI. Most p
 download_url: /downloads/custom-instructions-builder.pdf
 download_label: Custom Instructions Builder (PDF)
 download_button: Download it free
-status: draft
+status: published
 ---
 If you do one thing from this entire blog, make it this one.
 

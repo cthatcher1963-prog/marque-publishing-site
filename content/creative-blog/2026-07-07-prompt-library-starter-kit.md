@@ -7,7 +7,7 @@ excerpt: The difference between people who get great results from AI and everyon
 download_url: /downloads/prompt-library-starter-kit.pdf
 download_label: Prompt Library Starter Kit (PDF)
 download_button: Download it free
-status: draft
+status: published
 ---
 Here's something I noticed after months of daily AI work: my best results almost never came from a prompt I wrote on the spot. They came from prompts I'd already refined three or four times — saved, reused, and improved.
 

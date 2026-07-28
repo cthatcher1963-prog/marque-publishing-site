@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>They Found the Breach in 24 Hours. It Took 115 Days to Tell Anyone. — Marque Publishing</title>
+<meta name="description" content="AssuranceAmerica detected its breach in a day but took 115 days to notify 7 million people. Detection speed and disclosure speed are not the same thing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="They Found the Breach in 24 Hours. It Took 115 Days to Tell Anyone.">
+<meta property="og:description" content="Detection is a capability. Disclosure is a decision. AssuranceAmerica's 7-million-record breach shows why boards need to measure both.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/24-hours-detected-115-days-disclosed">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/24-hours-detected-115-days-disclosed">
+<link rel="stylesheet" href="/css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+/* ─── Blog post styles ─── */
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.post-subtitle { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: var(--text-muted); line-height: 1.5; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ─── Navigation ─── -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="/" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/books">Books</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ─── Article ─── -->
+<article class="section-pad" id="main-content">
+  <div class="container">
+
+    <a href="/blog" class="back-link">&larr; All posts</a>
+
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">July 2026</time>
+      </div>
+      <h1>They Found the Breach in 24 Hours. It Took 115 Days to Tell Anyone.</h1>
+    </header>
+
+    <div class="article-prose fade-in">
+      <p class="lead">In my experience, the number that boards fixate on after a breach is the wrong one. They want to know how fast the team detected the intrusion. AssuranceAmerica detected theirs in roughly 24 hours — the kind of response time most organizations would celebrate. And yet nearly seven million people spent the next four months not knowing their driver's license numbers, Social Security numbers, and insurance records were in someone else's hands.</p>
+
+      <p>That gap — between finding the fire and sounding the alarm — is where the real risk lives.</p>
+
+      <h2>What Happened</h2>
+
+      <p>On March 16, 2026, an attacker phished credentials from an AssuranceAmerica employee and used them to walk into the company's IT environment. By March 17, the company had spotted the suspicious activity, disabled the compromised account, killed the unauthorized sessions, and isolated affected systems. Textbook containment.</p>
+
+      <p>But the attacker had already copied what they came for. The stolen files contained names, contact information, auto insurance policy details, claims records, vehicle information, and driver's license numbers for 6,998,886 people — according to the company's filing with Maine's Attorney General. For a subset, the haul also included Social Security numbers and Tax IDs.</p>
+
+      <p>The forensic review — figuring out exactly which files were taken and whose data was in them — did not wrap up until June 15. Notification letters started going out on July 10. That is 115 days from detection to disclosure.</p>
+
+      <p>AssuranceAmerica is an Atlanta-based insurer specializing in non-standard auto coverage, distributing through a large network of independent agents across more than a dozen states. They are not a household name. But the scale of this breach — nearly seven million records — puts it among the largest driver's license exposures of 2026. And the lawsuit is already moving: Edelson Lechtzin LLP announced its class action investigation on July 9, before most affected people had even received a letter.</p>
+
+      <h2>The Question Your Board Should Be Asking</h2>
+
+      <p>Here is the uncomfortable truth this breach exposes: detection speed and disclosure speed are two completely different capabilities, and most organizations are only measuring the first one.</p>
+
+      <p>In <em>Cyber Risk Is Business Risk</em>, I frame the board's job around Three Questions. One of them is: <em>How much risk are we actually carrying?</em> AssuranceAmerica's answer turned out to be "a single employee credential away from exposing seven million people." That is not a technology failure. That is an architecture problem — one set of credentials should never open the door to your entire customer archive.</p>
+
+      <p>But the second question matters just as much: <em>Are we confusing compliance with security?</em> The 115-day timeline is likely defensible under many state breach notification laws, which allow the clock to run while the forensic investigation determines who was affected. In the strictest states — Colorado, Florida, California — the legal argument gets harder, because those statutes start the clock when you have "reason to believe" a breach occurred, not when you have finished counting every victim. AssuranceAmerica knew on March 17 that data had been exfiltrated. Regulators in hard-deadline states may not care that the final tally took another 90 days.</p>
+
+      <p>This is the compliance-versus-security trap I see organizations fall into repeatedly. They optimize for the legal defensibility of their notification timeline while ignoring what those 115 days cost in trust — and in litigation exposure. A class action investigation launched before the letters even hit mailboxes. That is not a sign of a legally defensible position. That is a sign of a narrative that got away from you.</p>
+
+      <h2>What Makes This Breach Different</h2>
+
+      <p>Three things stand out.</p>
+
+      <p><strong>The single-credential problem.</strong> One phished employee account gave an attacker access to files covering nearly seven million people. That number spans current and former policyholders, probably going back years. Every year of lapsed-policy data you retain beyond regulatory requirements is breach liability waiting to happen. If AssuranceAmerica had enforced strict data retention limits, the headline number might have been two million instead of seven.</p>
+
+      <p><strong>The driver's license angle.</strong> Credit cards can be replaced in ten minutes. Driver's license numbers cannot — most state DMVs will not issue a new number without evidence of actual fraud. For 6.9 million people, the stolen number will remain their number for years. Paired with the policy, vehicle, and claims data also taken, the stolen files give attackers everything they need to impersonate your insurance company with near-perfect credibility.</p>
+
+      <p><strong>The missing credit monitoring.</strong> AssuranceAmerica is not offering blanket identity protection services. Their notification letter says some recipients "may be eligible" depending on "applicable legal requirements" — meaning only where a state statute forces the issue. For a breach that exposed Social Security numbers, that is a decision the litigation will make very expensive.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>If this story sounds familiar, it should. We have seen some version of this pattern — credential theft, lateral access to unprotected data stores, slow disclosure — play out at Aflac, the NAIC itself, and a half-dozen other insurance sector targets this year alone.</p>
+
+      <p>Here are the questions worth raising in your next board or risk committee meeting:</p>
+
+      <p><strong>"If one employee credential were compromised tomorrow, how many customer records could an attacker reach before we noticed?"</strong> If the answer is in the millions, you have a segmentation problem. Detection speed is meaningless if exfiltration takes less time than your alert threshold.</p>
+
+      <p><strong>"What is our notification timeline — not the legal maximum, but our actual plan?"</strong> Map it now, before you need it. The difference between a staged disclosure at 30 days and a single notification at 115 days is the difference between controlling your story and reading about it in a class action press release.</p>
+
+      <p><strong>"How many years of customer data are we retaining past the regulatory minimum?"</strong> Every year beyond the requirement is scope you are adding to your next breach. Data retention is breach-size policy.</p>
+
+      <p>AssuranceAmerica did a lot of things right. They caught the intrusion fast. They contained it by the book. But none of that mattered to the seven million people who spent four months exposed without knowing it — or to the plaintiffs' attorneys who had their investigation announcement ready before the first letter was postmarked.</p>
+
+      <p>Detection is a capability. Disclosure is a decision. Your board needs to understand both.</p>
+    </div>
+
+
+    <!-- ─── Author bio ─── -->
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="/author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ─── Newsletter ─── -->
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get The Free Guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="/" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="/books">Books</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+
+</body>
+</html>

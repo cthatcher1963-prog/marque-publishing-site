@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Your Trusted Advisor Gets Breached — Marque Publishing</title>
+<meta name="description" content="EY's breach through a third-party help-desk platform exposed client tax data. With 570 Microsoft and 1,449 Oracle patches in July, third-party risk is the primary attack vector.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="When Your Trusted Advisor Gets Breached">
+<meta property="og:description" content="EY's third-party breach exposed client tax data. Third-party risk is now the primary attack vector.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/trusted-advisor-breached.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/trusted-advisor-breached.html">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a><nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav><article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">July 2026</time>
+      </div>
+      <h1>When Your Trusted Advisor Gets Breached</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">Ernst &amp; Young — one of the Big Four firms that companies hire specifically to help manage risk — just disclosed that an unauthorized party accessed a third-party IT platform used to support their tax-related work and downloaded client documents containing Social Security numbers, financial account information, and tax records.</p>
+
+      <p>Let that sink in for a moment. The firm you trust to handle your most sensitive financial data got compromised through a vendor's help-desk platform.</p>
+
+      <h2>What Happened</h2>
+
+      <p>Between March 28 and April 12, 2026, an attacker accessed a third-party IT service management platform that EY's technology personnel use to support tax-related client work. EY detected anomalous activity on April 23 — eleven days after the unauthorized access ended. Notification letters didn't go out to affected individuals until July 13, nearly three months after detection.</p>
+
+      <p>The exposed data included names, addresses, dates of birth, Social Security numbers, driver's license numbers, and financial account information tied to tax filings. EY has filed breach notifications in multiple states — 873 affected individuals in Texas, 480 in Massachusetts, 13 in Vermont — though the full scope remains undisclosed. A proposed class action has already been filed in the U.S. District Court for the Southern District of New York.</p>
+
+      <p>No ransomware group has claimed responsibility, and the specific method of compromise hasn't been disclosed. But the pattern is familiar: an attacker found a softer target in the supply chain and used it to reach the real prize.</p>
+      <h2>Why This Should Concern Every Executive</h2>
+
+      <p>In <em>Cyber Risk Is Business Risk</em>, I write about the Three Questions that every executive should be able to answer about their organization's cyber posture. The EY breach puts a sharp point on one of them: <strong>Do you know where your data actually lives?</strong></p>
+
+      <p>Most executives can answer that question for their internal systems. Fewer can answer it for every vendor, subcontractor, and service provider that touches their data. EY's clients didn't hand their Social Security numbers to some unknown startup. They handed them to one of the most respected professional services firms on the planet. And that firm, in turn, relied on a third-party help-desk platform that became the entry point.</p>
+
+      <p>This is the supply chain risk problem at its most uncomfortable. You can't outsource accountability.</p>
+
+      <h2>The Regulatory Walls Are Closing In</h2>
+
+      <p>The SEC's amended Regulation S-P — which requires covered institutions to establish incident response programs, notify customers of breaches within 30 days, and formally oversee service providers — hit its final compliance deadline on June 3, 2026 for smaller entities. Larger entities have been subject to these rules since December 2025.</p>
+
+      <p>The SEC has made cybersecurity a board-level accountability issue. Directors and officers who didn't ask appropriate questions or demand adequate reporting face scrutiny under the same Caremark standard that governs other fiduciary duties. You can't delegate away liability by outsourcing the IT function — you remain responsible for ensuring vendors meet security standards and for monitoring their performance.</p>
+
+      <p>That's not a theoretical risk anymore. It's an active enforcement posture.</p>
+      <h2>The Patch Tsunami Makes It Worse</h2>
+
+      <p>Here's the other piece of the July 2026 picture that boards need to understand. Microsoft's July Patch Tuesday addressed 570 vulnerabilities — the largest single update in the company's history — including three zero-day flaws, two of which were already being actively exploited before patches were available. Oracle shipped 1,449 security patches in its July Critical Patch Update, also a record, covering more than 1,200 vulnerabilities across 32 product families. Roughly 600 of those Oracle flaws could be exploited remotely without valid credentials.</p>
+
+      <p>Your organization runs Microsoft products. Your organization almost certainly runs Oracle somewhere. So do your vendors, your auditors, and your law firm.</p>
+
+      <p>When the attack surface is expanding this fast, third-party risk isn't a compliance checkbox. It's the primary way your data gets stolen.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>If the EY breach and July's record-breaking patch cycle don't prompt a conversation with your security leadership, I'm not sure what will. Here's where to start:</p>
+
+      <p><strong>"Which third parties have access to our most sensitive data, and when was the last time we verified their security controls?"</strong> Not their SOC 2 report from 18 months ago. Their actual, current security posture — including the sub-vendors they rely on.</p>
+
+      <p><strong>"How quickly would we know if one of those third parties was compromised?"</strong> EY's attacker had access for 15 days. Detection came 11 days after the access ended. Your board should know whether your organization could detect a similar compromise faster — and be honest about the answer.</p>
+
+      <p><strong>"Are we in compliance with the SEC's amended Regulation S-P?"</strong> If your organization falls under SEC jurisdiction, the compliance deadline has passed. If you're not compliant, that's a conversation that needs to happen now, not after the next breach makes headlines.</p>
+
+      <p><strong>"What does our patch cadence look like for critical and zero-day vulnerabilities?"</strong> With 570 Microsoft patches and 1,449 Oracle patches landing in a single month, your security team is triaging under pressure. Understand their process and whether they have the resources to keep up.</p>
+      <h2>The Bigger Picture</h2>
+
+      <p>In my experience, the organizations that handle third-party risk well share one trait: their boards treat vendor oversight as a standing agenda item, not something that gets attention after a breach. They ask specific questions. They expect documented answers. They follow up.</p>
+
+      <p>The EY breach is a reminder that no brand name, no matter how prestigious, guarantees security. Your data is only as safe as the weakest link in the chain that touches it — and most organizations don't even know how long that chain is.</p>
+
+      <p>Start mapping it. Start asking the hard questions. And don't wait for your name to show up in a breach notification to do it.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article><section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

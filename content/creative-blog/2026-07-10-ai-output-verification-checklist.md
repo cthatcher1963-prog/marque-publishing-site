@@ -7,7 +7,7 @@ excerpt: AI is confident whether it's right or wrong. After 30 years in cybersec
 download_url: /downloads/ai-output-verification-checklist.pdf
 download_label: AI Output Verification Checklist (PDF)
 download_button: Download it free
-status: draft
+status: published
 ---
 I spent thirty years in cybersecurity, where the first rule is that confidence is not evidence. AI models are the most confident-sounding technology ever built — right or wrong, the tone never changes. That's not a reason to avoid them. It's a reason to have a verification habit.
 

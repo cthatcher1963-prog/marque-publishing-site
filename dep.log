@@ -1,0 +1,17 @@
+
+ ⛅️ wrangler 4.110.0
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (20/61)
+Uploading... (34/61)
+Uploading... (47/61)
+Uploading... (61/61)
+✨ Success! Uploaded 41 files (20 already uploaded) (11.02 sec)
+
+✨ Uploading _redirects
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://b58454db.marque-publishing.pages.dev

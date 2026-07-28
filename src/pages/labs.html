@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Labs — Marque Publishing</title>
+<meta name="description" content="Marque Labs is the software and game development arm of Marque Publishing. Practical tools and interactive experiences, built with the same care as our books.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="Marque Labs — Software & Game Development">
+<meta property="og:description" content="Software and game development from Marque Publishing. Tools, applications, and interactive experiences. Coming soon.">
+<meta property="og:url" content="https://www.marquepublishing.com/labs">
+<link rel="canonical" href="https://www.marquepublishing.com/labs">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marque Labs — Software & Game Development">
+<meta name="twitter:description" content="Software and game development from Marque Publishing. Coming soon.">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="stylesheet" href="/css/style.css">
+<!--#include mailerlite-->
+<style>
+/* ─── Labs page styles ─── */
+.labs-hero {
+  position: relative;
+  padding: clamp(6rem, 14vw, 10rem) 0;
+  background: var(--ink);
+  color: #E8E4DC;
+  overflow: hidden;
+  text-align: center;
+}
+
+.labs-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(182, 138, 78, 0.1), transparent 50%),
+    radial-gradient(ellipse at 70% 70%, rgba(124, 42, 51, 0.08), transparent 50%);
+  pointer-events: none;
+}
+
+.labs-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.labs-hero-content h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: #FBFAF7;
+  margin-bottom: 0.5rem;
+}
+
+.labs-hero-content h1 span {
+  color: var(--brass);
+}
+
+.labs-hero-content .labs-tagline {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #9AA4AE;
+  margin-bottom: 2rem;
+}
+
+.labs-hero-content p {
+  font-size: 1.05rem;
+  color: #9AA4AE;
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+}
+
+/* Grid pattern decoration */
+.labs-grid-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(rgba(251,250,247,0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251,250,247,0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Division previews */
+.labs-divisions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.labs-division-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.labs-division-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--accent);
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+  opacity: 0.7;
+}
+
+.labs-division-card h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.labs-division-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.labs-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.labs-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@media (max-width: 640px) {
+  .labs-divisions {
+    grid-template-columns: 1fr;
+    max-width: 24rem;
+  }
+}
+
+/* Team callout */
+.labs-team-callout {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 36rem;
+  margin-inline: auto;
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.labs-team-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--placeholder-bg);
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.labs-team-callout p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.labs-team-callout strong {
+  color: var(--text);
+}
+
+@media (max-width: 480px) {
+  .labs-team-callout {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!--#include nav active="labs"-->
+
+
+<main id="main-content">
+<!-- ─── Labs Hero ─── -->
+<section class="labs-hero">
+  <div class="labs-grid-bg"></div>
+  <div class="container">
+    <div class="labs-hero-content fade-in">
+      <h1>Marque <span>Labs</span></h1>
+      <p class="labs-tagline">Software &amp; game development</p>
+      <p>We're building tools and games with the same care we put into our books. Practical software that solves real problems. Games that are worth your time.</p>
+      <span class="labs-status">In development</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Divisions ─── -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-kicker">What's coming</p>
+      <h2>Two Tracks, One Studio</h2>
+    </div>
+
+    <div class="labs-divisions fade-in">
+      <div class="labs-division-card">
+        <svg class="labs-division-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <line x1="8" y1="21" x2="16" y2="21"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+          <polyline points="7 8 10 11 7 14"/>
+          <line x1="12" y1="14" x2="17" y2="14"/>
+        </svg>
+        <h3>Software</h3>
+        <p>Applications and tools designed to solve real problems. Built with care, designed to last, and made for people who value their time.</p>
+        <span class="labs-status">Coming soon</span>
+      </div>
+
+      <div class="labs-division-card">
+        <svg class="labs-division-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="M8 10l2 2-2 2"/>
+          <path d="M16 10l-2 2 2 2"/>
+          <circle cx="12" cy="12" r="1"/>
+        </svg>
+        <h3>Games</h3>
+        <p>Interactive experiences that respect the player. We play as hard as we build, and we don't ship anything we wouldn't play ourselves.</p>
+        <span class="labs-status">Coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Team callout ─── -->
+<section class="section-pad" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-kicker">The lead</p>
+      <h2>Meet The Engineer</h2>
+    </div>
+
+    <div class="labs-team-callout fade-in">
+      <div class="labs-team-photo">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-subtle)" stroke-width="1" opacity="0.4">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      <div>
+        <p><strong>Jayden Thatcher</strong> leads software and game development at Marque. He brings the engineering mindset and the gamer's instinct — the rare combination of knowing how to build something right and knowing when it's fun. More details on what he's building are coming soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Newsletter ─── -->
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Stay in The Loop</h2>
+      <p>Get notified when we launch — plus a free copy of <em>10 Cybersecurity Decisions Every Board Gets Wrong</em>.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<!--#include footer-->
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+
+</body>
+</html>

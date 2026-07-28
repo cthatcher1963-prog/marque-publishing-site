@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When Your Auditor Gets Audited: The EY Breach — Marque Publishing</title>
+<meta name="description" content="EY took eleven days to detect a third-party breach that exposed client tax data. The lesson for every board: your risk doesn't stop at your own systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="When Your Auditor Gets Audited: The EY Breach">
+<meta property="og:description" content="The EY breach shows why third-party platforms are your blind spot too.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/when-your-auditor-gets-audited-ey-breach.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/when-your-auditor-gets-audited-ey-breach.html">
+<link rel="stylesheet" href="../css/style.css">
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.post-subtitle { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: var(--text-muted); line-height: 1.5; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">July 2026</time>
+      </div>
+      <h1>When Your Auditor Gets Audited: The EY Breach and the Third-Party Blind Spot</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">Ernst &amp; Young just became the cautionary tale it used to warn clients about.</p>
+      <p>Between March 28 and April 12, an unauthorized party accessed a third-party IT service management platform that EY's technology staff used to support tax-related work. The attacker downloaded client documents &mdash; tax filings containing Social Security numbers, financial account codes, and credit and debit card information. EY didn't spot the anomalous activity until April 23, eleven days after the attacker had already left. The firm started notifying affected clients in mid-July and is now facing a class action lawsuit in the Southern District of New York.</p>
+      <p>Let that timeline sit for a moment. Fifteen days of active exfiltration. Eleven more before anyone noticed. And three months before clients found out their most sensitive financial data had been stolen.</p>
+      <h2>The Part That Should Worry You</h2>
+      <p>This wasn't some obscure startup handling your data. EY employs 406,000 people, reported $53.2 billion in revenue last year, and operates in more than 150 countries. If you're a publicly traded company, there's a decent chance they touch your financials. And the breach didn't happen inside EY's core systems &mdash; it happened in a third-party platform that EY's own IT staff used to file support tickets. Some of those tickets had client tax documents attached.</p>
+      <p>That's the detail that matters most. The attack surface wasn't EY's audit methodology or its consulting practice. It was a help desk tool. A system so routine that nobody thought to ask whether client documents should be flowing through it, or whether the vendor operating it met the same security standards EY demands of itself.</p>
+      <p>In my experience, this is where most organizations get caught. Not by the risks they've assessed, but by the ones they never thought to assess. The IT service management platform was a tool for internal operations, not a client-facing system. It probably never showed up on a vendor risk assessment. And yet it became the conduit for one of the most damaging data exposures in Big Four history.</p>
+      <h2>The Three Questions Your Board Should Be Asking</h2>
+      <p>I've written before about the Three Questions framework &mdash; the questions every board member and executive should be able to answer about their cybersecurity posture. The EY breach puts all three into sharp focus.</p>
+      <p><strong>Can we get hit?</strong> Every organization uses third-party platforms for internal operations. Ticketing systems, HR portals, collaboration tools, file-sharing services. Each one is a potential entry point, and most of them are invisible to the people making risk decisions. If your CISO can't tell you how many third-party platforms handle sensitive data &mdash; not just the ones in your vendor management program, but the ones your staff use day-to-day &mdash; then the answer to this question is yes.</p>
+      <p><strong>Would we know?</strong> EY discovered the breach eleven days after the attacker stopped accessing the system. That's better than average, frankly. But &ldquo;better than average&rdquo; is cold comfort when your clients' Social Security numbers have been sitting on someone else's server for nearly a month. The question isn't whether you have monitoring. It's whether your monitoring covers the tools your people actually use, including the ones that weren't important enough to make it into the security architecture review.</p>
+      <p><strong>Are we ready?</strong> EY's response followed the standard playbook &mdash; contain, investigate, notify, offer credit monitoring. But the class action lawsuit alleges that EY &ldquo;knew, or should have known&rdquo; that stronger protections were necessary. That phrase &mdash; &ldquo;should have known&rdquo; &mdash; is the one that keeps general counsels awake at night. It's not about whether you responded well after the breach. It's about whether you did enough to prevent it.</p>
+      <h2>The Liability Clock Is Ticking</h2>
+      <p>Here's the part that should get board attention. The lawsuit was filed Monday in the U.S. District Court for the Southern District of New York. The plaintiff's attorneys argue that EY, as &ldquo;a sophisticated organization with the resources to deploy robust cybersecurity protocols,&rdquo; failed to meet its obligations to protect client information. They're seeking class certification and monetary relief, and they estimate the affected population could number in the tens or hundreds of thousands.</p>
+      <p>This isn't theoretical anymore. SEC amendments to Regulation S-P, with a compliance deadline that just passed on June 3, 2026, elevate cybersecurity from an operational concern to a board-level accountability issue. Across the Atlantic, DORA and NIS2 are creating similar pressure. Regulators are moving, unmistakably, toward holding executives and board members personally accountable for third-party cyber risk.</p>
+      <p>If your organization shares sensitive client data with any third party &mdash; and every organization does &mdash; this is your problem. Not your CISO's. Not your CTO's. Yours.</p>
+      <h2>What to Ask Your CISO This Week</h2>
+      <p>If the EY breach does nothing else, let it prompt a conversation. Here are three questions to bring to your next security briefing:</p>
+      <ol>
+        <li><strong>Which third-party platforms in our environment handle or could inadvertently receive sensitive client data?</strong> Don't accept the vendor management list. Ask about the tools your staff actually uses &mdash; the ticketing systems, the collaboration platforms, the shadow IT that nobody formally approved but everyone relies on.</li>
+        <li><strong>Do we have detection capabilities on those platforms, or are we relying on the vendor to tell us something went wrong?</strong> EY didn't discover the breach through its own monitoring of the third-party platform. If your answer is &ldquo;we trust the vendor,&rdquo; you're accepting a risk you may not fully understand.</li>
+        <li><strong>If a breach notification hit our desk tomorrow with our name on it as the affected party, what would our first 72 hours look like?</strong> Most organizations have incident response plans for breaches in their own systems. Far fewer have a plan for when their trusted partner is the one that got breached.</li>
+      </ol>
+      <p>The EY breach is a reminder that cybersecurity risk doesn't stop at your firewall. It follows your data &mdash; into every vendor, every platform, and every support ticket that someone thought was too routine to worry about.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> &mdash; plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

@@ -7,7 +7,7 @@ excerpt: The hardest part of building with AI isn't the building. It's picking a
 download_url: /downloads/what-should-i-build-idea-generator.pdf
 download_label: "What Should I Build?" Idea Generator (PDF)
 download_button: Download it free
-status: draft
+status: published
 ---
 Everyone who gets excited about building with AI hits the same wall in the first week: what do I actually build?
 

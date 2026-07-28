@@ -222,7 +222,7 @@ ml('account', '2453958');
     <div class="newsletter-inner fade-in">
       <h2>Get the Next One</h2>
       <p>New tools, tutorials, and book updates from Creating with Claude. No spam, ever.</p>
-      <div class="ml-embedded" data-form="NTW6JI"></div>
+      <div class="ml-embedded" data-form="5UgLqq"></div>
     </div>
   </div>
 </section>

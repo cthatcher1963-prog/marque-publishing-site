@@ -28,3 +28,24 @@ Updated July 5, 2026. Account: cthatcher1963@gmail.com (ID 2453958).
 ## Sending rules going forward
 
 Cyber content → Executives only. Maker/tutorial content → Makers only. Book launches and big studio news → everyone. This is the whole point of the split: nobody unsubscribes because you sent them the wrong half of your brain.
+
+
+---
+
+## Status update — July 8, 2026 (completed this session)
+
+**Account note:** The real account (all groups/forms/automations + the Claude connection) logs in as **cthatcher1963@gmail.com** (account ID 2453958). A second, EMPTY account exists under marquepublishing@gmail.com — do not build there. Chris now has access to the correct account.
+
+**Done tonight:**
+- **Two welcome automations built AND active** (via the connection, copy written by Claude, activated by Chris in the dashboard):
+  - "Welcome — Makers (Creating with Claude)" → delivers the free tools. Automation ID 192477453485082211.
+  - "Welcome — Executives (Cyber Risk)" → delivers the 10 Cybersecurity Decisions PDF. Automation ID 192477455759443836.
+  - Sender: Marque Publishing, LLC / chris@marquepublishing.com.
+- **Makers form designed + live.** "Creating with Claude — Creators Signup" (ID 192195413134017938, embed slug `5UgLqq`), double opt-in on, feeds the Makers group. (Shows active:false = "no signups yet", not a blocker — public share page renders.)
+- **Site wired (LOCAL, not deployed):** all Creating with Claude pages (hub, blog index, 7 blog posts) now use the Makers form `5UgLqq`. Generator template (generate_creative_blog.py) updated too, so future posts inherit it. Everything else still uses `NTW6JI`.
+- **CwC blog populated:** the 7 creative-blog posts flipped from draft → published and generated live.
+
+**Still to do (next session):**
+- **Executives-side segmentation.** No live site form feeds the Executives group yet. `NTW6JI` still feeds "Newsletter — All". Decide: repoint `NTW6JI` → Executives group (cleanest, since its context is the cyber board guide), OR build a separate styled Executives form. This affects homepage + cyber blog + the /cyber-risk/ page.
+- **Deploy.** All of tonight's work (author note, /cyber-risk/ page, published blog, Makers-form wiring) is LOCAL only. Run `npm run build` then wrangler deploy to go live.
+- Optional: delete the old empty "Simple welcome email" automation (June 18) to reduce clutter.

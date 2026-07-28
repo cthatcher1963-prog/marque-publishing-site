@@ -138,6 +138,13 @@ ml('account', '2453958');
   flex-wrap: wrap;
 }
 
+.amazon-buy { display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+.amazon-buy .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+.amazon-editions { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.amazon-editions a { font-size: 0.85rem; color: #9AA4AE; text-decoration: none; border-bottom: 1px solid rgba(154,164,174,0.3); transition: color 0.2s, border-color 0.2s; }
+.amazon-editions a:hover { color: #E8E4DC; border-color: rgba(232,228,220,0.5); }
+@media (max-width: 768px) { .amazon-buy { align-items: center; } .amazon-editions { justify-content: center; } }
+
 @media (max-width: 768px) {
   .cwc-hero-inner {
     grid-template-columns: 1fr;
@@ -550,8 +557,15 @@ ml('account', '2453958');
         <p class="hero-subtitle">Unleash your imagination. Build anything.</p>
         <p class="hero-desc">A practical, no-jargon guide to building real things with AI. Part introduction, part hands-on workshop &mdash; from curious beginner to confident creator through projects you can build from day one.</p>
         <div class="cwc-hero-actions">
-          <!-- Shopify buy button will go here -->
-          <a href="#from-the-author" class="btn-primary">Read the author's note</a>
+          <div class="amazon-buy">
+            <a href="https://www.amazon.com/Creating-Claude-Bring-Coding-Required/dp/B0H8MM1SHP/" target="_blank" rel="noopener" class="btn-primary">Buy on Amazon</a>
+            <div class="amazon-editions">
+              <a href="https://www.amazon.com/Creating-Claude-Bring-Coding-Required-ebook/dp/B0H81S7JGG/" target="_blank" rel="noopener">Kindle</a>
+              <a href="https://www.amazon.com/Creating-Claude-Bring-Coding-Required/dp/B0H8MKK688/" target="_blank" rel="noopener">Hardcover</a>
+            </div>
+          </div>
+          <a href="#from-the-author" class="btn-outline" style="border-color: rgba(232,228,220,0.3); color: #E8E4DC;">Read the author's note</a>
+          <a href="/downloads/creating-with-claude-sample.pdf" class="link-secondary" style="color: #9AA4AE;">Read a free sample &rarr;</a>
           <a href="#downloads" class="link-secondary" style="color: #9AA4AE;">Get free tools &darr;</a>
         </div>
       </div>
@@ -587,17 +601,53 @@ ml('account', '2453958');
         </div>
       </div>
       <div class="author-message-body">
-        <!-- ─── PLACEHOLDER: Chris will write his personal message here ─── -->
-        <p>This is where your personal message to readers will go. A few paragraphs about why you wrote the book, who it's for, and what readers can expect. Written in your voice, from the heart.</p>
+        <p>I've always been the person friends and family call when something doesn't make sense. For years that meant technology &mdash; the printer, the password, the thing that just broke. Lately it's been AI. My uncle Gary, who's spent his career in commercial real estate, started asking how he could use it to evaluate contracts and deals. My son &mdash; who loves to write code and wanted nothing to do with AI doing it for him &mdash; came around and started asking how it could help with the problems that had him stuck. A fellow writer wanted to know how I was using it to pick up my pace. And I keep finding myself in awe of the things my friend Chuck is building. About three months into my own journey, I realized I had something worth sharing: not just what I'd learned, but <em>how</em> I learned it.</p>
+
+        <p>I'm a storyteller. It's how I've always taught and explained things, and this book is no exception. But as I mapped it out, I knew it wasn't for someone like me &mdash; the guy who jumps in with both feet and figures it out by breaking things. I wrote it for people like my uncle. The ones who are already the best at what they do and simply want AI to help them do more.</p>
 
         <div class="pull-quote">
-          "Placeholder for a pull quote &mdash; something that captures the spirit of the book in one sentence."
+          "I made it simple enough that it won't intimidate you &mdash; and then I put you at the keyboard, building something real."
         </div>
 
-        <p>Another paragraph or two about the journey of writing the book, what surprised you, what you hope readers will take away. This is the most personal section of the page.</p>
+        <p>That's the method, and it works. You learn by doing, page by page, starting from the very first chapter. The early readers told me I hit the mark. What means the most is when people who use AI every single day come back and say, <em>"I never thought of that,"</em> or <em>"I love how you explained this."</em> That's the promise I made to you as a reader, and it's the one I most wanted to keep.</p>
+
+        <p>If any of this sounds like you, pull up a chair. Let's build something.</p>
 
         <p class="author-message-sig">&mdash; Chris</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Early praise ─── -->
+<style>
+.praise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.5rem; max-width: 60rem; margin-inline: auto; }
+.praise-card { background: var(--card-bg); border-radius: 10px; box-shadow: var(--card-shadow); padding: 1.75rem; }
+.praise-card blockquote { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 1.05rem; line-height: 1.6; color: var(--text); margin-bottom: 1rem; }
+.praise-card figcaption { display: flex; flex-direction: column; }
+.praise-card figcaption strong { font-size: 0.95rem; }
+.praise-card figcaption span { font-size: 0.8rem; color: var(--text-muted); }
+</style>
+<section class="section-pad" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-kicker">Early praise</p>
+      <h2>What Early Readers Are Saying</h2>
+    </div>
+    <div class="praise-grid fade-in">
+      <figure class="praise-card">
+        <blockquote>&ldquo;I was genuinely impressed by how easy it is to follow. Books like this are often written for more technical readers, but your style makes the concepts accessible to anyone.&rdquo;</blockquote>
+        <figcaption><strong>Alan Silvar Vieira</strong><span>AI Coach &amp; Senior Software Engineer</span></figcaption>
+      </figure>
+      <figure class="praise-card">
+        <blockquote>&ldquo;The conversational tone instantly puts the reader at ease by following a step-by-step process. This practical guide is a must for anyone who wants to start using AI.&rdquo;</blockquote>
+        <figcaption><strong>Jackie Tricoli</strong><span>Former English Teacher, Author &amp; Blogger</span></figcaption>
+      </figure>
+      <figure class="praise-card">
+        <blockquote>&ldquo;I picked this book up expecting a basic how-to and got so much more. It&rsquo;s the kind of book you read with your laptop open, working and testing as you go. It has been so FUN!&rdquo;</blockquote>
+        <figcaption><strong>Joyce Hindle</strong><span>Life Coach</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -818,6 +868,31 @@ ml('account', '2453958');
 </section>
 
 
+<!-- ─── App updates ─── -->
+<section id="updates" class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-kicker">The app moved? Start here</p>
+      <h2>App Updates</h2>
+      <p>Claude changes faster than a printed book can. Every interface change that affects the book gets logged here, newest first, with what to do about it.</p>
+    </div>
+
+    <div class="cwc-blog-preview fade-in">
+<!-- APPUPDATES:START -->
+      <div class="blog-card">
+        <div class="blog-card-body">
+          <p class="blog-card-meta">July 2026 &middot; Interface change</p>
+          <h3>Chat and Cowork now share one home</h3>
+          <p>Anthropic merged the separate Chat and Cowork tabs into a single window on desktop and web. You now switch between Chat and Cowork with a selector in the bottom corner of the message box. Cowork also expanded to iPhone and the web, rolling out first to Max plans.</p>
+          <p><strong>What it affects:</strong> Chapter 4&rsquo;s Research instructions. Research still lives in Chat &mdash; instead of switching tabs, pick Chat with the selector in the message box, then turn on Research from the &ldquo;+&rdquo; menu as described. Everything else in the book works as written.</p>
+        </div>
+      </div>
+<!-- APPUPDATES:END -->
+    </div>
+  </div>
+</section>
+
+
 <!-- ─── From the blog ─── -->
 <section class="section-pad" style="background: var(--bg-alt);">
   <div class="container">
@@ -829,13 +904,30 @@ ml('account', '2453958');
 
     <div class="cwc-blog-preview fade-in">
 <!-- HUBPOSTS:START -->
-      <div class="blog-card">
+      <a href="/creating-with-claude/blog/what-should-i-build-idea-generator" class="blog-card">
         <div class="blog-card-body">
-          <p class="blog-card-meta">Coming soon &middot; Tutorial</p>
-          <h3>First posts are on the way</h3>
-          <p>Hands-on guides, project walkthroughs, and the real story behind building this book with AI.</p>
+          <p class="blog-card-meta">July 2026 &middot; Free tools</p>
+          <h3>"What Should I Build?" — A Generator for Your First AI Project</h3>
+          <p>The hardest part of building with AI isn't the building. It's picking a first project small enough to finish and useful enough to matter. This tool picks it with you.</p>
+          <span class="blog-card-link">Read more &rarr;</span>
         </div>
-      </div>
+      </a>
+      <a href="/creating-with-claude/blog/ai-output-verification-checklist" class="blog-card">
+        <div class="blog-card-body">
+          <p class="blog-card-meta">July 2026 &middot; Free tools</p>
+          <h3>Trust, But Verify — The Checklist That Keeps AI Honest</h3>
+          <p>AI is confident whether it's right or wrong. After 30 years in cybersecurity, I have a habit for that. Here's the verification checklist I use on every output that matters.</p>
+          <span class="blog-card-link">Read more &rarr;</span>
+        </div>
+      </a>
+      <a href="/creating-with-claude/blog/ai-readiness-self-assessment" class="blog-card">
+        <div class="blog-card-body">
+          <p class="blog-card-meta">July 2026 &middot; Free tools</p>
+          <h3>Are You Ready to Build With AI? Score Yourself Honestly</h3>
+          <p>Before you build anything with AI, it helps to know where you're starting from. A short self-assessment that tells you exactly where to begin.</p>
+          <span class="blog-card-link">Read more &rarr;</span>
+        </div>
+      </a>
 <!-- HUBPOSTS:END -->
     </div>
 
@@ -888,7 +980,7 @@ ml('account', '2453958');
     <div class="newsletter-inner fade-in">
       <h2>Stay in the Loop</h2>
       <p>Get notified when new tools drop, blog posts publish, and book updates land. No spam, ever.</p>
-      <div class="ml-embedded" data-form="NTW6JI"></div>
+      <div class="ml-embedded" data-form="5UgLqq"></div>
     </div>
   </div>
 </section>
@@ -1037,6 +1129,5 @@ function formatDate(iso) {
 // Load comments on page load
 loadComments();
 </script>
-
 </body>
 </html>
