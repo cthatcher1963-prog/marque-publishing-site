@@ -144,4 +144,35 @@ if (CHECK_ONLY) {
 console.log('Deploying site/ ...');
 execSync('npx wrangler pages deploy site --project-name=marque-publishing --commit-dirty=true',
   { cwd: PROJECT, stdio: 'inherit' });
-console.log('DEPLOY GUARD: deploy complete.');
+console.log('DEPLOY GUARD: deploy complete. Purging edge cache...');
+purgeCache();
+
+// ---- Auto-purge Cloudflare edge cache (prevents stale-page incidents) ------
+function purgeCache() {
+  const ZONE_ID = '3198722e1033325dad28a4e9fb161b59'; // marquepublishing.com
+  const TOKEN_FILE = 'C:\\Users\\rctha\\.marque\\cache-purge-token';
+  let token = '';
+  try { token = fs.readFileSync(TOKEN_FILE, 'utf8').trim(); } catch (e) {}
+  if (!token) {
+    console.error('WARN: no token at ' + TOKEN_FILE + ' - cache purge SKIPPED. Stale pages may persist; purge manually in the dashboard.');
+    return;
+  }
+  const https = require('https');
+  const req = https.request({
+    hostname: 'api.cloudflare.com',
+    path: '/client/v4/zones/' + ZONE_ID + '/purge_cache',
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' }
+  }, (res) => {
+    let d = '';
+    res.on('data', (c) => { d += c; });
+    res.on('end', () => {
+      let ok = false;
+      try { ok = JSON.parse(d).success === true; } catch (e) {}
+      if (ok) console.log('DEPLOY GUARD: edge cache purged - fresh pages everywhere.');
+      else console.error('WARN: cache purge FAILED - purge manually in the dashboard. Response: ' + d.slice(0, 300));
+    });
+  });
+  req.on('error', (e) => console.error('WARN: cache purge request failed (' + e.message + ') - purge manually in the dashboard.'));
+  req.end(JSON.stringify({ purge_everything: true }));
+}
