@@ -334,7 +334,7 @@ def main():
     open(HUB, 'w', encoding='utf-8').write(hub)
 
     print('\n%d published post(s) on the index; drafts in _preview/creative-blog/' % len(posts))
-    print('Deploy with: npx wrangler pages deploy site --project-name=marque-publishing --commit-dirty=true')
+    print('Deploy with: npm run deploy  (guarded — never call wrangler directly)')
 
 if __name__ == '__main__':
     main()

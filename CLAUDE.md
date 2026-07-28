@@ -17,7 +17,7 @@ Light include-based build to kill nav/footer/tracking duplication.
   `<!--#include footer-->`, `<!--#include mailerlite-->`, `<!--#include scripts-->`,
   writes finished HTML to `site/`.
 - `build/refactor.js` — one-time codemod that generated the partials + src pages. Do NOT re-run.
-- `package.json`: `npm run build` (regenerate), `npm run deploy` (build + `wrangler pages deploy`).
+- `package.json`: `npm run build` (regenerate), `npm run deploy` (deploy guard → ships `site/` as-is), `npm run deploy:check` (guard checks only, no deploy).
 
 **CRITICAL — which file to edit:**
 - Pages in `src/pages/` (index, books, about, blog, labs, 404, cyber-risk/) → edit the
@@ -28,7 +28,13 @@ Light include-based build to kill nav/footer/tracking duplication.
   without any active class.
 
 ## Deploy
-`npm run build` then deploy the `site/` folder via wrangler on Chris's machine (Desktop Commander).
+`npm run deploy` on Chris's machine (Desktop Commander) — the ONLY permitted deploy path.
+It runs `scripts/deploy-guard.js`, which HALTS and alerts Chris (Desktop alert file + Windows
+popup) if anything references the retired /site URL space, if private docs are inside `site/`,
+or if any scheduled task carries a non-site deploy command. Otherwise it ships `site/` exactly
+as-is (NO build step — run `npm run build` first only if you edited `src/pages/`; building
+blindly would wipe the blog cards the nightly task writes directly into `site/`).
+Never call wrangler directly. If blocked ("GUARD ALERT"): stop, fix the cause, tell Chris.
 Local preview: `cd site && python -m http.server 8123` → http://localhost:8123/ (absolute asset
 paths need a server; file:// won't work).
 
@@ -47,6 +53,8 @@ paths need a server; file:// won't work).
 3. Wire Cyber Risk buy buttons once the product is live.
 
 ## House rules
-- Never deploy the project root — it holds private business docs. Only `site/` ships.
+- Never deploy the project root — it holds private business docs. Only `site/` ships, and only
+  via `npm run deploy` (the guard). Incident 2026-07-28: a scheduled task deployed the root
+  nightly, exposing docs and resurrecting the /site redirect — the guard now scans `Scheduled/` too.
 - Chris does not use OneDrive; never reference it.
 - Check CSS (object-fit, scaling) before blaming image resolution.

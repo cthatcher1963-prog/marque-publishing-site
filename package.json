@@ -5,6 +5,7 @@
   "description": "Marque Publishing website — static site with a light include-based build.",
   "scripts": {
     "build": "node build/build.js",
-    "deploy": "node build/build.js && wrangler pages deploy site"
+    "deploy": "node scripts/deploy-guard.js",
+    "deploy:check": "node scripts/deploy-guard.js --check"
   }
 }
