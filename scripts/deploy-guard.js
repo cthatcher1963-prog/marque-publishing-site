@@ -112,7 +112,7 @@ function writeAlerts() {
   try {
     const msg = 'Marque deploy BLOCKED - ' + violations.length + ' violation(s). Nothing was deployed. See ' + ALERT_NAME + ' on your Desktop.';
     spawn('powershell.exe', ['-NoProfile', '-WindowStyle', 'Hidden', '-Command',
-      "(New-Object -ComObject WScript.Shell).Popup('" + msg + "',600,'MARQUE DEPLOY GUARD',48)"],
+      "(New-Object -ComObject WScript.Shell).Popup('" + msg + "',600,'MARQUE DEPLOY GUARD',4144)"],
       { detached: true, stdio: 'ignore' }).unref();
   } catch (e) {}
 }
