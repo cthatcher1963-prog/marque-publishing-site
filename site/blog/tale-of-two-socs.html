@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Tale of Two SOCs: What Happened When the Government Hacked Two Companies at Once — Marque Publishing</title>
+<meta name="description" content="CISA red-teamed two critical infrastructure organizations simultaneously. One contained the intrusion in minutes. The other never knew it happened.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="A Tale of Two SOCs: What Happened When the Government Hacked Two Companies at Once">
+<meta property="og:description" content="CISA hacked two organizations at once. One caught it in minutes. The other never knew.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/tale-of-two-socs">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/tale-of-two-socs">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">August 2026</time>
+      </div>
+      <h1>A Tale of Two SOCs: What Happened When the Government Hacked Two Companies at Once</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">This week, CISA published one of the most useful documents a board member will read all year, and almost no board member will read it.</p>
+
+      <p>The advisory, released August 25 and titled "A Tale of Two SOCs," describes two red team assessments the agency ran simultaneously against two critical infrastructure organizations. Same playbook, same tradecraft, same class of attacker. Both organizations volunteered for the exercise. Both were fully compromised at the domain level.</p>
+
+      <p>Here is where the stories diverge. At the second organization, a water and wastewater utility, the security operations center caught the initial phishing payloads as they executed and isolated the affected workstations within 2 to 20 minutes, cutting off the attackers' communications before the intrusion could spread. CISA's team had to switch to an "assume breach" model just to continue the exercise.</p>
+
+      <p>At the first organization, a government services entity, the red team gained access to multiple workstations, took elevated privileges over the entire domain, moved laterally into sensitive business systems and cloud resources, and even read the security team's email to check whether anyone had noticed them.</p>
+
+      <p>No one had. The organization never detected the intrusion at all.</p>
+      <h2>The Uncomfortable Part: Both Organizations Had the Tools</h2>
+
+      <p>If your instinct is that the first organization must have underinvested in security, the advisory will disappoint you. Organization A ran multiple security operations centers and multiple endpoint security tools. It had alerts firing constantly. That was precisely the problem.</p>
+
+      <p>CISA found that thousands of false-positive alerts from normal business operations, many rated at high severity, buried the real alerts the red team generated. The multiple SOCs had no shared visibility between them. Analysts lacked escalation procedures and had limited authority to act. In the advisory's most painful detail, a real alert tied to red team activity on a server was dismissed as a false positive because defenders could not figure out who owned the system.</p>
+
+      <p>CISA's conclusion was blunt: "Detection tools are only as effective as the people, processes, and procedures supporting them."</p>
+
+      <p>I have been making a version of this argument for years, and it rarely lands in the budget conversation. Boards approve security spending because spending feels like action. But Organization A did not fail for lack of spending. It failed because nobody had answered the operational questions that money cannot answer on its own: Who watches which alerts? Who has authority to isolate a machine at 2 a.m.? Who owns that server?</p>
+
+      <h2>Both Had the Same Weaknesses. Only One Had the Response.</h2>
+
+      <p>The technical findings at the two organizations were remarkably similar. At both, the red team found credentials stored in cleartext. At Organization A, the list also included default passwords on a web application, cloud access keys set never to expire, and misconfigured Active Directory certificate templates. At Organization B, the team found a service account password sitting in a configuration file with rights over a domain controller.</p>
+
+      <p>In other words, the utility that performed well was not clean. Its vulnerabilities looked a lot like its counterpart's. What separated the two outcomes was not the presence of weaknesses but the presence of people who noticed an intruder and acted within minutes.</p>
+
+      <p>That distinction is the whole story, and it maps directly onto a point I make in <em>Cyber Risk Is Business Risk</em>: prevention will eventually fail, so the questions that matter most are about detection and response. In the Three Questions framework, the second question is not "can we be breached?" It is "how quickly would we know?" Organization B could answer it in minutes. Organization A could not answer it at all, and did not know that it could not answer it.</p>
+      <h2>Why This Belongs in Your Boardroom</h2>
+
+      <p>There is a reason I think this advisory deserves board attention rather than just SOC attention. Every failure CISA documented at Organization A was organizational, not technical. Fragmented teams with no shared visibility. Analysts without authority. No asset ownership records. Alert volumes no human could triage. These are governance and management failures wearing a technology costume, and they are invisible in every dashboard your CISO presents, because dashboards report on tools, and the tools were all present and running.</p>
+
+      <p>The only way to find these failures before an attacker does is to test the way CISA tested: simulate a real intrusion and watch what the organization actually does. Not a penetration test that produces a list of vulnerabilities, but an exercise that answers the question the advisory poses: what happens after somebody gets in?</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p><strong>"If an attacker executed malware on an employee workstation right now, how long until we isolate that machine?"</strong> Organization B's answer was 2 to 20 minutes. If your CISO cannot give you a number backed by a tested procedure, you have Organization A's problem.</p>
+
+      <p><strong>"How many of our alerts are false positives, and who has the authority to act on a real one?"</strong> Alert volume is not a capability. Ask specifically whether frontline analysts can isolate systems without waiting for approvals.</p>
+
+      <p><strong>"Do we have a current inventory of who owns each system?"</strong> An alert on an unowned server is an alert that gets dismissed. This is unglamorous work, and it decided the outcome at Organization A.</p>
+
+      <p><strong>"When did we last run an assume-breach exercise, and what changed afterward?"</strong> Not a compliance audit. Not a vulnerability scan. An exercise where someone plays the intruder and the organization has to notice.</p>
+
+      <p>Two organizations. Same attacker, same techniques, similar weaknesses. One contained the intrusion in minutes; the other never knew it happened. The difference was not in what they bought. It was in how they operated, and that is a matter squarely within the board's oversight.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

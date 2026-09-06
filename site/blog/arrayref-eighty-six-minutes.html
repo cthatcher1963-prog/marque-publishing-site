@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eighty-Six Minutes: The Attack Your Tools Will Tell You Never Happened — Marque Publishing</title>
+<meta name="description" content="Poisoned Rust packages lived online for 86 minutes, then vanished. Standard scanners report clean. Three questions your board should ask about supply chain blind spots.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="Eighty-Six Minutes: The Attack Your Tools Will Tell You Never Happened">
+<meta property="og:description" content="Poisoned Rust packages vanished in 86 minutes. Scanners say clean. Your board needs to ask why.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/arrayref-eighty-six-minutes">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/arrayref-eighty-six-minutes">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">August 2026</time>
+      </div>
+      <h1>Eighty-Six Minutes: The Attack Your Tools Will Tell You Never Happened</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">On Thursday morning, between 7:11 and 9:25 UTC, someone with stolen credentials published poisoned versions of three small pieces of software that sit underneath a large share of the world's Rust applications. The largest of them, a utility called <code>arrayref</code>, has been downloaded roughly 245 million times. The cloud security firm Wiz reports finding it in about three-quarters of the environments where Rust is present at all.</p>
+
+      <p>The malicious versions were online for 86, 90, and 107 minutes respectively. Then they were gone — deleted, not merely flagged.</p>
+
+      <p>That last detail is the one your board needs to understand, and I'll come back to it.</p>
+
+      <h2>Nobody Attacked the Code</h2>
+
+      <p>Here is what makes this incident different from the vulnerability stories your CISO usually brings to the audit committee.</p>
+
+      <p>There was not a single line of malicious code in <code>arrayref</code>. The library source was untouched. What changed was one line in its manifest: a new dependency called <code>proc-macro1</code>, a near-perfect impersonation of a legitimate package called <code>proc-macro2</code>, published four minutes earlier by an account created that same morning under a name one transposed letter away from a well-known developer's.</p>
+
+      <p>That impersonating package shipped genuine, working source code. Every build succeeded. Every test passed. The weapon was a build script — a small program that runs automatically during compilation, with the full privileges of whoever is doing the building. It reached out to a server, downloaded a second-stage backdoor, and launched it in the background. Then it exited cleanly and the build went green.</p>
+
+      <p><code>arrayref</code> had not added a dependency in its ten-year history. It didn't need one. It's an array-conversion utility roughly the size of a business card.</p>
+
+      <p>The compromised asset here was not software. It was a person's publishing credentials.</p>
+
+      <h2>The Yank Was the Lure</h2>
+
+      <p>The most instructive part of this operation, and the part I'd put on a slide, is what happened twenty-four seconds after the malicious version went live.</p>
+
+      <p>The same account began withdrawing every prior stable release — five of them, at roughly four-second intervals, in a cadence the researchers at StepSecurity describe as scripted rather than human. Withdrawing a release doesn't break anyone's existing build. What it does is make the build tool print a warning: <em>the version you're using has been withdrawn, consider updating.</em></p>
+
+      <p>So a developer sees a scary new warning on a dependency with hundreds of millions of downloads, does the responsible thing, runs the update command — and lands on the only remaining version, which is the poisoned one. The original researcher who reported the incident says this is precisely how they were hit.</p>
+
+      <p>The attacker turned the ecosystem's own safety warning into the delivery mechanism. Diligence was the attack path. I want executives to sit with that for a moment, because it cuts against the instinct that more alerts and faster patching are always the answer.</p>
+
+      <h2>Why Your Dashboard Says Everything Is Fine</h2>
+
+      <p>Now the part I flagged at the top.</p>
+
+      <p>Because the malicious versions were <em>deleted</em> from the registry rather than marked as vulnerable, standard dependency-scanning tools report a clean result for a project that pinned a poisoned version. StepSecurity's analysis is blunt about this: automated tooling will not flag it for you. Worse, a build machine with a warm local cache — or a company that keeps a local copy of its dependencies, which is generally considered good practice — will keep compiling the payload offline even though the version no longer exists anywhere on the public internet.</p>
+
+      <p>This is the compliance-versus-security gap in a single fact. Your scanner is green. Your dashboard is green. Your quarterly attestation says you had no findings. And a developer laptop in your organization may have spent Thursday morning beaconing to a rented server.</p>
+
+      <p>The Rust Security Response Team, to their considerable credit, moved fast and published advisories stating they found no evidence that any malicious version was actually used. But in the public advisory thread where the incident was first reported, a developer described being infected and named the server their machine was calling. Both statements can be true at once. "No evidence of use" is a statement about what the registry can see. It is not a statement about what happened inside your build pipeline, and no outside party can make that statement on your behalf.</p>
+
+      <h2>Who Did It, and Why That Matters to a Board</h2>
+
+      <p>Wiz reports — based on shared command-and-control infrastructure, a matching server-side certificate signature, and the same hosting provider address range used in two earlier attacks on JavaScript packages — that this campaign overlaps significantly with operations attributed to North Korean actors. Microsoft attributed one of those earlier attacks to a group it calls Sapphire Sleet; Google's threat intelligence group attributed the other to an actor Mandiant links to North Korea. Read that carefully: it is infrastructure overlap, not a confession, and as of this writing no vendor has formally attributed <em>this</em> incident to a named actor.</p>
+
+      <p>But the attribution matters for one governance reason. A criminal crew running ransomware wants your money and will tell you they're there. A state-sponsored crew running credential theft through build systems wants persistence and quiet. The second kind does not announce itself, does not trigger your incident response plan, and does not create a materiality determination you can date. It just sits in the pipeline that produces your software.</p>
+
+      <p>If your cyber risk conversation is organized entirely around "what happens when they lock our files," you are governing for the loud version of the threat.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>Three questions. None require you to understand a build script.</p>
+
+      <p><strong>First:</strong> <em>Did any of our machines — developer laptops, build servers, contractor systems — compile Rust code between 7:11 and 9:25 UTC on August 20?</em> The honest answer for many organizations will be "we don't know," and that answer is itself the finding. If you can't reconstruct what your build systems did on a given morning, you cannot scope any supply chain incident, this one or the next one.</p>
+
+      <p><strong>Second:</strong> <em>Would our tooling have caught this?</em> Push past yes. The specific follow-up is whether your scanners rely on published advisories — because in this case the malicious versions were deleted before advisories were issued, which means the tooling reports clean. This is the difference between a control that works and a control that reports.</p>
+
+      <p><strong>Third:</strong> <em>What is our waiting period on new versions of outside code?</em> The malicious releases lived for under two hours. Any organization with a rule that says "we don't consume a dependency version until it has been public for a few days" experienced this attack as a non-event. Google's threat intelligence group formally recommended exactly this — cooling windows on newly published third-party components — in a report published three weeks before the attack, and GitHub shipped a three-day delay as a default for one of its own tools in July.</p>
+
+      <p>Here is the part that should sharpen the question rather than answer it: Rust's build tool has no such feature shipped. A proposal to add one entered its final review period on August 18 and was still unmerged when the attack landed on the 20th. So the honest answer for a Rust shop today is that this control has to be built or bought, not switched on.</p>
+
+      <p>That is still the question I would press hardest. Most of the expensive controls we debate at the board level are attempts to detect an attacker who is already inside. A waiting period keeps you out of the blast radius entirely, it is a policy decision rather than a technology purchase, and the person who has to sponsor it is probably reading this.</p>
+
+      <p>Eighty-six minutes is not a window your quarterly vendor review is going to catch. It is, however, exactly long enough.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

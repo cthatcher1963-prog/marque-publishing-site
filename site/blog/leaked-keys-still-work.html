@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Keys Have Been Public for Four Years. They Still Work. — Marque Publishing</title>
+<meta name="description" content="Researchers re-tested 10,616 leaked AWS keys — 88% still worked, including 768 with full admin control. What boards need to ask about credential rotation and AI pipeline hygiene.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="The Keys Have Been Public for Four Years. They Still Work.">
+<meta property="og:description" content="88% of 10,616 leaked AWS keys still worked — including 768 with full admin control of corporate accounts.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/leaked-keys-still-work">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/leaked-keys-still-work">
+<link rel="stylesheet" href="/css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+/* ─── Blog post styles ─── */
+.post-header {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.post-category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.post-date {
+  font-size: 0.85rem;
+  color: var(--text-subtle);
+}
+.post-meta-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+}
+.post-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+.post-subtitle {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.article-prose {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+.article-prose p {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.article-prose h2 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.article-prose h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+.article-prose strong {
+  font-weight: 600;
+  color: var(--text);
+}
+.article-prose em {
+  font-style: italic;
+}
+.article-prose ol, .article-prose ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+.article-prose ol li, .article-prose ul li {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.article-prose .lead {
+  font-size: 1.25rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+.post-author {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+.post-author .photo-frame {
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.post-author-name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.post-author p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+.back-link:hover {
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .post-author {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .post-author .photo-frame {
+    margin-inline: auto;
+  }
+}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ─── Navigation ─── -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="/" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/books">Books</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- ─── Article ─── -->
+<article class="section-pad" id="main-content">
+  <div class="container">
+
+    <a href="/blog" class="back-link">&larr; All posts</a>
+
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">August 2026</time>
+      </div>
+      <h1>The Keys Have Been Public for Four Years. They Still Work.</h1>
+    </header>
+
+    <div class="article-prose fade-in">
+      <p class="lead">On August 10, researchers at Truffle Security re-tested 10,616 Amazon Web Services access keys that had leaked into public view over the past four years — sitting in code repositories, Docker images, published AI datasets, and build logs where anyone could find them. <strong>Eighty-eight percent still worked.</strong></p>
+
+      <p>That is more than 9,300 live keys, catalogued in public since as far back as August 2022. Among the keys traceable to companies, 526 were root keys, and 768 granted full administrative control of a corporate AWS account — the power to read every database, delete every backup, and quietly create new administrator accounts that survive after the original leak is cleaned up. The oldest key in the dataset had existed for 17.4 years.</p>
+
+      <p>Nobody had to hack anything.</p>
+
+      <h2>What a Leaked Key Actually Means</h2>
+
+      <p>If you sit on a board or run a P&amp;L, here is the translation. An AWS access key is a password for software. It works without the second-factor prompt your own login requires, and whoever holds it becomes your infrastructure — with whatever privileges that key carries. A <em>root</em> key sits above every permission control your security team has built. Amazon's own best-practice guidance says root access keys shouldn't exist at all.</p>
+
+      <p>In my experience, executives hear "cloud breach" and picture a sophisticated adversary defeating expensive defenses. What actually happens looks more like this: a developer pastes a key into a configuration file, the file lands in a public repository or a published dataset, and the key sits there — still valid, still privileged — for five years. Then someone finds it. Truffle Security found these keys with automated scanners. Attackers run the same scanners.</p>
+
+      <p>The same week made the point twice. On August 18, a dataset appeared for free on a criminal data-trading forum: live Stripe secret keys for 659 merchant accounts, bundled with roughly 35 gigabytes of customer and payment data — reportedly about 688,000 customer records. Stripe's own systems were not compromised; the merchants leaked their own keys through infostealer infections and exposed configuration files. According to the researchers who examined the dataset and alerted Stripe, 519 of those accounts could both take payments and send payouts. That is direct theft capability, published free of charge.</p>
+
+      <h2>Your Policy Says 90 Days. The Data Says Never.</h2>
+
+      <p>Nearly every organization I've audited or advised has a credential rotation policy on paper. It's in the SOC 2 report. The auditor confirms the policy exists, samples a few accounts, and signs off. Nobody in that process googles your keys.</p>
+
+      <p>Now put the paperwork against Truffle Security's numbers. Among leaked keys with a known creation date, the median age was 1,831 days — about five years. Only 13.7 percent had a newer replacement key on the same account, which is the researchers' marker for whether a key has ever been rotated in its life. The policy says 90 days. The evidence says never.</p>
+
+      <p>This is the gap I wrote <em>Cyber Risk Is Business Risk</em> to expose: compliance tells you a control is documented. Security is whether the control actually operates. A rotation policy nobody verifies is a comfort object, not a control.</p>
+
+      <h2>The Biggest Single Source Was the AI Pipeline</h2>
+
+      <p>Here's the detail that should get your attention if your company is racing to ship AI. The largest single source of leaked keys was not a traditional code repository. It was Hugging Face, the platform where developers share AI models and datasets — 8,482 exposed keys, and 17.9 percent of them were root.</p>
+
+      <p>The pattern makes sense once you see it. Data science teams move fast, and publishing datasets is part of the job. Credentials get embedded along the way. Your AI governance program — the sheriff, as I call it in the book — has probably been focused on model behavior and hallucination risk. The sheriff also needs to inspect what your AI teams push out the door, because right now the AI pipeline is a leading exporter of corporate cloud credentials.</p>
+
+      <p>One more number. Of the AWS accounts whose settings the researchers could read, only 262 out of 2,754 had a budget alert configured. Attackers who find valid keys routinely deploy cryptominers and run up enormous compute bills before anyone notices. A budget alert is free, and fewer than one in ten accounts had one.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>Five questions, all answerable with numbers, none requiring a technical background:</p>
+
+      <ol>
+        <li><strong>How many of our cloud access keys are older than one year?</strong> Ask for the count itself. If the answer is "we'd have to check," that is the answer.</li>
+        <li><strong>Do any root access keys exist in our accounts?</strong> The acceptable number is zero.</li>
+        <li><strong>What scans our code, containers, datasets, and build logs for leaked secrets — before publication and continuously afterward?</strong> If the answer only covers your own repositories, it misses where these keys actually surfaced.</li>
+        <li><strong>When a key leaks, how fast can we revoke it?</strong> The answer should be measured in hours, and someone should be able to tell you when that was last tested.</li>
+        <li><strong>Does every cloud account have a budget alert?</strong> It is the cheapest breach detector you will ever deploy.</li>
+      </ol>
+
+      <p>Truffle Security says it notified every credential owner it could identify, and Amazon says it applies quarantine policies when exposed keys are reported. If your company received one of those notifications, your security team already knows — ask them what happened next. If nobody can tell you whether you received one, that's your first question for Monday morning.</p>
+
+    </div>
+
+
+    <!-- ─── Author bio ─── -->
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="/author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ─── Newsletter ─── -->
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get The Free Guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Footer ─── -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="/" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="/books">Books</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+
+</body>
+</html>

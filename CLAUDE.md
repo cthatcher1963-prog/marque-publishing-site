@@ -58,3 +58,13 @@ paths need a server; file:// won't work).
   nightly, exposing docs and resurrecting the /site redirect — the guard now scans `Scheduled/` too.
 - Chris does not use OneDrive; never reference it.
 - Check CSS (object-fit, scaling) before blaming image resolution.
+
+## Downloads — house rule (added 2026-09-06)
+Every PDF served from `site/` carries the Marque lozenge mark, "© <year> Chris Thatcher · Marque
+Publishing, LLC", and "Not for redistribution" (header and footer for companion resources; footer
+line for book samples and the board guide). Two scripts own this:
+- `scripts/build_wwc_toolkit_pdfs.py` — builds the Writing with Claude toolkit PDFs from Markdown in
+  the companion-resource style (one-page cards, no split tables, no widows/orphans).
+- `scripts/stamp_downloads.py` — re-stamps the older downloads in place (originals kept in
+  `downloads_originals_<date>/` at the project root, never deployed). Re-run after any rebuild.
+New downloads: build with the toolkit generator, or stamp before they go into `site/`.

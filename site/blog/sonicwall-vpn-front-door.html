@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your VPN Was the Front Door. The Attackers Had the Keys for Three Weeks. — Marque Publishing</title>
+<meta name="description" content="Attackers exploited SonicWall VPN zero-days for three weeks before a patch existed, stealing credentials and cloning MFA tokens. What boards should know.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="Your VPN Was the Front Door. The Attackers Had the Keys for Three Weeks.">
+<meta property="og:description" content="Attackers had the keys to your VPN for three weeks before a patch existed. Here's what to do.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/sonicwall-vpn-front-door.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/sonicwall-vpn-front-door.html">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">August 2026</time>
+      </div>
+      <h1>Your VPN Was the Front Door. The Attackers Had the Keys for Three Weeks.</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">On June 22, someone walked through your VPN. Not metaphorically. A threat group tracked by Volexity as UTA0533 began exploiting two zero-day vulnerabilities in SonicWall's SMA 1000 series appliances — the same remote access devices that tens of thousands of organizations use to let employees work from home, connect branch offices, and reach internal systems.</p>
+
+      <p>SonicWall didn't publish its advisory until July 14. That's twenty-two days. Three full weeks of attackers moving through production environments before anyone on the vendor side said a word publicly.</p>
+
+      <p>I've been doing this long enough to know what twenty-two days means. It means credentials were harvested. Sessions were hijacked. And in a detail that should concern every executive reading this: the attackers extracted TOTP seed configurations — the underlying secrets that generate those six-digit multi-factor authentication codes your security team told you made everything safe.</p>
+
+      <p>When you steal the TOTP seed, you don't bypass MFA. You clone it. Every code your employee generates, the attacker generates simultaneously. The second factor becomes a shared factor.</p>
+
+      <h2>Who's Doing This and Why It Matters</h2>
+
+      <p>The group using this access most aggressively is INC, a ransomware-as-a-service operation that Resecurity and others have tracked since 2023. As of August 2, 2026, INC has listed 885 victims on its data leak site. That makes it the fourth most active ransomware group this year, behind Qilin, Akira, and The Gentlemen.</p>
+
+      <p>INC's targeting is deliberate. More than 65% of its victims are US-based. The top five sectors — legal services, manufacturing, technology, healthcare, and construction — share two things: regulatory sensitivity and cyber insurance policies. In one 48-hour window earlier this year, INC claimed ten law firms. That's not opportunism. That's a business plan.</p>
+
+      <p>The SonicWall exploit chain gave INC exactly what it needed: quiet, persistent access through devices that most security operations centers don't monitor with the same intensity as endpoints or cloud workloads.</p>
+
+      <h2>The Exploit Chain, in Plain English</h2>
+
+      <p>Two vulnerabilities, chained together.</p>
+
+      <p>CVE-2026-15409 scored a perfect 10.0 on the CVSS severity scale. It let an unauthenticated attacker — no credentials, no prior access — open a tunnel through the VPN appliance to services that were supposed to be reachable only from within the device itself. Think of it as discovering that the front door to your building has a hidden passage that leads directly to the security office, the key cabinet, and the alarm panel.</p>
+
+      <p>CVE-2026-15410 scored 7.2. Once inside, this flaw let the attacker escalate from a low-privilege service account to root — full administrative control of the appliance's operating system.</p>
+
+      <p>Chain them together and you go from "anonymous person on the internet" to "administrator of the VPN appliance" in a single sequence. Volexity, the firm that discovered the exploitation, documented custom malware — tools named ROOTRUN and KNUCKLEBALL — that the attackers injected directly into legitimate SonicWall processes running in memory. That's designed to survive standard forensic review.</p>
+
+      <h2>What Your Board Should Be Asking</h2>
+
+      <p>In <em>Cyber Risk Is Business Risk</em>, I walk through what I call the Three Questions — the ones every board should be asking about any material cyber risk:</p>
+
+      <p><strong>What can go wrong?</strong> Your VPN appliance — the device that controls remote access to your entire network — was exploitable by anyone on the internet for at least three weeks before a patch existed. During that window, attackers stole credentials, hijacked live sessions, and cloned your MFA tokens.</p>
+
+      <p><strong>What are we doing about it?</strong> CISA added these vulnerabilities to its Known Exploited Vulnerabilities catalog on July 14 and gave federal agencies until July 17 to patch — just three business days, which tells you how seriously the government took this. If your organization isn't a federal agency, there was no mandatory deadline. The question is whether your team patched anyway, and how quickly.</p>
+
+      <p><strong>How do we know it's working?</strong> This is the one that separates organizations that manage cyber risk from organizations that just buy tools. Patching the appliance closes the front door. But if attackers were already inside — if they harvested credentials and TOTP seeds before the patch — then the patch alone changes nothing. You need to verify that no compromised credentials remain active, that TOTP seeds have been rotated, and that no persistent access mechanisms are sitting in memory on those appliances.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>If your organization uses SonicWall SMA 1000 series appliances — the SMA6210, SMA7210, or SMA8200v — here's what the conversation should include:</p>
+
+      <p><strong>Have we patched?</strong> The fixed firmware versions are 12.4.3-03453 and 12.5.0-02835 or later. If you haven't applied them, stop reading this and go do it. The exploit is public.</p>
+
+      <p><strong>Did we check for compromise before patching?</strong> Patching a device that has already been breached locks the attacker out of the front door while leaving them in the house. Your team should have reviewed appliance logs, checked for unauthorized WebSocket tunnel activity, and looked for signs of credential extraction before or immediately after patching.</p>
+
+      <p><strong>Have we rotated credentials and TOTP seeds?</strong> If there's any possibility those appliances were compromised between June 22 and the day you patched, every credential and MFA seed that flowed through them should be considered stolen. Rotating passwords without rotating TOTP seeds leaves the window open.</p>
+
+      <p><strong>Do we monitor our edge devices the way we monitor our endpoints?</strong> Most organizations have EDR on every laptop and server. Far fewer apply the same scrutiny to VPN appliances, load balancers, and firewalls — the very devices that control access to everything else. If your security operations center can't tell you what happened on your SonicWall appliance last Tuesday, that's a gap worth closing.</p>
+
+      <p>This is one of those weeks where the incident is specific enough to act on. The vulnerability has a name. The attacker group has a name. The patch has a version number. The only missing variable is whether your organization has done anything about it.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

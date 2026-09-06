@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Firewall's Front Door Was Left Unlocked — Marque Publishing</title>
+<meta name="description" content="Cisco's firewall management console shipped with hardcoded credentials actively exploited in the wild. What boards should ask their CISO about CVE-2026-20316.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="Your Firewall's Front Door Was Left Unlocked">
+<meta property="og:description" content="Cisco FMC shipped with static credentials, exploited before the patch. What boards should ask now.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/firewall-front-door-left-unlocked">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/firewall-front-door-left-unlocked">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">August 2026</time>
+      </div>
+      <h1>Your Firewall's Front Door Was Left Unlocked</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">Here's an uncomfortable sentence to say out loud to your board: the tool your security team relies on to manage your firewalls had a hardcoded, unauthenticated login built into it. And attackers found it before Cisco fixed it.</p>
+
+      <h2>What Happened</h2>
+
+      <p>On July 29, 2026, Cisco disclosed a vulnerability — CVE-2026-20316 — in Secure Firewall Management Center (FMC), the console security teams use to configure and monitor Cisco firewalls across an organization. The flaw is about as basic as vulnerabilities get: a low-privileged account ships with static, built-in login credentials. Anyone who knows those credentials can log into an internet-reachable FMC instance without authenticating as a real user, then pull sensitive data as that account.</p>
+
+      <p>Cisco gave it a CVSS score of 5.3 out of 10 — technically "medium." But the company rated it <em>High</em> severity in practice, because that low-privileged foothold can reportedly be chained with other FMC flaws to escalate into much deeper access. And it wasn't theoretical: Cisco confirmed the flaw was already being actively exploited in the wild before the advisory shipped. The U.S. Cybersecurity and Infrastructure Security Agency (CISA) added it to its Known Exploited Vulnerabilities catalog and gave federal agencies until August 1, 2026 to patch — a three-day window from disclosure.</p>
+
+      <p>The vulnerability affects a wide swath of FMC versions, spanning releases from 7.0 through the newly released 10.0.1. There's no workaround. Fixing it requires applying Cisco's hotfix directly.</p>
+
+      <h2>Why a Board Should Care About a Firewall Console Bug</h2>
+
+      <p>It's tempting to read this as an IT ticket: patch it, move on. That instinct is exactly the gap I write about in <em>Cyber Risk Is Business Risk</em>. The tools your security team buys to <em>reduce</em> risk can themselves become the attack path — and the more central the tool, the worse the blast radius when it's compromised.</p>
+
+      <p>FMC isn't a nice-to-have dashboard. It's the control plane for your firewall estate. Someone who gets into it doesn't just see data — depending on what else they can chain together, they can potentially see how your network is segmented, what's exposed, and where the soft spots are. That's reconnaissance a ransomware affiliate would pay for.</p>
+
+      <p>There's also a compliance-versus-security lesson buried here. A CISA KEV deadline is a compliance forcing function — it tells federal agencies "patch by this date or you're out of policy." But compliance deadlines don't map cleanly onto risk. An organization that patches by August 1 to check the compliance box, without also asking <em>why</em> a security product shipped with a built-in unauthenticated account and <em>whether that pattern exists elsewhere in our stack</em>, has satisfied the letter of the requirement without addressing the underlying exposure.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <ul>
+        <li>Do we run Cisco Secure Firewall Management Center, and is it patched against CVE-2026-20316 — not just scheduled, but confirmed patched?</li>
+        <li>Is our FMC management interface reachable from the public internet? If so, why, and can we restrict it to a dedicated management network today, before the patch is even applied?</li>
+        <li>When a security vendor discloses a hardcoded-credential flaw, do we have a process to ask whether similar static-credential patterns exist in our other security tooling — EDR consoles, SIEM, VPN concentrators?</li>
+        <li>How fast is our real patch cycle for high-severity vendor advisories, measured in days, not our stated SLA?</li>
+        <li>If this vulnerability had been exploited against us before the July 29 disclosure, would we have detected it? What does "detected" even mean for unauthorized access using a legitimate-looking low-privileged account?</li>
+      </ul>
+
+      <p>That last question is the one I'd press hardest. Static-credential and default-credential vulnerabilities are quiet by design — they don't look like malware, they look like normal logins. Detection depends on knowing what normal looks like for that account in the first place, which is a monitoring maturity question, not a patching question.</p>
+
+      <h2>The Bigger Pattern</h2>
+
+      <p>This isn't the first time a security product has been the vector rather than the shield, and it won't be the last. Boards that treat "we bought a good security tool" as the end of the conversation are missing the second half of the Three Questions framework I lay out in the book: it's not enough to ask <em>what are we doing about risk</em> — you have to keep asking <em>what new risk did that decision introduce</em>. Every control you add to the environment is also a new piece of attack surface someone has to patch, monitor, and eventually retire.</p>
+
+      <p>Ask your CISO not just whether FMC is patched, but whether your organization has a standing process for the next time a core security vendor discloses something like this — because there will be a next time.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

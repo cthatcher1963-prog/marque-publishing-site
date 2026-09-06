@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>They Deleted the Backups at the Disaster Recovery Site Too — Marque Publishing</title>
+<meta name="description" content="A six-agency advisory on the Gunra ransomware operation reveals attackers erasing backups at both the primary and DR sites — and what boards should ask next.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="They Deleted the Backups at the Disaster Recovery Site Too">
+<meta property="og:description" content="Gunra ransomware erased backups at both primary and DR sites. Here's what boards should ask.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/gunra-ransomware-dr-backups">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/gunra-ransomware-dr-backups">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">August 2026</time>
+      </div>
+      <h1>They Deleted the Backups at the Disaster Recovery Site Too</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">On August 10, six government agencies — the FBI, CISA, the Defense Department's Cyber Crime Center, the NSA, the Secret Service, and the Republic of Korea's National Police Agency — published a joint advisory on a ransomware operation called Gunra. It runs 21 pages and is written for security engineers. Most of it will not interest you.</p>
+
+      <p>One sentence should.</p>
+
+      <p>In describing what Gunra's operators did to one victim, the advisory notes that the actors "deleted backup and archived data stored on backup infrastructure at both the primary data center and disaster recovery center before and after the ransomware deployment."</p>
+
+      <p>Read that again. Not the primary site. <strong>Both</strong> sites. The disaster recovery center — the thing your organization pays for precisely so that a disaster at the primary site does not become an extinction event — was reachable from the compromised network, and the attackers erased it on their way through.</p>
+
+      <p>If you have ever sat in a board meeting and heard "we have offsite backups and a DR site," you have been given a true statement that answers the wrong question.</p>
+
+      <h2>The controls existed. They just didn't work.</h2>
+      <p>Gunra first appeared in April 2025 as a variant built from the Conti ransomware source code that leaked in 2022. By January 2026 its operators had turned it into a franchise — a ransomware-as-a-service affiliate program advertised on criminal forums, complete with a management panel, a configurable payload builder, and documentation. The advisory notes the group has been recruiting penetration testers to serve as initial access brokers in exchange for a cut of the proceeds. Victims span healthcare, financial services, manufacturing, transportation, utilities, government, academia, and retail across five continents.</p>
+
+      <p>What makes this advisory worth an executive's time is not the criminal business model. It is the pattern of <em>controls that were present and were defeated anyway</em>.</p>
+
+      <p><strong>The front door.</strong> The FBI observed Gunra getting in primarily by exploiting two Fortinet authentication bypass flaws — CVE-2024-55591 and CVE-2025-24472 — in internet-facing firewall and VPN appliances. Fortinet patched both in <strong>January 2025</strong>. Nineteen months later, a six-agency advisory names them as the primary way this group gets into networks. Somewhere in every one of those victim organizations, there was an asset inventory that did not include that appliance, or a patch cycle that did not cover it, or a maintenance window that kept getting deferred because the firewall was working fine.</p>
+
+      <p><strong>Multi-factor authentication.</strong> At one victim, the actors did not phish an MFA code or spam push notifications. They modified the authentication processing files on the company's virtual desktop login server so that one specific attacker-chosen one-time password would always succeed. MFA remained enabled. It remained on the compliance checklist. It remained on the board slide. And it was, functionally, off — for the attacker only, indefinitely, and invisibly.</p>
+
+      <p><strong>Backups.</strong> Volume shadow copies deleted before encryption. Backup and archive data destroyed at the primary data center <em>and</em> at the disaster recovery center. The recovery plan existed on paper. It was reachable from the same network the attackers already owned.</p>
+
+      <p>This is the distinction I keep returning to in <em>Cyber Risk Is Business Risk</em>: compliance measures whether a control is <strong>present</strong>. Security measures whether a control <strong>works when someone competent is trying to defeat it</strong>. Every organization in this advisory could have truthfully reported "MFA enabled, offsite backups maintained, firewalls patched per policy" to its audit committee. The reports would have been accurate. The company would still have been down.</p>
+
+      <h2>The decision you will make in the first six hours</h2>
+
+      <p>Here is the part that turns this from a technical story into a governance one.</p>
+      <p>The advisory discloses that researchers found a flaw in Gunra's Linux encryptor in March 2026. The malware generates its encryption keys using a weak pseudorandom number generator seeded from the system clock. Because the timestamp is recoverable from the encrypted files themselves, defenders can mathematically reconstruct the keys and <strong>recover the data without paying</strong>.</p>
+
+      <p>But that only works if the evidence survives. The advisory's incident response guidance for a Gunra Linux compromise is explicit: preserve the encrypted files, the file timestamps, the ransom notes, and the system logs.</p>
+
+      <p>Now picture the actual first hour of a real incident. Systems are down. Revenue is stopped. Somebody's instinct is to reboot the servers. Somebody else wants to wipe and reimage from a clean build to get production back. Both are reasonable-sounding operational reflexes. Both may destroy the timestamps that would have gotten your data back for free.</p>
+
+      <p>Meanwhile, Gunra's ransom notes give victims five to seven days to open negotiations before the stolen data goes to the leak site, and the advisory reports the group opens negotiations at figures in the tens of millions of dollars. That is deliberate pressure engineering. It is designed to make a frightened executive team decide fast.</p>
+
+      <p>The technical flaw in the malware is luck. Whether your organization is positioned to <em>use</em> that luck is governance — and it comes down to whether your incident response plan has a preservation step that executes before anyone touches a keyboard in anger, and whether the people who will be in that room have ever rehearsed it.</p>
+
+      <h2>What to ask your CISO this week</h2>
+
+      <p>Not "are we protected from Gunra." That question invites a reassuring answer about indicators of compromise and blocked IP addresses, and it will be technically true and strategically useless.</p>
+
+      <p>Ask these instead:</p>
+      <ol>
+        <li><strong>"Show me the last time we restored production data from backup — not tested the backup job, restored the data. What was the date, how long did it take, and who watched?"</strong> If the answer is a report from the backup software rather than a date and a duration, you do not have a recovery capability. You have a recovery expense.</li>
+
+        <li><strong>"Can an attacker who owns our production network reach our backups?"</strong> The correct answer involves the words <em>immutable</em> and <em>physically separate</em>. "They're in a different data center" is not an answer — Gunra's victims had a different data center.</li>
+
+        <li><strong>"Which internet-facing devices are running software with a publicly known exploited vulnerability right now, and what is the oldest one?"</strong> You are not asking for a number. You are asking whether anyone can produce the list at all. The Fortinet flaws in this advisory were patchable in January 2025.</li>
+
+        <li><strong>"In the first six hours of a ransomware event, who decides whether we preserve or rebuild, and have they practiced that decision?"</strong> If the answer is a name and a tabletop exercise date, good. If the answer is a document, ask when it was last opened.</li>
+      </ol>
+
+      <p>None of these are technical questions. They are questions about whether the money you have already spent bought you an outcome or a receipt. That is the only cybersecurity question a board is actually equipped to ask — and the only one that matters when the encryption starts.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

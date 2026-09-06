@@ -49,3 +49,56 @@ Cyber content → Executives only. Maker/tutorial content → Makers only. Book 
 - **Executives-side segmentation.** No live site form feeds the Executives group yet. `NTW6JI` still feeds "Newsletter — All". Decide: repoint `NTW6JI` → Executives group (cleanest, since its context is the cyber board guide), OR build a separate styled Executives form. This affects homepage + cyber blog + the /cyber-risk/ page.
 - **Deploy.** All of tonight's work (author note, /cyber-risk/ page, published blog, Makers-form wiring) is LOCAL only. Run `npm run build` then wrangler deploy to go live.
 - Optional: delete the old empty "Simple welcome email" automation (June 18) to reduce clutter.
+
+
+---
+
+## Writing with Claude — Writers list + gated toolkit (planned 2026-09-05, site side built)
+
+**Decision (Chris, 2026-09-05):** third group, not Makers. Gate = signup form → double opt-in → welcome automation delivers the links. Everything gated: reference guides PDF, production worksheets ZIP, editorial + cover brief templates.
+
+**Site side — DONE locally, not deployed:**
+- `/writing-with-claude/` book page (src/pages + site rendered): hero, the book, who it's for, toolkit preview (locked cards), signup section with `data-form="WWC_FORM_SLUG"` placeholder.
+- `/downloads/wwc-toolkit/` unlisted download page: `noindex,nofollow` meta, `site/_headers` X-Robots-Tag, `site/robots.txt` Disallow. Files: `writing-with-claude-reference-guides.pdf` (20 pp, the book's appendix), `writing-with-claude-production-worksheets.zip` (10 templates + README, Word + Markdown), `editorial-brief-template.pdf`, `cover-brief-template.pdf`. (No .docx loose in site/ — the deploy guard forbids it; Word versions ride in the ZIP.)
+- Deploy guard `--check` passes on the new files.
+- Only the two new pages were rendered (targeted render, not `npm run build`) so the nightly blog cards in `site/` were not touched.
+
+**MailerLite side — DONE 2026-09-06 (group + form via dashboard/Chrome, rename + automation via connector):**
+- **Group:** "Writers — Writing with Claude" — ID 197871099722073198.
+- **Form:** "Writing with Claude — Writers Signup" — ID 197871181682968378, embed slug `0U4Pav`. Duplicated from the Creators form (styling carried over), repointed to the Writers group only, double opt-in ON. Success-message text not customized (inherits the Creators copy) — optional tweak in Edit design.
+- **Automation:** "Welcome — Writers (Writing with Claude)" — ID 197871593993536612. Trigger: joins Writers group. One email, subject "Your Writing with Claude toolkit", HTML built from the copy below (Ink/Paper/Brass), sender Marque Publishing, LLC / chris@marquepublishing.com. Dry run clean; test sent to Chris. **Left INACTIVE — Chris activates in the dashboard after reviewing the test.**
+- **Slug swapped** into src/pages + site copies of /writing-with-claude/index.html. Not deployed.
+
+Original plan (kept for the record):
+1. **Group:** "Writers — Writing with Claude".
+2. **Embedded form:** "Writing with Claude — Writers Signup" → Writers group, double opt-in ON. Style it like the Makers form (Ink/Paper, Brass button). Success message: "Check your inbox to confirm — the toolkit is on its way."
+3. **Swap the slug:** replace `WWC_FORM_SLUG` in BOTH `src/pages/writing-with-claude/index.html` and `site/writing-with-claude/index.html`.
+4. **Welcome automation:** trigger "subscriber joins group: Writers". One email, copy below. Sender Marque Publishing, LLC / chris@marquepublishing.com.
+5. **Sending rules:** writer/book-craft content → Writers only. Book launches + studio news → everyone.
+
+### Welcome email — "Writing with Claude" toolkit (draft, Chris's teaching register)
+
+**Subject:** Your Writing with Claude toolkit
+
+**Preheader:** The guides, the worksheets, the two briefs. Plus one thing to do tonight.
+
+Hi,
+
+You're in. Here is everything the book tells you to download, in one place:
+
+**Your toolkit → https://www.marquepublishing.com/downloads/wwc-toolkit/**
+
+- **The Machine: Quick Reference Guides** (PDF). The book's appendix. Every file in your project and what goes in it, then a one-page guide for every chapter's build.
+- **Production Worksheets** (ZIP, Word + Markdown). The run sheet with the owner column and every data sheet behind it. Give the run sheet to Claude and say "run my production."
+- **Editorial Brief and Cover Brief** templates. Write them before you hire anyone. If Claude turns out to be the anyone, they are its instructions.
+
+Save that link. It doesn't expire.
+
+One thing to do tonight, if you haven't started: create a project folder, dump everything you have into it, and tell Claude to start a session log. That is Chapter 1, and it is the step that makes every other step possible. Ask me how I know.
+
+I'll email when the book launches, and now and then when I have something worth a writer's time. That's it. No spam, ever.
+
+Chris Thatcher
+Marque Publishing
+
+P.S. The files are free for readers. Please don't repost them — send a friend to marquepublishing.com/writing-with-claude instead.

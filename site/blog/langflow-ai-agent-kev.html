@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your AI Agent Builder Is the Attack Surface Nobody Approved — Marque Publishing</title>
+<meta name="description" content="CISA flagged Langflow with a 9.8 CVSS flaw while attackers use AI agents to autonomously scan for targets. Three questions every board should ask this week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="Your AI Agent Builder Is the Attack Surface Nobody Approved">
+<meta property="og:description" content="CISA flagged Langflow while attackers use AI agents to autonomously probe targets. What boards must ask.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/langflow-ai-agent-kev">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/langflow-ai-agent-kev">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">August 2026</time>
+      </div>
+      <h1>Your AI Agent Builder Is the Attack Surface Nobody Approved</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">On August 4, CISA added a tool called Langflow to its Known Exploited Vulnerabilities catalog. If you don't run a security team, you've probably never heard of it. If you do run one, I'd bet money someone in your organization has it installed anyway.</p>
+
+      <p>Langflow is a low-code platform for building AI agents — the kind of tool a data science team or a product group picks up on a Tuesday afternoon to prototype a chatbot or an automation workflow, no procurement process required. IBM acquired it in 2025 through its purchase of DataStax. It's popular precisely because it's fast and frictionless. That's also why it's dangerous.</p>
+
+      <h2>The Two-Click Takeover</h2>
+
+      <p>The flaw, CVE-2026-9198, carries a CVSS score of 9.8 out of 10 — about as bad as vulnerability scoring gets. An attacker needs no credentials and no user to click anything. They chain two API calls: one that hands out a full-admin session token to any caller who asks for it, and a second that runs whatever Python code they submit next. Two requests, full control of the server. IBM shipped a fix in July. CISA's deadline for federal agencies to patch is August 7.</p>
+
+      <p>Here's the part that should bother a board more than the CVSS score: this isn't Langflow's first appearance on a bad-news list this year. Security researchers have tracked the platform being hit by cryptomining campaigns in June, a separate remote-code-execution flaw exploited by an AI agent in July, and ransomware built specifically to target AI infrastructure the same month. A tool that keeps getting popped isn't unlucky. It's a pattern, and patterns are what risk committees exist to catch.</p>
+
+      <h2>The Attacker Was Also Running an AI Agent</h2>
+
+      <p>The stranger half of this story broke a week earlier. On July 30, Palo Alto Networks' Unit 42 published research on a Chinese-speaking threat actor, tracked under the aliases "knaithe" and "KnYuan," who built an autonomous attack pipeline around the DeepSeek model, orchestrated through an open-source framework called Hermes Agent. Unit 42 got visibility into the operation because the attacker's own automation accidentally exposed a file server, letting researchers read the instructions the operator had been feeding the AI.</p>
+
+      <p>When the agent's first attempt against a Langflow flaw failed — the target's configuration blocked it — it didn't stop. It researched other known vulnerabilities on its own and pivoted to higher-value targets without a human telling it where to look next. Unit 42 also found signs the operator used Claude Code for connectivity testing and possibly Codex and Qwen Code elsewhere in the campaign. In total, the actor attempted to breach more than 460 targets through a mix of autonomous and manual technique. Unit 42 could only confirm three were actually compromised.</p>
+
+      <p>That last number matters. Andy Piazza, Unit 42's senior director of threat research, put it plainly to IT Brew: "Overall, they weren't very successful. They got some basic memory leak… it's not the big, damning silver bullet that everybody's looking for right now." I'd read that as reassurance with an expiration date. This is a dress rehearsal, not the main event, and Piazza's other point is the one worth sitting with: most companies don't understand how much AI tooling they've already deployed. "The technology sprawl is actually pretty broad," he said, "and I don't think that enterprises quite understand that."</p>
+
+      <h2>Where This Meets the Book</h2>
+
+      <p>I wrote about this exact gap in <em>Cyber Risk Is Business Risk</em>: the first of the Three Questions I ask every board is whether they actually know what's running in their environment. Langflow is the answer nobody likes. It didn't arrive through IT procurement. It arrived because someone on a business team needed to move fast, and nobody assigned a sheriff to patrol the tools that showed up afterward.</p>
+
+      <p>Shadow AI is shadow IT with better marketing. Most asset inventories still don't have a line item for "AI agent-building platforms," which means the oversight processes your board believes are working have a blind spot exactly where this incident lives. And now the thing probing for that blind spot might not be a person typing commands at 2 a.m. It might be a reasoning model deciding, on its own, which door to try next.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>Three questions, none of which require a security background to ask:</p>
+
+      <ol>
+        <li>Do we have a current inventory of every AI agent-building tool running anywhere in this company — Langflow or otherwise — and do we know who approved each one?</li>
+        <li>Are any of those instances reachable from the open internet, and are they running a patched, current version?</li>
+        <li>If an autonomous agent scanned our perimeter tonight the way Unit 42 described, would we detect it — and how many hours would pass before someone did?</li>
+      </ol>
+
+      <p>Three out of 460 is not a crisis. It's a preview. The organizations that treat this as an early warning now will be the ones with an answer ready the next time the number isn't three.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

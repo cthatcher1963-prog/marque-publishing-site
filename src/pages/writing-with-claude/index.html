@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing with Claude — Marque Publishing</title>
+<meta name="description" content="Writing with Claude by Chris Thatcher: how to write a book with AI as your assistant, not your ghostwriter. Book two of the Marque AI Collection. Sign up for the free reference guides and production worksheets from the book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="Writing with Claude — Chris Thatcher">
+<meta property="og:description" content="Your voice, amplified — not replaced. How to write a book with AI as your assistant, plus the free toolkit from the book.">
+<meta property="og:url" content="https://www.marquepublishing.com/writing-with-claude/">
+<link rel="canonical" href="https://www.marquepublishing.com/writing-with-claude/">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Writing with Claude — Chris Thatcher">
+<meta name="twitter:description" content="Your voice, amplified — not replaced. Book two of the Marque AI Collection.">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Writing with Claude",
+  "author": { "@type": "Person", "name": "Chris Thatcher", "url": "https://www.marquepublishing.com/about" },
+  "publisher": { "@type": "Organization", "name": "Marque Publishing", "url": "https://www.marquepublishing.com" },
+  "genre": ["Writing", "Nonfiction", "Technology"],
+  "isPartOf": { "@type": "BookSeries", "name": "The Marque AI Collection" },
+  "description": "How to write a book with AI as your assistant, not your ghostwriter. Book two of the Marque AI Collection.",
+  "url": "https://www.marquepublishing.com/writing-with-claude/"
+}
+</script>
+<!--#include mailerlite-->
+<style>
+/* ─── Writing with Claude — page-specific styles (mirrors treasure-hunter) ─── */
+.wc-hero { position: relative; padding: clamp(4rem, 10vw, 7rem) 0; background: var(--ink); color: #E8E4DC; overflow: hidden; }
+.wc-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(182, 138, 78, 0.16), transparent 60%); pointer-events: none; }
+.wc-hero-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 220px 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; max-width: 64rem; margin-inline: auto; }
+.wc-hero-cover { width: 220px; aspect-ratio: 2 / 3; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); }
+.wc-hero-cover img { width: 100%; height: 100%; object-fit: scale-down; }
+.wc-hero-text .hero-kicker { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass); margin-bottom: 0.75rem; }
+.wc-hero-text h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 600; line-height: 1.1; color: #FBFAF7; margin-bottom: 0.5rem; }
+.wc-hero-text .hero-subtitle { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: #9AA4AE; margin-bottom: 1.5rem; }
+.wc-hero-text .hero-desc { font-size: 1.05rem; line-height: 1.65; color: #9AA4AE; max-width: 36rem; margin-bottom: 2rem; }
+.wc-launch-line { font-family: var(--sans); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--brass); margin-bottom: 1rem; }
+.wc-hero .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+@media (max-width: 768px) { .wc-hero-inner { grid-template-columns: 1fr; text-align: center; } .wc-hero-cover { margin-inline: auto; width: 180px; } }
+
+.wc-story { max-width: 42rem; margin-inline: auto; }
+.wc-story-body { font-family: 'EB Garamond', Georgia, serif; font-size: 1.15rem; line-height: 1.75; color: var(--text-muted); }
+.wc-story-body p { margin-bottom: 1.25rem; }
+.wc-story-body p:last-child { margin-bottom: 0; }
+.wc-story-body .pull-quote { font-family: var(--serif); font-style: italic; font-size: 1.35rem; line-height: 1.5; color: var(--text); border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 2rem 0; }
+
+.wc-for { max-width: 52rem; margin-inline: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.wc-for-card { background: var(--card-bg); border-radius: 10px; box-shadow: var(--card-shadow); padding: 1.75rem; }
+.wc-for-card h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; margin-bottom: 0.5rem; }
+.wc-for-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+@media (max-width: 700px) { .wc-for { grid-template-columns: 1fr; max-width: 26rem; } }
+
+/* Toolkit preview cards (locked) */
+.toolkit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; max-width: 60rem; margin-inline: auto; }
+.toolkit-card { background: var(--card-bg); border-radius: 10px; box-shadow: var(--card-shadow); padding: 1.5rem; display: flex; align-items: flex-start; gap: 1.25rem; }
+.toolkit-icon { width: 44px; height: 44px; flex-shrink: 0; color: var(--accent); background: var(--accent-soft); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+.toolkit-icon svg { width: 22px; height: 22px; }
+.toolkit-info h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.toolkit-info p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.75rem; }
+.toolkit-meta { display: flex; align-items: center; gap: 0.75rem; }
+.file-badge { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 4px; background: var(--badge-bg); color: var(--badge-text); }
+.toolkit-lock { font-size: 0.85rem; font-weight: 500; color: var(--accent); }
+.toolkit-note { text-align: center; max-width: 40rem; margin: 2rem auto 0; color: var(--text-muted); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!--#include nav active="books"-->
+
+
+<main id="main-content">
+<!-- ─── Hero ─── -->
+<section class="wc-hero">
+  <div class="container">
+    <div class="wc-hero-inner fade-in">
+      <div class="wc-hero-cover">
+        <img src="/writing-with-claude-cover.png" alt="Cover of Writing with Claude by Chris Thatcher" loading="eager">
+      </div>
+      <div class="wc-hero-text">
+        <p class="hero-kicker">The Marque AI Collection &middot; Book Two</p>
+        <h1>Writing with Claude</h1>
+        <p class="hero-subtitle">Your voice, amplified &mdash; not replaced.</p>
+        <p class="hero-desc">Three books in four months, every one of them unmistakably his. This is how Chris Thatcher did it &mdash; with Claude as the assistant, never the author &mdash; and the system he built so you can do it without his scars.</p>
+        <p class="wc-launch-line">In production &middot; launch date coming</p>
+        <a href="#toolkit" class="btn-primary">Get the free toolkit &darr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── The book ─── -->
+<section class="section-pad">
+  <div class="container">
+    <div class="wc-story fade-in">
+      <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+        <p class="section-kicker">The book</p>
+        <h2>The Writing Assistant He Couldn't Trust</h2>
+      </div>
+      <div class="wc-story-body">
+        <p>The first time Chris let Claude write his novel, it produced seventy-five thousand words overnight. Competent, complete, and not his. The manuscript went into an archive folder, and what came out of the wreckage was a system: a way of working with AI that keeps the author in the chair and the machine on a leash.</p>
+        <p>The book walks that system from the first blank page to a book on the shelf. A thesis that survives interrogation. A scaffold you build before a word of prose exists. Rules that load every session, because a partner with no memory has to be briefed every time. A voice profile that teaches Claude to sound like you. A five-pass edit machine. And a production run that gets from finished draft to Amazon in days instead of months.</p>
+        <div class="pull-quote">"Policy without enforcement is a recommendation."</div>
+        <p>It is written by someone who spent thirty years in cybersecurity and applied the one doctrine he trusted &mdash; never trust, always verify &mdash; to the most productive, most confident, least reliable collaborator he has ever worked with.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Who it's for ─── -->
+<section class="section-pad" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-kicker">Who it's for</p>
+      <h2>Writers Who Want the Book to Stay Theirs</h2>
+    </div>
+    <div class="wc-for fade-in">
+      <div class="wc-for-card">
+        <h3>The writer who never started</h3>
+        <p>You have carried a book for years. The blank page keeps winning. The first chapter is about the day it stopped winning.</p>
+      </div>
+      <div class="wc-for-card">
+        <h3>The writer burned by AI</h3>
+        <p>You tried it, it sounded like everyone else, and you put it down. The book is about why that happened and the fix.</p>
+      </div>
+      <div class="wc-for-card">
+        <h3>The writer who wants to ship</h3>
+        <p>Drafting is half the job. The back half of the book is the production run &mdash; ISBNs, covers, interiors, uploads &mdash; with the worksheets to run it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── Toolkit (gated) ─── -->
+<section id="toolkit" class="section-pad">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-kicker">The toolkit</p>
+      <h2>Everything From the Back of the Book</h2>
+      <p>The reference guides, worksheets, and briefs the book tells you to download. Free to readers &mdash; sign up below and the links arrive in your inbox.</p>
+    </div>
+
+    <div class="toolkit-grid fade-in">
+      <div class="toolkit-card">
+        <div class="toolkit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+        </div>
+        <div class="toolkit-info">
+          <h3>The Machine: Quick Reference Guides</h3>
+          <p>The book's appendix as a standalone PDF. Every file in your project explained, and a one-page guide for every chapter's build.</p>
+          <div class="toolkit-meta"><span class="file-badge">PDF</span><span class="toolkit-lock">Delivered by email</span></div>
+        </div>
+      </div>
+
+      <div class="toolkit-card">
+        <div class="toolkit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </div>
+        <div class="toolkit-info">
+          <h3>Production Worksheets</h3>
+          <p>The owner-column run sheet and every data sheet behind the production run: ISBN log, interior spec, copyright page, metadata, cover wrap, platform uploads, deposit and registration.</p>
+          <div class="toolkit-meta"><span class="file-badge">ZIP &middot; Word + Markdown</span><span class="toolkit-lock">Delivered by email</span></div>
+        </div>
+      </div>
+
+      <div class="toolkit-card">
+        <div class="toolkit-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg>
+        </div>
+        <div class="toolkit-info">
+          <h3>Editorial &amp; Cover Briefs</h3>
+          <p>The two briefs to write before you hire anyone &mdash; or hand to Claude if you don't. Fill-in templates with the disqualifying rule built in.</p>
+          <div class="toolkit-meta"><span class="file-badge">PDF + Word</span><span class="toolkit-lock">Delivered by email</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="toolkit-note">Have Claude fill in what it can. You write the rest. That's the whole book in one sentence.</p>
+  </div>
+</section>
+
+
+<!-- ─── Signup / gate ─── -->
+<section class="newsletter section-pad" id="signup">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the Toolkit</h2>
+      <p>Sign up and the download links land in your inbox after you confirm. You'll also get the launch email for <em>Writing with Claude</em> and the occasional note for writers working with AI. No spam, ever.</p>
+      <div class="ml-embedded" data-form="0U4Pav"></div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<!--#include footer-->
+
+<!--#include scripts-->
+</body>
+</html>

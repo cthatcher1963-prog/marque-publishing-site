@@ -2,14 +2,15 @@
 %‚„œ”
 1 0 obj
 <<
-/Producer (pypdf)
+/Producer (Marque Publishing)
+/Author (Chris Thatcher)
 >>
 endobj
 2 0 obj
 <<
 /Type /Pages
 /Count 5
-/Kids [ 4 0 R 11 0 R 13 0 R 15 0 R 17 0 R ]
+/Kids [ 4 0 R 11 0 R 14 0 R 17 0 R 20 0 R ]
 >>
 endobj
 3 0 obj
@@ -23,31 +24,117 @@ endobj
 /Contents 5 0 R
 /MediaBox [ 0 0 612 792 ]
 /Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
 /Rotate 0
 /Trans <<
 >>
 /Type /Page
+/Annots [ ]
 /Parent 2 0 R
 >>
 endobj
 5 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ]
-/Length 676
+/Length 1474
 >>
 stream
-GasJPgQ%aW&;KY!MZ5H6=r3Yqi%gd5X%99cQFa2!l4"+rE0W[t9NHH9)?QDG'%L*C`!eGoB7?8c2@jZ^km"ZXq"?s=)>Fio,qes;,&Zd!g-q$='#5GFiR[UUmuH:QhcYWd2"W6"X]el)"F[K=K5XFP"r9$1S[MkgOjN]ZQY..0Pt885<d9fha)mm%RJ6pa(]6)'Sjs^Ak5cbb9^7?u8'64c`jiH9854%#L6SrtPVS:&bjA4S=K!Lq1/6?p?HZ#M=XlgdTakXRK"h"oR+c[#$&5unk@r"Wgp^/:(=d;"K9/&NmCSf;=b5am:33+(B]h\!BT?RA<=GS+col[`>0o=5_7Y6NPd^GZgM,CfoRi/SR`(7?Lni(?'Oq_F^Lkl3r*aE#V`Df84N@?d#ENMA5P]-pFOJ!.NaZbdZWl)+m]eEQ*N,U-e0_mK*`LNgSkWk8L7^HmqI%h\,G(D(R[k.kMmQGUUfq;"Z@,WH!bo2.[-CIs0?"m=[G$q3W)+8q")6*3*/qF]H!W_AZI#>mfH^]4Ek)kk93#l&F!EME(t!3df<q]#;b(@rbHa*=U7o]Y:OfVb8L9I`-q]J)?#&m5<LtUK$r\K'XlO9""Z\$LEs_52hHSc@(LuG^r<U$YK(q=nbP<sV)r3:\:,<7+gJL2nl$W$ls!bEW@Jp:8-liH~>
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 70.8 570 cm
+Q
+q
+1 0 0 1 70.8 536 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 6 Tm /F2 28 Tf 34 TL 95.956 0 Td (Creating with Claude) Tj T* -95.956 0 Td ET
+Q
+Q
+q
+1 0 0 1 70.8 520 cm
+Q
+q
+1 0 0 1 70.8 498 cm
+q
+.266667 .266667 .266667 rg
+BT 1 0 0 1 0 6 Tm /F1 16 Tf 22 TL 125.824 0 Td (A Practical Guide for Everyone) Tj T* -125.824 0 Td ET
+Q
+Q
+q
+1 0 0 1 70.8 442.8 cm
+Q
+q
+1 0 0 1 70.8 422.8 cm
+q
+.2 .2 .2 rg
+BT 1 0 0 1 0 6 Tm /F1 14 Tf 20 TL 189.301 0 Td (Chris Thatcher) Tj T* -189.301 0 Td ET
+Q
+Q
+q
+1 0 0 1 70.8 330.4 cm
+Q
+q
+1 0 0 1 70.8 294.4 cm
+q
+.8 0 0 rg
+BT 1 0 0 1 0 5 Tm /F2 11 Tf 16 TL 90.968 0 Td (EARLY READER PREVIEW \227 NOT FOR DISTRIBUTION) Tj T* -90.968 0 Td ET
+Q
+Q
+q
+1 0 0 1 70.8 262.4 cm
+Q
+q
+1 0 0 1 70.8 220.4 cm
+q
+BT 1 0 0 1 0 33 Tm 110.649 0 Td 14 TL /F1 9 Tf .333333 .333333 .333333 rg (This is an uncorrected advance copy for review purposes only.) Tj  T* 24.255 0 Td (Content may differ from the final published edition.) Tj  T* 19.251 0 Td (Please do not quote, share, or distribute.) Tj T* -154.155 0 Td ET
+Q
+Q
+q
+BT /F1 7.5 Tf 9 TL ET
+.6 .6 .6 rg
+BT 1 0 0 1 226.8225 32.4 Tm (PREVIEW COPY \227 NOT FOR DISTRIBUTION) Tj T* ET
+Q
+ 
+
+Q
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+BT
+/F1-0 6 Tf
+7.2 TL
+ET
+0.352941 0.392157 0.439216 rg
+BT
+1 0 0 1 186.408 14 Tm
+(\251 2026 Chris Thatcher  \267  Marque Publishing\054 LLC  \267  Preview copy  \267  Not for redistribution) Tj
+T*
+ET
+Q
+
 endstream
 endobj
 6 0 obj
 <<
-/F1 7 0 R
-/F2 8 0 R
-/F3 9 0 R
-/F4 10 0 R
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 7 0 obj
@@ -90,124 +177,607 @@ endobj
 /Contents 12 0 R
 /MediaBox [ 0 0 612 792 ]
 /Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+/Font <<
+/F1 6 0 R
+/F1-0 13 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
 /Rotate 0
 /Trans <<
 >>
 /Type /Page
+/Annots [ ]
 /Parent 2 0 R
 >>
 endobj
 12 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ]
-/Length 1237
+/Length 2268
 >>
 stream
-Gat%!d;nM1&:N^lp+bqG?-Ck)mTW"L-_30SVJ\Jdl&1W>XN$PG=bb,WG9q&-m<pEl*%\48c^m;#jUff]%o6=14Qc.tM$&e^hZ6MT!r:0Hc6j\IhHS8M[X^2;d$Ca\?iIaVQi54MKRE=;r@HohfAr=*/6f!YOr"hJ]DqL;_pZS8Zgde:J%LKJPssYrhSW4$&lt:]$N(;CYd$MU,t.u%G,dg[)%5a4g69qZ*TV^*FFn_X^B`%s/=f4XGe\:FUQf=%n!EHCVE%ee0-0s*V]=\Ec<sXUeO!RL-VLfT*i]R!9a__@Zj/-aL_W83p^87NKZ3OO+(3Q7/(Kqf_"IoG#lE!moP9]JkiV`c)/#,:.%Bm9?48[-3\WX7-%TjE#>#=A%CJ13(("/S:!lN`VGO5B=gdXeIj'Q:'tUN4U\?M&IDk,%menXF6D$B0[C7N^rj>3V2?fpgeJ5e89kg,[6lE[3.AAZ-#X@R4ECACA4_=.cp,f?P3bu*chQTIP$6<k`UFT&)+afPLk9r?D`[\8T=q=\%K=4ft98Qub@e4ge-4kcA5)<c3"oKjTE<J==8C=/ED/0mSi1i(\OOaKa>>lq"Mpg4A,hZ!R8H8f_M[+sVQ5D&9U32&mLL`[i/PTNGQ&=q>(>CWMcSKQcUQKdUE%OT%<T868;EST+[()65P-Ps4N)C*Z!*"@Ik>DOJ4D7f"djR51c/X\DDTQ@'b^6SDP[AtNdR-)U)Z+tLQ*MeVGkB+?]f$A=DPns1Hk*kA;eR*obh/"U-oH9+[QR90%"HC[ShJ_YM$MhMI0R>fe4A[J4Vh--qbFnSA;be4/G]pE/J&\E5o??H?2.Z:eC>csB*g!PS$O93W<6/uW6r$i886:G^:YV5[UeXT?TEg;g<9NO;aEQJ4;*;L>rP3^Didj'AlSE"Z]4L/2nD%U;_V_QZ+IYmd?2:_aEA7J[I-*hkFm+aB$l5j^&E_^VKIc$LF]T)mZJ0%^sdi:B*)!ub)S*qPBT:7Cau4r_R>049r-1Di3%kZ.d+to@RtSiT+?sSP\hGB$fuqfL7c'B'J@MT_2\9K+O3GeFh%"2n]#'l.i^_\A]^7EUpm22oApo)-LoE#cCQFEmsIg],&Gp1m1`1k%.a"Eo.])X5C^20kBn*RGFQ)7n'C;a@.h,,PD2=bLR6U4SmL=4LZ`%9\*(fho&nVk$fmf+,NO<8;@iXibC5DU%*ma7?u_^A78+.GMuCSrs"B0>'diq\d$$Yd~>
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 70.8 548.4 cm
+Q
+q
+1 0 0 1 70.8 198.4 cm
+q
+BT 1 0 0 1 0 341 Tm 121.6695 0 Td 14 TL /F2 9 Tf .333333 .333333 .333333 rg (Creating with Claude: A Practical Guide for Everyone) Tj /F1 9 Tf  T* 113.5305 0 Td  T* -105.6015 0 Td (Copyright \251 2026 Chris Thatcher. All rights reserved.) Tj  T* 105.6015 0 Td  T* -64.278 0 Td (Published by Marque Publishing) Tj  T* 64.278 0 Td  T* -144.063 0 Td (No part of this publication may be reproduced, distributed, or transmitted) Tj  T* -0.252 0 Td (in any form or by any means, including photocopying, recording, or other) Tj  T* 5.2695 0 Td (electronic or mechanical methods, without the prior written permission) Tj  T* 6.723 0 Td (of the publisher, except in the case of brief quotations embodied in) Tj  T* -0.468 0 Td (critical reviews and certain other noncommercial uses permitted by) Tj  T* 105.282 0 Td (copyright law.) Tj  T* 27.5085 0 Td  T* -145.3185 0 Td (Claude is a product of Anthropic, PBC. This book is an independent work) Tj  T* 15.003 0 Td (and is not affiliated with, sponsored by, or endorsed by Anthropic.) Tj  T* -18.7425 0 Td (All product names, trademarks, and registered trademarks are the property) Tj  T* 96.5385 0 Td (of their respective owners.) Tj  T* 52.5195 0 Td  T* -139.563 0 Td (The information in this book is provided for educational purposes only.) Tj  T* -13.752 0 Td (The author and publisher make no representations or warranties with respect) Tj  T* 56.5155 0 Td (to the accuracy or completeness of the contents.) Tj  T* 96.7995 0 Td  T* -45.5175 0 Td (First Edition: July 2026) Tj  T* 45.5175 0 Td  T* -45.2655 0 Td (marquepublishing.com) Tj T* -189.9345 0 Td ET
+Q
+Q
+q
+1 0 0 1 70.8 140.8 cm
+Q
+q
+1 0 0 1 70.8 104.8 cm
+q
+.8 0 0 rg
+BT 1 0 0 1 0 5 Tm /F2 11 Tf 16 TL 118.7705 0 Td (PREVIEW COPY \227 NOT FOR DISTRIBUTION) Tj T* -118.7705 0 Td ET
+Q
+Q
+q
+BT /F1 7.5 Tf 9 TL ET
+.6 .6 .6 rg
+BT 1 0 0 1 226.8225 32.4 Tm (PREVIEW COPY \227 NOT FOR DISTRIBUTION) Tj T* ET
+Q
+ 
+
+Q
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+BT
+/F1-0 6 Tf
+7.2 TL
+ET
+0.352941 0.392157 0.439216 rg
+BT
+1 0 0 1 186.408 14 Tm
+(\251 2026 Chris Thatcher  \267  Marque Publishing\054 LLC  \267  Preview copy  \267  Not for redistribution) Tj
+T*
+ET
+Q
+
 endstream
 endobj
 13 0 obj
 <<
-/Contents 14 0 R
-/MediaBox [ 0 0 612 792 ]
-/Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->>
-/Rotate 0
-/Trans <<
->>
-/Type /Page
-/Parent 2 0 R
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
 >>
 endobj
 14 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ]
-/Length 685
->>
-stream
-Gatn%95g:b'SZ;ZMR.CTPqp7p^ohjOaANp@12Rc*)[bVm`%Y^a,gF*mn?QlN/K6AFR>X(t08FlsYk3_#gGf9^%%j^/#R/t532Qe$K,HJ:%FUh.[S.d7n![5U^f\:N\3X&=2QZbbHnb1]a[*rLbHqHW[42XN<=0uoVE`X3Q=)Na\`10RIfOfuqhS%g<R%h\TM"U$nQ9tT@hQCWE5"O_e6%0PfX7CS]tnBR.k-W:<iO/%[*(;/5Et;P)\n6'O:^;/=.&EM1?&!sknm9h+H)gN;M@&,b'aeb2`)3XENaMi8`a8Enn<eFMFS_g*YN+!&j$5[V2"bN._K_gDVf[Nkg0T1LhhQpo:ea#0L'a'DMUA\\`!M)cJYSl67aG?lUS?iHuS\:_sUqEH#8&L+tH8kl6.&#I(gp>H*2#AE4cOg96q]b[pK\U;Pq&/H]`<U:%JUgD5=C/?hh?M;6'9V[:aG=K:A',H?(#:.;X[u07A&d*mC]mMLt"_qPTlaX"o[,YiZlWGoh$3QYF<`=LpnI?a1,EVnY+TH/-f-b,_35MMY6OFD]a/>s6@ARmZ>/S9+aHj*>IPe^]70S4sO=HI`bpR6IH"Cg,qFL=($)q_=`A`,r8sD_uAK$s/?E^<Z3"H9V/Mk)7uhG-lQ]rAILNj[S`;ZJ4(p:8"'hR!$?.a@TTEquue!ld,~>
-endstream
-endobj
-15 0 obj
-<<
-/Contents 16 0 R
+/Contents 15 0 R
 /MediaBox [ 0 0 612 792 ]
 /Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+/Font <<
+/F1 6 0 R
+/F1-0 16 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
 /Rotate 0
 /Trans <<
 >>
 /Type /Page
+/Annots [ ]
 /Parent 2 0 R
 >>
 endobj
-16 0 obj
+15 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ]
-/Length 2297
+/Length 2426
 >>
 stream
-GatU4muQ5C&cI0.`P;ae\%#p:l3F/7ZX#Xii8uYPd\&k?XN76F&]pl[bG3V&^2IUT3KeG2^r7>^,`:[,]Qrtj:bb]6'?f:7,'pSh^V,[W:2!R&4H!gYq*=C,2kP!IiQQBV/SQAXZg-]9Y<J@#iKI%r;*9\:MjQ-s\%<T4M,06M[&FToTgYV%99/g_?2N48?07-Ks$E44C%GD$jQE^6c<&ILj@##8#"U)g4N'Krnf"p\q>U[F[9Ce@;qgjL8\K/?a;oB_9bu,@O5t+/7s!G:XkE))WS3iRfB\7DZr`<W[T_]*gE'&%UYbc/H(F><>M@nq.dK4MJuU&p]IWq_a[?2rVU,qRTP<$CT"9Xfb]&4tA5\W610ZW4EI46Te(S*.W_0`?>ZFa-+'l]0\Ur'gIL_i(?-UfJc-&4Kg6ClIWq>[bq<oC`<7mMdeoo-*N`rj"[)M>I_mqGA3:_Dj!C1%XErj#*b+gLe>ag;Bn#bE2q@''2[@F(78H@*sY?Pd_8,l/DPWj4:4&Dsuiar!kg=uVP>9)4S3TG!'Us1[Vn5bh8\uJZqOk\i2V>["/=As,.qPC)Vlgd13@MuB/FD)BZ6b591iRGD">MM/9AU1'u+S&en62?eJ!K7#1LlH:$,Y5N'R2YI!H`H``N[(s7D#jXBY0Q?^jT-pG?;kIJ1'\27-]tj._->%:?0hE!&l#"cr)7H^[Fq>$CZOR(i!pko=BfN,7\Fa8;)F/KWNc\-;/3N)oT`sab:>DS/Y=<I4H3G,9Mc&K(t#8dGfCh>f,XsA.Zk?Wl7=XCj/c-EI&nDi+&AU\bRPG`?-Llk@0TANLft^:c@BFdO>"*,fk2DSDo2`RHXGci_&[]bmt_b8R@92A4Zmft1N$F[)K^IM'KUP=C$(JZ4h(C;33[mN.aT!2T1+g9kqnD:JUerXU14ZM2?8NbbV<Oq'+a%a3lcMr2n6?^]WE;1@^7!VgQA$,1\sl0K)RA0O/'g=P"Z,>[6%BXs(]*-D^.`lE9=8PR*7^]>Vi`XLelaAqW.@+>RP2t(NQi<*n5`dSENg1B:K4tW;T&.Ma_<(XXYUkUM:ks2R)WZ.gAPNN&aur9Sl7dK*P7nU>8,ki$M9>L@)<,b.4Cp+C`=r3/Y!+cN/u_neZ"$[f-_L_OYIAlU)"@.md&R]k+)Rj8k5:H_?N011c[SV:%knHH.tJ)e>0^0e(-4>ku(iJeRtgRRM#-+^DJ_`Gl546f>MmGVH[NX19X_,;\oLUJ]e:W\e@ps'pAPi5kuKi//fb-)k3*5UV!Ag1@D>Na>5ArJsg0^OaS`9*GRgn\3"5:(7^$/.Xe^-(<g5VnGVAVU*,/^;OQ)`<rN$V[C)+aO\6*:bThE[Zi2&S,8-7?(3>cnnj?g[qL>[-?j>8U)aRXd&f.F#>5LBCUU,J!t.XR75\2RkO/.=+Y;+<\=?N5B/49C9quJ^PTT[((gXYl<\06t=Z,%o(tG%+\2bem"U*fG%'_Ek2/lD#LO*1)0#&5ee^<We)!B\Y%B2)kFW$S1$,knP$frP"/+??tcSOp%pnQqe0hGFK^W&hs+G);DQ/,&'L-dmR;9,XX,7;(^_(eFKQr`"2BGbY=kWcm,R\Z/#d!75Z[g8!)Qn+Ffc'X?a*Hr[`.Deu5*N?rXGG4W&>(.d3!W5*NKKJrMg]n-.!%LUsTD)`O@BVsBSe_R9fRZV09\dLC1Z2Fh%Z<)S)H+I1Jd(UX^N[>8L2t[YR2)EtcSm@\`o!e]-sjj^?j7],GhU!=[6BC'!8o"#."8b:N1X)1_o/^lUjogPgNqqTrgXkBN`VGQc]4np\sO!L3he/kAR<K%)HIVV+2=n-3.#Gg^_3daSc"5k0a4&5#L9uk#)\)!m*^g7#.&DRcdWNG\'!25]4nFA5#8A`kt`pIn,]F\IS2=:&Bjo0e@(G%KD$sDgB#*g4F1unJa)OU[mfqjk09J(8p9O-F5pBX6AeiZ:KQH?%Oo%6M5:CMj$_ihNToklGD3ln=_6lYa!h/LXRNFs>dF;;@i[W8aQib<-)Z01BW3Zi2a(r'&gd-\n>775*ou#CO+EjLpJqf#PeOVNXE6L3,>V*%W*A8X`.rI9o>S(50".4KnR$,<EO8=cP=:iEXY'[ij>j.0:$8b^@O3HnWcIS;$[OmlNqZ7K;t)qMnfnTE,B__=pnY%7%X7annu6iN2[!i.`G50s+BhV:4mu^?/>?^=b\<O8<s]VTHMI:'?gDpNdG+PRIg9)*]&1m3qiCB1oe2eqlSlRrf(VE-JMBO)Pr,*.&d&%M=/M0q1rGNqF;5*p?6s7.URV8a%nl]b~>
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 70.8 685.2 cm
+Q
+q
+1 0 0 1 70.8 659.2 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 6 Tm /F2 20 Tf 26 TL 191.87 0 Td (Contents) Tj T* -191.87 0 Td ET
+Q
+Q
+q
+1 0 0 1 70.8 623.2 cm
+Q
+q
+1 0 0 1 70.8 603.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Introduction) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 583.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 1: Meet Claude \227 and make it yours) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 563.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 2: Your first real project) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 543.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 3: Trust but verify) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 523.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 4: Go deep) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 503.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 5: See it) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 483.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 6: Present it) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 463.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 7: Claude on your computer) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 443.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 8: Connect your world) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 423.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 9: Build something that lives on its own) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 403.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Chapter 10: Make it yours forever) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 383.2 cm
+q
+.133333 .133333 .133333 rg
+BT 1 0 0 1 20 8 Tm /F1 12 Tf 20 TL (Appendix: Your Quick Reference Guide) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 359.2 cm
+Q
+q
+1 0 0 1 70.8 339.2 cm
+q
+.8 .8 .8 rg
+BT 1 0 0 1 0 2 Tm /F1 6 Tf 8 TL 224.532 0 Td (\227 \227 \227) Tj T* -224.532 0 Td ET
+Q
+Q
+q
+BT /F1 7.5 Tf 9 TL ET
+.6 .6 .6 rg
+BT 1 0 0 1 226.8225 32.4 Tm (PREVIEW COPY \227 NOT FOR DISTRIBUTION) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+0 0 0 rg
+BT 1 0 0 1 303.498 39.6 Tm (1) Tj T* ET
+Q
+ 
+
+Q
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+BT
+/F1-0 6 Tf
+7.2 TL
+ET
+0.352941 0.392157 0.439216 rg
+BT
+1 0 0 1 186.408 14 Tm
+(\251 2026 Chris Thatcher  \267  Marque Publishing\054 LLC  \267  Preview copy  \267  Not for redistribution) Tj
+T*
+ET
+Q
+
 endstream
+endobj
+16 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
 endobj
 17 0 obj
 <<
 /Contents 18 0 R
 /MediaBox [ 0 0 612 792 ]
 /Resources <<
-/Font 6 0 R
-/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+/Font <<
+/F1 6 0 R
+/F1-0 19 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
 >>
 /Rotate 0
 /Trans <<
 >>
 /Type /Page
+/Annots [ ]
 /Parent 2 0 R
 >>
 endobj
 18 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ]
-/Length 2025
+/Length 4605
 >>
 stream
-GatU3?$"aY&:F5U\2U<+Kb[%)5'82Z;g$O@:"3]7dhdgn8AldI!2()"f6?[K3L64.*I$kT7%1pImHs=m.1Pg2b29iTHEj3:hP?BrBXOOUS;_1TQ<paI^0IK4PI"[QVcc&Q(0H+a6b2[.$S5$@G+6jYM)u01M<m+YcaWPjmsWQBVk%h=TPch6DlM/!CgGE2>'1!uVfcWkD$$]FTUftQgsed`"0Fc9l:4V7GPjQoCc]a7-T7-8^7SUb>`A2a8'cY3['M\0l#BgZ$[6+7P(*:Q9n/-l1Yc_=CRVE">GKcWVQI0nQ\U6[Zr<Q")b>J7l9+RA?)7VSkUXV@mnBYiAIKkkUWKkWn47%pM^8\3E1s^E$&u6))5o5XH\i9YW4$+7OFf`^LJHCmrp]7lLk]ObR\V;R9%3#M@WZanSYY'+YCSTXLGnB95JRN[k\ZDr\U%1fL"kD([1*l(%<^mLG5;\M)iN$ZTqtYA&3#V78g`TWGW(S,=c\YM9?YM1.TJ0KH``f6kS*0TC;<)LD1PL<[qW4mNN/g\VD_l/BnV9sEi\O*6-EVs&gqo<5"4_RC_gg4D$P6Y&_p!c5f/gf\fla[=p)q8.Oe99@didlES8>Lh%i./Lq\q2*P-O?ONtnCB::oM&#%Z(#nqsoSl18WV.o+%V<;<Y,1:-aS.6d4gr-TioNXDck;nm7*C*J88@O;ad&XR^2j$_>Z0p!+V0!eodp?EMa(s/t(XS!$V7KO$p(,5$):->J$'0fuH`ub[d3>JlHi^E7=i[Yi]12C_aJrh_-@#^MMB/o4>>%_D@;phHBeO7qB$de\m=X>l1sKM!NS+Fe?0Yi=BM\fJZ7RT#V,o_0c!%^[>7M92l'u=!D:'#Q8p(O!!-+t)MGcr*Z(&&"KOYpWYY68W]5o<4Y(WK3e*HNT4l,F&^7$D%F;2n5P-NHLFP6sE\q`42OP5PFjT)?7G`c$D2Se7I8?EsBQ*.T$Q?B$=c/4\4W,,O96!A_BCn)XgD<"Tjfkc='8h0i9FN)p\EnVk<Z[_.]RRUnmG\0fZUUcL8I3$"b+*GBV3?N.'S`)S23Nc(K!3L:G8fe>@"doDN@LgD$9X&e#c,OfrJ_?]e6eQ-uWM:WJY(fCQ]5-F<M*jo?)*_[5Qu1Kq9GHACJLOpoNK6!,_%?7(/fmD&O/IpH)msEBT0%[F!')#=fkDLLD5_hM7I4:WR(34$GQ^oUG=#5GRi#`?O%1E9M^`nY*ukH65"p]62N$uG78a\c@g$<fqk.3XB5t]VTQcSj%i05kk8;rk?)("m?u'\'c'98:5'Y:4Bbh0hNZ\+V'7ao1L7dNl$B)0#f\,HtQp0DH26Q^->(i97lL@MF%GK)-`:0/Bk%iU6kChKc!.j:C?EpE02:SAHAM_K#mL73R1lk%-D@ej!!Z7paaJ"^!p9mWX"8>F-Z5aY2VA.+/c:]\TB#DqT.aYI*$L("!lbtRI:Z.:(+#U(Wref$l/om3$SnnVkFLk!Rm\dpuO2jPNj85P$%i%Y4Z@Ve\-K[Hd0p;CL"h6:63Lm<[_+9++BFG4kfM2o>7hpV&fg1DNbX<-mqA.F9`^,!_D6^]S@`e@$EH`+`UuK4HF6X3.H6UCq@g?+pkDLnfcdmD\?n;VtZZ<j6YeG4,pm4'.k>c;<bg!Q<Db?Gp$2ob4EZEY8XgZ&`#JE`QVT+->>9:"",e""pNuXh5)[tXM[E:#AqAt5Y^1/FUljZ)"%a&1SZ>G7#2OVo"5&1PR0LP+DhP=o@7OE#b#@k2,bk%VNgtt.6oZ5qV\a-PHD4:GUVap[SNts,.[H;P5N;57<9c*F$n_u@Mk(f`!2>l(D1_j>H4<l#kGR_f9LS@uVVdPKH06$:g0/(?(Kuk2@j8L<ho._3f0MF!Aj]^iIoD6:c7*?>NA%o;*^_oDlNskD`;J37j7K8769I]r^=$@NsPPGId+_0+,!7.h*^](`jrJ=ie?2kdfnEt$[Dm%sGX6#,eqrN`#<m.OfpS.BO('5A+*<Ua$k6s"Firr\-JODJ"G*G-qqub:pM+7~>
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 70.8 670.8 cm
+Q
+q
+1 0 0 1 70.8 642.8 cm
+q
+.101961 .101961 .101961 rg
+BT 1 0 0 1 0 6 Tm /F2 22 Tf 28 TL (Introduction) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 593.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 20.5 Tm /F1 10.5 Tf 15.5 TL .196583 Tw (I was a skeptic. My son was downright anti-AI. I have been working with technology most of my adult) Tj T* 0 Tw (life. He grew up on it and was an accomplished programmer. I am not.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 523.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 51.5 Tm /F1 10.5 Tf 15.5 TL .177947 Tw (I'd been playing with ChatGPT for about a year, but "playing" is the right word. I treated it like Google) Tj T* 0 Tw .98475 Tw (on steroids \227 quick research, how-to questions, the occasional summary of something I didn't feel) Tj T* 0 Tw .681917 Tw (like reading. I was basically paying $20 a month for a super search engine. It never occurred to me) Tj T* 0 Tw (that AI could actually build things.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 500.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 5 Tm /F1 10.5 Tf 15.5 TL (Then I met Chuck Poole at my local bar poker league.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 383.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 98 Tm /F1 10.5 Tf 15.5 TL .571974 Tw (Chuck is a security guy like me. He'd sold his last company and was figuring out what he wanted to) Tj T* 0 Tw .2375 Tw (do next. What he settled on was going all-in on AI. Pun intended. By the time I went to visit him, he'd) Tj T* 0 Tw 1.331167 Tw (been fully immersed for months. He was using AI to automate everything in his life. He used it to) Tj T* 0 Tw 1.030235 Tw (organize his thinking and draft new ideas for his blog. He even built a digital personal assistant he) Tj T* 0 Tw .6664 Tw (named Jarvis that wired all of his productivity tools together to simplify his increasingly complex life.) Tj T* 0 Tw 1.677375 Tw (But the part that got my attention was this: he was building things. Real things. Applications and) Tj T* 0 Tw (websites for his friends. Tools that actually worked and were commercially viable.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 344.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 20.5 Tm /F1 10.5 Tf 15.5 TL .730275 Tw (I was blown away at what he described to me over the course of a few conversations, so I asked if) Tj T* 0 Tw (he'd show me.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 290.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 36 Tm /F1 10.5 Tf 15.5 TL -0.101912 Tw (The following Saturday morning, we met for breakfast, and then I followed him home to see where the) Tj T* 0 Tw .875583 Tw (magic happened. He told me to bring my laptop because we were getting me set up to run Claude) Tj T* 0 Tw (myself. I was skeptical, but I did as instructed.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 235.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 36 Tm /F1 10.5 Tf 15.5 TL .846079 Tw (I didn't follow a lot of what we did that morning, because it all happened so fast. Chuck got Claude) Tj T* 0 Tw .070412 Tw (installed on my machine along with some basic plugins and tools and got me started. Four hours flew) Tj T* 0 Tw (by before I knew it, and I left his house intrigued by what I'd just opened up for myself.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 181.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 36 Tm /F1 10.5 Tf 15.5 TL .161175 Tw (Later that week, we talked on the phone and I told him what I'd been working on. I was excited. Then) Tj T* 0 Tw 1.132765 Tw (we started talking about poker \227 something we both love. I asked him if he thought Claude could) Tj T* 0 Tw (help us build a poker training app.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 157.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 5 Tm /F1 10.5 Tf 15.5 TL (He said, "I don't know. Let's find out.") Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 134.3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 5 Tm /F1 10.5 Tf 15.5 TL (That night, an obsession was born.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 79.8 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 36 Tm /F1 10.5 Tf 15.5 TL .707921 Tw (Over the next forty-five minutes or so, we laid out the parameters of what we wanted to build \227 for) Tj T* 0 Tw 2.2589 Tw (whom, and why. Then there was a two-hour session with Claude, creating the first prompt and) Tj T* 0 Tw 1.970063 Tw (refining the outputs until Claude was clear on the vision. Chuck already had all of the back-end) Tj T* 0 Tw ET
+Q
+Q
+q
+BT /F1 7.5 Tf 9 TL ET
+.6 .6 .6 rg
+BT 1 0 0 1 226.8225 32.4 Tm (PREVIEW COPY \227 NOT FOR DISTRIBUTION) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+0 0 0 rg
+BT 1 0 0 1 303.498 39.6 Tm (2) Tj T* ET
+Q
+ 
+
+Q
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+BT
+/F1-0 6 Tf
+7.2 TL
+ET
+0.352941 0.392157 0.439216 rg
+BT
+1 0 0 1 186.408 14 Tm
+(\251 2026 Chris Thatcher  \267  Marque Publishing\054 LLC  \267  Preview copy  \267  Not for redistribution) Tj
+T*
+ET
+Q
+
 endstream
 endobj
+19 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+20 0 obj
+<<
+/Contents 21 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 22 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+21 0 obj
+<<
+/Length 4224
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 70.8 712.9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 5 Tm /F1 10.5 Tf 15.5 TL (systems wired up, so he told Claude to build it and went to bed.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 673.9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 20.5 Tm /F1 10.5 Tf 15.5 TL .0945 Tw (He woke up to a working MVP \227 a minimum viable product. I was not expecting what he shared with) Tj T* 0 Tw (me in the morning. The app worked. It didn't do a lot, but it actually worked.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 603.9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 51.5 Tm /F1 10.5 Tf 15.5 TL .11655 Tw (Over the next few weeks, we kept sharing ideas, and both of us were working on the code. It was the) Tj T* 0 Tw .540474 Tw (most fun I'd had in years. We talked about the commercial viability of the app, all the cool things we) Tj T* 0 Tw 1.110375 Tw (could do with it. We got it to a point where we were sharing it with friends, and they were actually) Tj T* 0 Tw (using it.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 580.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 5 Tm /F1 10.5 Tf 15.5 TL (Then I got an idea.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 510.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 51.5 Tm /F1 10.5 Tf 15.5 TL .200605 Tw (I'd been carrying around a couple of book ideas for years. I had notes and outlines and lots of emails) Tj T* 0 Tw .554842 Tw (to myself and lots of rants in Word documents about my vision \227 but no real progress in more than) Tj T* 0 Tw .521132 Tw (fifteen years on either one. In December, a mentor and good friend gave me a nudge and told me it) Tj T* 0 Tw (was time to write my book.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 471.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 20.5 Tm /F1 10.5 Tf 15.5 TL 1.3622 Tw (Then the question that literally changed my life. Could Claude help me organize my thoughts and) Tj T* 0 Tw (build the framework for a book?) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 385.9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 67 Tm /F1 10.5 Tf 15.5 TL .2115 Tw (To be clear \227 Claude didn't write my books. It was my guide through the process. It took a lot of trial) Tj T* 0 Tw .836348 Tw (and error to get the rules down, but I was able to go from a pile of notes and a thesis to a finished) Tj T* 0 Tw .844667 Tw (manuscript in about three months \227 most of that learning how to work with Claude. That is to say,) Tj T* 0 Tw -0.03325 Tw (three months after getting started with Claude, I had a book ready to publish, a novel in progress, and) Tj T* 0 Tw (the poker project had branched into two more apps and a third book.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 362.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 5 Tm /F1 10.5 Tf 15.5 TL (I am doing more at sixty-two than I ever have before.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 323.4 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 20.5 Tm /F1 10.5 Tf 15.5 TL .7287 Tw (If I can do it, so can you. Start thinking big and dusting off your dreams. Claude can help you bring) Tj T* 0 Tw (them to life.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 237.9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 67 Tm /F1 10.5 Tf 15.5 TL .416912 Tw (That's what this book is about. I'm going to walk you through everything I wish someone had walked) Tj T* 0 Tw 2.4367 Tw (me through \227 from your first conversation with Claude to building things you didn't think were) Tj T* 0 Tw .948938 Tw (possible. No code required. No technical background. Just you, a laptop, and a willingness to try. I) Tj T* 0 Tw -0.012 Tw (can't teach you everything \227 most of it you will figure out on your own. But if you follow along and put) Tj T* 0 Tw (in the time, you will find the sky is your limit and Claude is your new best friend.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 70.8 198.9 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 20.5 Tm /F1 10.5 Tf 15.5 TL .438375 Tw (Please make sure your seat backs and tray tables are in their upright and locked positions, because) Tj T* 0 Tw (we are getting ready to take off.) Tj T* ET
+Q
+Q
+q
+BT /F1 7.5 Tf 9 TL ET
+.6 .6 .6 rg
+BT 1 0 0 1 226.8225 32.4 Tm (PREVIEW COPY \227 NOT FOR DISTRIBUTION) Tj T* ET
+BT /F1 9 Tf 10.8 TL ET
+0 0 0 rg
+BT 1 0 0 1 303.498 39.6 Tm (3) Tj T* ET
+Q
+ 
+
+Q
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+BT
+/F1-0 6 Tf
+7.2 TL
+ET
+0.352941 0.392157 0.439216 rg
+BT
+1 0 0 1 186.408 14 Tm
+(\251 2026 Chris Thatcher  \267  Marque Publishing\054 LLC  \267  Preview copy  \267  Not for redistribution) Tj
+T*
+ET
+Q
+
+endstream
+endobj
+22 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
 xref
-0 19
+0 23
 0000000000 65535 f 
 0000000015 00000 n 
-0000000054 00000 n 
-0000000141 00000 n 
-0000000190 00000 n 
-0000000379 00000 n 
-0000001146 00000 n 
-0000001208 00000 n 
-0000001315 00000 n 
-0000001427 00000 n 
-0000001542 00000 n 
-0000001620 00000 n 
-0000001811 00000 n 
-0000003141 00000 n 
-0000003332 00000 n 
-0000004109 00000 n 
-0000004300 00000 n 
-0000006690 00000 n 
-0000006881 00000 n 
+0000000091 00000 n 
+0000000178 00000 n 
+0000000227 00000 n 
+0000000481 00000 n 
+0000002007 00000 n 
+0000002114 00000 n 
+0000002221 00000 n 
+0000002333 00000 n 
+0000002448 00000 n 
+0000002526 00000 n 
+0000002783 00000 n 
+0000005104 00000 n 
+0000005212 00000 n 
+0000005469 00000 n 
+0000007948 00000 n 
+0000008056 00000 n 
+0000008313 00000 n 
+0000012971 00000 n 
+0000013079 00000 n 
+0000013336 00000 n 
+0000017613 00000 n 
 trailer
 <<
-/Size 19
+/Size 23
 /Root 3 0 R
 /Info 1 0 R
 >>
 startxref
-8999
+17721
 %%EOF

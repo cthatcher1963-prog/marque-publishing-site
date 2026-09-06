@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Breach Wasn't Where the Headline Said It Was — Marque Publishing</title>
+<meta name="description" content="The LiteLLM supply chain attack grabbed headlines, but 95% of the damage came from a compromised Trivy scanner five days earlier. What your board needs to know.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="The Breach Wasn't Where the Headline Said It Was">
+<meta property="og:description" content="95% of the LiteLLM supply chain damage came from Trivy five days earlier. The wrong name costs you money.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/breach-wasnt-where-headline-said">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/breach-wasnt-where-headline-said">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">August 2026</time>
+      </div>
+      <h1>The Breach Wasn't Where the Headline Said It Was</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">On Wednesday of this week, roughly 2,500 companies learned they might be victims of what was being called the largest AI supply chain breach of the year. By Friday, a second research firm had published a timeline showing that about 95 percent of them were already compromised five days before the AI product in the headline was ever touched.</p>
+
+      <p>Both findings are probably right. That is the part worth your attention.</p>
+
+      <h2>Forty Minutes That Weren't the Whole Story</h2>
+
+      <p>Here is the version that ran everywhere first. On March 24, at 10:39 UTC, two poisoned versions of a Python package called LiteLLM went live on the public package index. LiteLLM is an AI gateway — the piece of plumbing that lets an application talk to several different AI model providers through one connection. The malicious versions sat there for about forty minutes before being quarantined. LiteLLM's own advisory tells customers to treat any install that day, right up until 16:00 UTC, as suspect.</p>
+
+      <p>Forty minutes does not sound like much. It was enough. One of the two versions included a file that Python runs automatically every time the interpreter starts — meaning the malicious code executed on those machines whether or not any application ever actually used LiteLLM. It swept up environment variables, SSH keys, cloud provider credentials, Kubernetes tokens, and database passwords, encrypted them, and shipped them to a domain that looked like it belonged to LiteLLM and did not.</p>
+
+      <p>On August 12, the threat intelligence firm CloudSEK published an analysis built from roughly 434,000 files it says the attackers captured, mapping potential exposure to more than 2,500 organizations. The names on the list are the kind that make a board sit up. CloudSEK was careful in its own language — these are reconstructed exposure figures, not confirmed compromises — but the headline number traveled faster than the caveat.</p>
+
+      <h2>Then Someone Checked the Clocks</h2>
+
+      <p>Two days later, on August 14, SOCRadar published a record-level look at the same incident data covering 2,188 organizations. Every record carried a first-seen and last-seen timestamp. The earliest was March 19 at 18:05 UTC. The latest was March 24 at 20:09 UTC — a span of just over five days.</p>
+
+      <p>For 2,085 of those organizations — 95 percent — the data collection had already finished before the poisoned LiteLLM packages ever appeared. Their credentials were gone days earlier.</p>
+
+      <p>The actual entry point was Trivy, an open-source vulnerability scanner from Aqua Security. On March 19, attackers used compromised credentials to publish a malicious Trivy release and tamper with the associated build actions. The first stolen data showed up eighteen minutes later. CISA added the Trivy compromise to its Known Exploited Vulnerabilities catalog on March 26, citing evidence of active exploitation. LiteLLM was downstream of that: its own build pipeline pulled in the poisoned scanner automatically, and the malicious LiteLLM releases were what came out the other end.</p>
+
+      <p>SOCRadar's summary is the cleanest sentence anyone has written about this incident: <em>the forty minutes everyone reported was the closing act, not the whole play.</em></p>
+
+      <h2>Why the Wrong Name on the Marquee Costs You Money</h2>
+
+      <p>I want to be direct about the practical damage here, because it isn't reputational.</p>
+
+      <p>If your team scoped its investigation to the LiteLLM window — March 24, 10:39 to 16:00 UTC — you searched a four-hour slice of one day. The exposure window that mattered for most affected organizations opened on March 19 and ran through the 24th, across six different CI/CD platforms: GitHub Actions, GitLab CI, Jenkins, Bitbucket, CircleCI, and Buildkite. A company that checked the narrow window, found nothing, and closed the ticket in March has been carrying live stolen credentials for five months.</p>
+
+      <p>And these credentials do not expire on their own. The FBI issued a FLASH advisory on July 2 warning that actors affiliated with this campaign are likely to weaponize credentials stolen here long after the initial compromise, and telling organizations to rotate CI/CD secrets, publishing tokens, and cloud credentials that were reachable during the exposure windows. SOCRadar reports the stolen material is already being brokered on Telegram. A static cloud key copied in March works today unless somebody rotated it.</p>
+
+      <p>The confirmed downstream damage is not theoretical. CERT-EU concluded that the Trivy compromise gave attackers an AWS API key that led to a breach of European Commission cloud infrastructure — roughly 350 gigabytes of data, about 91.7 gigabytes compressed, touching data tied to 42 internal Commission clients and at least 29 other EU entities. The security vendor Checkmarx confirmed that credentials obtained through the Trivy attack enabled unauthorized access to its own code repositories.</p>
+
+      <p>Read that last sentence again. A security scanner was used to breach a security company.</p>
+
+      <h2>The Question This Actually Raises for Your Board</h2>
+
+      <p>I've argued for years that the most dangerous position in your technology stack is the tool nobody thinks about because it's <em>supposed</em> to be safe. Scanners, build systems, gateways, and monitoring agents get installed once, granted broad permissions so they can do their job, and then reviewed approximately never. They are trusted by default and audited by exception. That inversion is the whole vulnerability.</p>
+
+      <p>The AI angle is real, but it is not the one most coverage reached for. The story here is not that an AI product got hacked. It is that the AI layer now sits at a junction between your data, your identity systems, your compute, and increasingly your automated actions — which makes it a uniquely rich place to land. CloudSEK's own conclusion is that the next major supply chain attack will likely target AI infrastructure precisely because it is connected to everything else. That is a governance question, not a tooling question, and it belongs on an agenda rather than in a backlog.</p>
+
+      <p>One more thing is worth noticing. The organizations that came through this clean mostly did so for an unglamorous reason: they pinned their dependencies. LiteLLM's customers running the official Docker image were not affected, because that deployment path locks versions. There is no heroism in that. It's hygiene, and it worked.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>Ask one question first, and don't accept a summary: <em>did we scope our March investigation to March 24, or to March 19 through 24?</em> If the answer is the narrower window, the investigation needs to be reopened this week, not this quarter.</p>
+
+      <p>Then ask what your organization did with the FBI's July 2 guidance. Were CI/CD secrets, publishing tokens, and cloud credentials rotated across that full window, or only where compromise was confirmed? "We found no evidence" is not the same answer as "we rotated anyway," and only one of those closes the exposure.</p>
+
+      <p>Finally, ask the structural version of the question, the one that outlives this incident: which tools in our environment run automatically, hold broad credentials, and would not trip an alarm if they started behaving differently? Then ask when anyone last looked.</p>
+
+      <p>The name in the headline was wrong. The credentials were still gone.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

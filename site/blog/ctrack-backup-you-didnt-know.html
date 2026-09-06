@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Backup Copy You Did Not Know Your Vendor Kept — Marque Publishing</title>
+<meta name="description" content="Thomson Reuters' C-Track breach exposed court records from 11 states — including backup copies the courts didn't know existed. What boards should learn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="The Backup Copy You Did Not Know Your Vendor Kept">
+<meta property="og:description" content="Court records breached through vendor copies nobody knew existed. A board-level lesson.">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/ctrack-backup-you-didnt-know">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/ctrack-backup-you-didnt-know">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">September 2026</time>
+      </div>
+      <h1>The Backup Copy You Did Not Know Your Vendor Kept</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">On Wednesday, Thomson Reuters disclosed that someone had been inside its C-Track court case management platform from March through the end of June, and had walked off with files belonging to appellate courts in eleven states and the U.S. Virgin Islands, plus three Ontario courts. Minnesota and Oregon courts have since said separately that they were affected too.</p>
+
+      <p>The records may contain names, Social Security numbers, driver's license numbers, dates of birth, medical information, and health insurance information. Some of what was taken may have been sealed, redacted, or confidential court information — the material a judge specifically ordered kept out of public view.</p>
+
+      <p>That is a serious breach on its own. But the detail I want boards to notice came from Alabama, and it was one sentence long.</p>
+
+      <h2>The Courts Did Not Know the Copy Existed</h2>
+
+      <p>Alabama's appellate courts use C-Track for case management, e-filing, and public access. Their statement on Wednesday said the courts' own systems were never touched. Court data, they said, is kept in a secure cloud environment separate from the vendor's.</p>
+
+      <p>Then came the correction. West Publishing, the Thomson Reuters unit that sells C-Track, later told the courts that a copy of some Alabama appellate court data had been sitting in a backup file inside the company's cloud environment. That copy is what may have been accessed.</p>
+
+      <p>The Alabama courts said they had not asked West Publishing to keep a backup copy of their data, and they had not known one existed.</p>
+
+      <p>Montana filled in how such a copy comes to exist. Chief Justice Cory Swanson's release said the compromised files were copies of Montana's databases that had been "supplied to TR for the purpose of troubleshooting the applications." Somebody had a support ticket. Somebody sent the vendor a database copy so the vendor could reproduce the problem. The copy stayed on the vendor's servers, and it was still there in March when the unauthorized party arrived. Minnesota's courts described the same thing: backup data the courts had provided to the vendor.</p>
+
+      <p>In my experience, this is how most vendor-held data actually gets there. Not through the contract. Through a troubleshooting session, a migration, a proof of concept, a data extract somebody emailed to make a demo work. The contract describes the data flow the lawyers negotiated. The backup describes the data flow that happened.</p>
+
+      <h2>Two Courts, Two Different Answers About Where the Data Was</h2>
+
+      <p>It gets less tidy. The Supreme Court of Ohio, whose C-Track installation serves ten of the state's twelve courts of appeals, said its platform is hosted by the court itself and managed by Thomson Reuters. On August 31 — five weeks after Ohio was first notified — the vendor told the court that the unauthorized access took place on the court's production platform, not a backup.</p>
+
+      <p>So Alabama was told the exposure was a backup copy it never knew about. Ohio was told it was the live production system. Thomson Reuters' own notice says only that an unauthorized party "obtained certain C-Track files" and that the incident was not caused by the courts' networks or security. As of Thursday, nobody had published how the attacker got in, who was responsible, how much was taken, or how many people are affected.</p>
+
+      <p>I am not going to reconcile those accounts, because I cannot. What I can say is that if you are a customer of a breached vendor and you cannot get a straight answer to "which copy of our data, sitting where," you are not in a position to make a single decision about notification, regulatory reporting, or what to tell your own board. Ohio said it still has not received comprehensive details of the enhanced security measures the vendor says it deployed. Ohio is still using the platform.</p>
+
+      <h2>The Timeline Is Longer Than the Headline</h2>
+
+      <p>Here is the sequence, as reconstructed from the vendor's notice and the courts' own statements.</p>
+
+      <p>Unauthorized access ran from March 1 through June 29. Thomson Reuters discovered it on June 30. The courts were told between July 23 and July 28 — three to four weeks after discovery, and nearly five months after the intrusion began. Ohio learned the production-platform detail on August 31. Public disclosure came September 2, a date Montana said was chosen so the vendor and the affected states could announce simultaneously.</p>
+
+      <p>Four months of undetected access to a system holding sealed court records is the number that will make the headlines. But the number that should worry a board is the gap between June 30 and July 23. For those three weeks, the customers whose data had been taken were operating with no knowledge of it. Their own incident response clocks, their own regulatory obligations, their own notification duties under state law — none of it had started, because none of them knew.</p>
+
+      <p>Minnesota's response was to terminate Thomson Reuters' access to its court environments and force password resets for every user of its appellate case management system. That is what a customer does when it decides it can no longer wait for the vendor's version of events.</p>
+
+      <h2>Three Questions, Pointed at the Copies</h2>
+
+      <p><strong>What are we protecting?</strong> Not "our data in the vendor's system." The copies. Every extract, backup, snapshot, and troubleshooting export that has left your environment for a vendor's and has no scheduled deletion date. If the answer to "what does the vendor hold of ours" is "whatever is in the contract," the answer is wrong, and Alabama just demonstrated why.</p>
+
+      <p><strong>What happens if we lose it?</strong> For a court, sealed records are the crown jewels. For your business, it is whatever you sent the vendor when the system broke at 2 a.m. and someone needed a full database to fix it. That copy is a snapshot of your most sensitive data, at full fidelity, in an environment you do not monitor and were not told about.</p>
+
+      <p><strong>Who decides?</strong> When the vendor calls on July 23 to say your data was in the affected files, and then calls again on August 31 to say it was actually the production system, who in your organization is empowered to stop waiting and act — cut access, reset credentials, notify your regulator on your own timeline? Minnesota had an answer. Most companies do not until the second phone call.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>Ask which vendors have ever received a copy of production data for support, migration, or testing purposes, and whether any of those copies have a confirmed deletion date. Not the vendors who are contractually allowed to. The ones who actually did.</p>
+
+      <p>Ask what your critical vendor contracts say about notifying you when the vendor discovers a breach, and whether "promptly" has a number attached. Thomson Reuters took just over three weeks for the first courts it told, four for others. If your contract would have permitted that, you know what to renegotiate.</p>
+
+      <p>Ask whether you can independently verify a vendor's account of what was accessed, or whether you are entirely dependent on the vendor's forensics. Montana got a copy of its accessed data and reviewed it with its own team. That is the posture to aim for.</p>
+
+      <p>Ask what you would do on day one if a vendor told you a backup you did not know about had been taken. If the honest answer is "ask the vendor what to do," that is the gap.</p>
+
+      <p>The courts in this incident did nothing wrong by the vendor's own account. Their systems held. Their data left anyway, in copies at least one of them did not know existed, from an environment none of them controlled. Your vendors have copies too.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="/author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>
