@@ -294,3 +294,9 @@ still open.
   Workshop-Offer.md), gated behind the list. Next: the Track 2 inventory doc, then gate the CwC toolkit.
 - Carry: Executives MailerLite form styling; deploy guard EACCES/ENOENT on Scheduled folder is
   cosmetic (guard passes).
+
+## 2026-09-06 (late) - Toolkit split, forms unified, list routing fixed
+- WwC free gate now delivers ONLY the two brief templates; reference guides PDF + worksheets ZIP moved out of site/ to wwc-toolkit-reader-only/ (ship with the book; reader-only page later). WwC page + download page copy updated. Writers welcome email rewritten (subject 'Your Writing with Claude briefs'); automation re-enabled by Chris.
+- All four MailerLite forms now use the light Writers style: Makers By4UIw, Executives xmtcNh, Writers 0U4Pav (heading fixed), Newsletter KBp3sy (built, currently unused).
+- Routing fix: every page that promises '10 Cybersecurity Decisions' (homepage, books, about, labs, all 70 cyber posts) now uses the Executives form xmtcNh so the Executives automation actually delivers the guide. Previously they fed Newsletter - All, which has no automation. Net: xmtcNh 103 embeds, By4UIw 23, 0U4Pav 2. Generator templates updated.
+- Open (copy decision, not urgent): homepage/about/labs promise the cyber guide sitewide; if the general newsletter should be its own thing, swap those four back to KBp3sy and build a Newsletter welcome.
