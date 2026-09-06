@@ -102,3 +102,8 @@ Chris Thatcher
 Marque Publishing
 
 P.S. The files are free for readers. Please don't repost them — send a friend to marquepublishing.com/writing-with-claude instead.
+
+## 2026-09-06 (evening) - All four forms on the light Writers style
+- Makers form is now **By4UIw** (id 197878758427854030), Executives form is **xmtcNh** (id 197878777449023173), Newsletter form is **KBp3sy** (id 197879891714115182, 'Stay in the Loop', feeds Newsletter - All). All three are duplicates of the Writers form 0U4Pav, repointed to their groups, headings/text rewritten in the editor. Old 5UgLqq / HWaBaq / NTW6JI are no longer on the site; the blog generator templates were updated too.
+- Writers form 0U4Pav heading fixed: 'Your Voice, Amplified' + free-briefs text (it had been carrying the Creators copy).
+- Free WwC gate now delivers ONLY the two brief templates; reference guides + worksheets ship with the book (reader-only page later). Welcome email must be updated to match (blocked while the automation is active).
