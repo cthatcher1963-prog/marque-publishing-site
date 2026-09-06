@@ -270,3 +270,27 @@ still open.
 - Guard --check: only the sandbox Scheduled-folder ENOENT line (not a real block). Nothing deployed.
 - Open: Chris reviews the test email → activates the automation → `npm run deploy`. Optional:
   customize the form's success message ("Check your inbox to confirm — the toolkit is on its way.").
+
+
+## 2026-09-06 (evening) — Staged work DEPLOYED; THL flipped to available; repo committed + pushed
+
+- Deployed via `npm run deploy` (guard clean, cache purged), two passes. Live and verified:
+  /writing-with-claude/ (book page + Writers form 0U4Pav), /downloads/wwc-toolkit/ (noindex),
+  stamped download PDFs, robots.txt, _headers.
+- THL: "Preorder now · out September 1" was still live five days after launch. Fixed on homepage,
+  /books, /treasure-hunter/ (hero, meta/OG, signup section now "Be First to Hear About Book Two").
+  Print ASINs from the live Amazon page: paperback B0HDMY2J3Y (primary Buy button), hardcover
+  B0HDK7GQ1S, Kindle B0HCMCJ7R7.
+- WwC links repointed from /books#writing-with-claude to /writing-with-claude/ on homepage card,
+  /books entry (new "Visit the book page & get the free toolkit" button), and the CwC page's
+  "Next in the collection" block. Status copy "In the works" -> "In production".
+- Repo: committed 6be3a47 (first commit since 7/28; adds .gitignore for node_modules/.wrangler/
+  guard file) and pushed to origin main. Deployed state is now recorded.
+- OPEN (Chris): MailerLite automation "Welcome — Writers (Writing with Claude)" (197871593993536612)
+  is still DISABLED. Form is live; signups before it is enabled will not get the toolkit email.
+  Subscriber baseline today: 4 total.
+- Decision from Chris (CMO discussion): Marque AI hub page and per-book intro videos are NOT this
+  month — off THE-RAILS. Teaser recorded session = the workshop's selling mechanism (already in
+  Workshop-Offer.md), gated behind the list. Next: the Track 2 inventory doc, then gate the CwC toolkit.
+- Carry: Executives MailerLite form styling; deploy guard EACCES/ENOENT on Scheduled folder is
+  cosmetic (guard passes).
