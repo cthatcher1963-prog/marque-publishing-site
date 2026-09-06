@@ -1,2 +1,5 @@
 /downloads/wwc-toolkit/*
   X-Robots-Tag: noindex, nofollow
+
+/downloads/*
+  X-Robots-Tag: noindex, nofollow

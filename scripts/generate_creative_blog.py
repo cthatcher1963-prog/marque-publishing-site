@@ -217,7 +217,7 @@ ml('account', '2453958');
   </div>
 </article>
 
-<section class="newsletter section-pad">
+<section id="signup" class="newsletter section-pad">
   <div class="container">
     <div class="newsletter-inner fade-in">
       <h2>Get the Next One</h2>
@@ -245,7 +245,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {{
 
 CTA_TMPL = '''<div class="download-cta fade-in">
       <h3>{label}</h3>
-      <p>Free, no strings attached. If it saves you an hour, tell a friend about the book.</p>
+      <p>Free with your email. Sign up and it lands in your inbox with the rest of the toolkit. If it saves you an hour, tell a friend about the book.</p>
       <a href="{url}" class="btn-primary">{button}</a>
     </div>'''
 
