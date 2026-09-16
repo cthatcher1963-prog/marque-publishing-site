@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anthropic Just Open-Sourced the Shopping Agent &mdash; Creating with Claude &mdash; Marque Publishing</title>
+<meta name="description" content="Anthropic released a full commerce agent blueprint under Apache 2.0. Two reference agents, four industries, and a signal that AI is done with demos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="Anthropic Just Open-Sourced the Shopping Agent">
+<meta property="og:description" content="Anthropic released a full commerce agent blueprint under Apache 2.0. Two reference agents, four industries, and a signal that AI is done with demos.">
+<meta property="og:url" content="https://www.marquepublishing.com/creating-with-claude/blog/anthropic-open-sourced-the-shopping-agent">
+<link rel="canonical" href="https://www.marquepublishing.com/creating-with-claude/blog/anthropic-open-sourced-the-shopping-agent">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting",
+  "headline": "Anthropic Just Open-Sourced the Shopping Agent", "datePublished": "2026-09-14",
+  "author": {"@type": "Person", "name": "Chris Thatcher"},
+  "publisher": {"@type": "Organization", "name": "Marque Publishing", "url": "https://www.marquepublishing.com"},
+  "description": "Anthropic released a full commerce agent blueprint under Apache 2.0. Two reference agents, four industries, and a signal that AI is done with demos."}
+</script>
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 2.5rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.post-subtitle { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: var(--text-muted); line-height: 1.5; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.article-prose blockquote { border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 2rem 0; }
+.article-prose blockquote p { font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--text-muted); }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+.download-cta { max-width: 42rem; margin: 3rem auto 0; background: var(--card-bg); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; box-shadow: var(--card-shadow); padding: 1.75rem; }
+.download-cta h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+.download-cta p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="/" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/books">Books</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <div style="max-width: 42rem; margin-inline: auto;">
+      <a href="/creating-with-claude/blog" class="back-link">&larr; All posts</a>
+    </div>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Insights</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">September 2026</time>
+      </div>
+      <h1>Anthropic Just Open-Sourced the Shopping Agent</h1>
+
+    </header>
+    <div class="article-prose fade-in">
+<p class="lead">Last week I was building a poker training app. This week Anthropic dropped an open-source blueprint for AI shopping agents, and I stopped what I was doing to read every line of it.</p>
+<p>Not because I'm building a shopping agent. Because the way they built it changes how I think about building anything with Claude.</p>
+
+<p>Here's what happened. On September 2nd, Anthropic released <strong>Claude Commerce Agents</strong> — a full Apache 2.0 repository containing two production-ready reference agents and runnable implementations across four industries. The repo includes a shopping agent that handles product discovery, cart management, comparisons, and customer service. And a merchant agent that does sales analytics, inventory management, pricing strategy, and campaign development. Retail, travel, telecom, entertainment — all covered.</p>
+
+<p>This isn't a demo. This is a blueprint you can clone, configure, and deploy in an afternoon.</p>
+
+<h2>Why this matters more than the headline suggests</h2>
+
+<p>The commerce angle is interesting, sure. Visa and Mastercard are already working on payment integrations. Retailers are circling. But the architecture underneath is what caught my attention.</p>
+
+<p>Anthropic made a design decision that goes against the grain of how most people build agents right now. Instead of routing requests between a swarm of specialized sub-agents — the approach everyone copied from that AutoGPT wave two years ago — they kept everything in a single agent conversation. The agent has "skills" it can activate, but there's one continuous thread. One context. One memory.</p>
+<p>That matters. If you've ever built a multi-agent system, you know the pain. Agent A generates output, Agent B misinterprets it, Agent C hallucinates a fix. You spend more time debugging the handoffs than building the actual product. Anthropic's approach eliminates all of that by design. Fewer tokens, lower latency, and way less complexity.</p>
+
+<p>I've been building my own agents with Claude for months now. An agent that publishes blog posts to this site. An agent that manages my book production pipeline. After reading this blueprint, I realized I've been overcomplicating some of them. The single-agent-with-skills pattern is cleaner than what I was doing, and I'm already refactoring.</p>
+
+<h2>The prompt caching trick everyone should steal</h2>
+
+<p>The blueprint targets 90 to 99 percent prompt cache hit rates. Read that number again. They're caching almost everything — the system prompt, the skill definitions, the conversation history — so that each turn only sends the new user message as uncached tokens. The cost difference is enormous. I've been paying attention to prompt caching in my own projects, but nowhere near that aggressively.</p>
+
+<p>If you're building anything with Claude's API right now, this is the single most actionable takeaway from the entire repo. Structure your prompts so the static parts never change between turns. Put your skill definitions and context at the top of the system prompt where they'll cache. It's not sexy engineering, but it cuts your API costs by an order of magnitude.</p>
+<h2>What this means for builders like us</h2>
+
+<p>A year ago, Anthropic was selling an API and letting developers figure out the rest. Six months ago, they shipped tools like Cowork and Claude Code that showed how they thought agents should work. Now they're open-sourcing full production architectures for specific industries.</p>
+
+<p>See the trajectory? They're not just providing the engine anymore. They're providing the car, the road, and the GPS. And they're doing it under Apache 2.0, which means you can take it, modify it, and ship it commercially without asking permission.</p>
+
+<p>After thirty years in cybersecurity, I've watched this pattern before. A technology matures when the reference implementations go open source. It happened with web servers, with containers, with cloud infrastructure. When the company behind the technology says "here's exactly how to build with it, for free," that's not generosity — that's a market being declared ready.</p>
+
+<p>The commerce agent blueprint ships with three deployment options: the raw Messages API, the Claude Agent SDK, and Claude Managed Agents. That last one is still in beta, but it's Anthropic hosting and running your agent for you. Think about what that means. You bring the business logic — the catalog, the pricing rules, the policies — and Anthropic handles everything else. The infrastructure gap between "I have an idea" and "I have a deployed agent" just collapsed.</p>
+
+<p>I'm not saying everyone should build a shopping agent. I'm saying the patterns in this blueprint apply to any agent you're building. The single-conversation architecture. The aggressive prompt caching. The skill-based routing. The typed tool responses instead of raw text. These are production patterns from the people who built the model, and they just handed them to you for free.</p>
+<p>Clone the repo. Read the architecture docs. Even if you never build a commerce agent, the engineering decisions in this blueprint will make your next project better. That's not a suggestion — it's what I'm doing this week.</p>
+
+<p>What patterns have you noticed in your own agent builds that this blueprint either confirms or challenges? I'd love to hear what you're working on.</p>
+    </div>
+
+  </div>
+</article>
+
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the Next One</h2>
+      <p>New tools, tutorials, and book updates from Creating with Claude. No spam, ever.</p>
+      <div class="ml-embedded" data-form="By4UIw"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="/" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="/books">Books</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/labs">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

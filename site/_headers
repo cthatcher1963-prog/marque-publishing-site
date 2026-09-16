@@ -1,3 +1,6 @@
+/downloads/cwc-reader/*
+  X-Robots-Tag: noindex, nofollow
+
 /downloads/wwc-toolkit/*
   X-Robots-Tag: noindex, nofollow
 

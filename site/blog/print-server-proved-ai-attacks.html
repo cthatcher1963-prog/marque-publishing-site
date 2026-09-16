@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Print Server That Proved AI Attacks Are Here — Marque Publishing</title>
+<meta name="description" content="One attacker used hundreds of AI agents to compromise 440 print servers at 395 organizations in 48 countries. The economics of cyberattacks just changed permanently.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="The Print Server That Proved AI Attacks Are Here">
+<meta property="og:description" content="One attacker, hundreds of AI agents, 440 compromised servers — AI attacks are here">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/print-server-proved-ai-attacks">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/print-server-proved-ai-attacks">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">September 2026</time>
+      </div>
+      <h1>The Print Server That Proved AI Attacks Are Here</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">On August 31, a single attacker sat down at an empty workspace. Four hours later, that attacker had achieved remote code execution against a live target. Two hours after that, full domain administrator access. By the time security researchers at GreyNoise and Blackpoint Cyber published their findings on September 9, the campaign had compromised 440 print server instances at 395 organizations across 48 countries.</p>
+
+      <p>The weapon wasn't a zero-day exploit. Those existed — two critical vulnerabilities in PaperCut NG/MF print management software, CVE-2026-81578 and CVE-2026-82078, rated 8.8 and 9.4 on the CVSS scale respectively. But the thing that made this campaign different from every breach you've read about this year was who did most of the work.</p>
+
+      <p>Hundreds of AI agents did.</p>
+
+      <h2>What Actually Happened</h2>
+
+      <p>The suspected Russian-speaking attacker used OpenAI's Codex and a DeepSeek model to build what Blackpoint Cyber described as an autonomous engineering pipeline. The AI agents didn't just write exploit code. They analyzed PaperCut's patches, replicated code execution paths in a virtual lab, built Go-based scanning tools, generated target lists through the Netlas internet scanning platform, and refined their approach based on real-time errors.</p>
+
+      <p>Think about that for a moment. This wasn't a team of skilled operators working in shifts. It was one person directing AI agents that functioned as an autonomous exploit development unit — researching, coding, testing, failing, adapting, and retrying — while the attacker presumably slept or worked on something else.</p>
+
+      <p>Once the automated campaign kicked into gear, GreyNoise recorded 11 organizations breached in 26 seconds. At one U.S. high school, the gap between initial access and full domain administrator control was seven minutes.</p>
+
+      <p>The attacker harvested credentials from 280 victims. Obtained operating system or domain secrets from 147. Gained full domain admin at 12. The education sector took the heaviest hit — 204 of the 440 compromised systems belonged to schools and universities, with the United States accounting for 98 victims, the largest share of any country.</p>
+
+      <h2>Why Executives Should Care About a Print Server</h2>
+
+      <p>I can already hear the objection: <em>print servers?</em> That's an IT problem, not a board problem.</p>
+
+      <p>Wrong framing.</p>
+
+      <p>PaperCut sits on your network with the same access as any other server. In many organizations, it runs with elevated privileges because it needs to talk to Active Directory to manage print queues and user authentication. When an attacker owns your print server, they're not stealing your toner budget. They're harvesting every credential that server can see, and using those credentials to move laterally into systems that actually keep your business running.</p>
+
+      <p>The real story here isn't the print server. It's the economics.</p>
+
+      <h2>The Math Just Changed</h2>
+
+      <p>In <em>Cyber Risk Is Business Risk</em>, I wrote about the Three Questions every board member needs to ask their CISO: <em>What are we protecting? What are the threats? What are we doing about it?</em> This incident rewrites the assumptions behind all three.</p>
+
+      <p>The traditional calculus of a cyberattack required skilled human operators spending days or weeks on reconnaissance, exploit development, and lateral movement. That human labor was the bottleneck. It limited how many targets an attacker could hit simultaneously and how quickly they could pivot when something failed.</p>
+
+      <p>AI agents eliminated that bottleneck.</p>
+
+      <p>This attacker went from zero to remote code execution in four hours — not because the exploits were simple, but because AI agents handled the tedious cycle of test, fail, debug, retry that used to eat weeks of a human operator's time. Blackpoint's researchers recovered the full directory structure showing an AI-assisted workflow that looped continuously: vulnerability research feeding exploit development feeding failure analysis feeding code changes feeding another wave of attacks.</p>
+
+      <p>The implication for your organization is concrete. The same vulnerability that might have given you a week to patch before someone got around to exploiting it now gives you hours. Maybe less. PaperCut issued emergency patches on August 27. The automated campaign started four days later on August 31 — the same day CISA added both vulnerabilities to its Known Exploited Vulnerabilities catalog.</p>
+
+      <p>Four days. That's the window your security team had.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>If you're a board member or executive reading this, here's what matters:</p>
+
+      <p><strong>"How fast can we patch critical vulnerabilities across our environment?"</strong> Not the policy. The actual time from patch release to deployment on every affected system. If the answer is measured in weeks, you have a problem that AI-powered attacks just made urgent. Four days wasn't fast enough for 395 organizations.</p>
+
+      <p><strong>"Do we know what's running on our network — all of it?"</strong> PaperCut is print management software. It's the kind of thing that gets installed, configured once, and forgotten. Many of these compromised instances were likely running unpatched because nobody remembered they were there. Your attack surface includes every piece of software your team has stopped thinking about.</p>
+
+      <p><strong>"What does our AI threat model look like?"</strong> Most organizations haven't updated their threat models to account for AI-accelerated attacks. This campaign shows that a single operator can now achieve what previously required a well-resourced team. Your incident response plans, your patching timelines, your assumptions about attacker dwell time — all of it needs recalibration.</p>
+
+      <h2>The Uncomfortable Truth</h2>
+
+      <p>The PaperCut campaign is not an outlier. It's a proof of concept for every attack that comes next. The attacker used commercially available AI tools — not some classified nation-state capability. OpenAI's Codex. A DeepSeek model. Open-source offensive security tools that any penetration tester has on their laptop.</p>
+
+      <p>The barrier to entry just dropped through the floor, and the speed of execution just went through the roof. That's not a technology problem your CISO can solve alone. It's a business risk that belongs in the boardroom.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

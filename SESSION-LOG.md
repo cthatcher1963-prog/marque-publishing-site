@@ -300,3 +300,159 @@ still open.
 - All four MailerLite forms now use the light Writers style: Makers By4UIw, Executives xmtcNh, Writers 0U4Pav (heading fixed), Newsletter KBp3sy (built, currently unused).
 - Routing fix: every page that promises '10 Cybersecurity Decisions' (homepage, books, about, labs, all 70 cyber posts) now uses the Executives form xmtcNh so the Executives automation actually delivers the guide. Previously they fed Newsletter - All, which has no automation. Net: xmtcNh 103 embeds, By4UIw 23, 0U4Pav 2. Generator templates updated.
 - Open (copy decision, not urgent): homepage/about/labs promise the cyber guide sitewide; if the general newsletter should be its own thing, swap those four back to KBp3sy and build a Newsletter welcome.
+
+
+## 2026-09-06 — Harvester (evening): shipping day, all live and committed
+
+Recorded by session-harvester from session 0ed7096e "Marque AI website structure strategy" and
+file mtimes (deploys through 17:33Z).
+
+- Deploy unblocked; site live with THL fix, WwC page, full appendix pulled.
+- Four MailerLite forms unified in light Marque style: Makers "Create Something Real",
+  Executives "Get the Free Guide", Writers "Your Voice, Amplified", Newsletter "Stay in the Loop"
+  (NTW6JI -> KBp3sy).
+- List routing fixed: cyber-guide pages (homepage, books, about, labs, all 70 cyber posts) ->
+  Executives; CwC pages -> Makers; WwC page -> Writers.
+- Decision (Chris): Creating with Claude is the LEAD offer everywhere general (hero, popup,
+  signup sections). Cyber guide only on the Cyber Risk page and cyber posts.
+- Cover frames 3:4 -> 2:3 (side bands gone); v8 CwC and WwC covers live; old ones archived.
+- CwC toolkit gate CLOSED: every tool link and the five tool blog posts route to signup; welcome
+  email is the only delivery; calculator stays public; "free sample" link removed (file was a
+  5-page NOT FOR DISTRIBUTION preview). Tool PDFs unlisted + noindex.
+- Open: THL page signup feeds the Makers list (Chris decides fiction group vs newsletter).
+- NEXT (agreed for Monday 9/7): blog restructure. /blog becomes a hub with one card per stream
+  (Cybersecurity, Creating with AI, Writing with AI "coming soon"); each stream gets its own
+  index (/blog/cybersecurity/ new; post URLs do not move); homepage bottom = one latest-post
+  card per stream. Update the nightly publisher script FIRST or its next run undoes the change.
+  Two-hour job with a test run.
+
+
+## 2026-09-06 -- [scavenged] source attribution for today's out-of-folder sessions (also harvested)
+
+- Today's website work came from four sessions whose cwd was a session outputs folder, not this project: 82afaeeb "Chapters 1-9 edits review" (PDF stamping, downloads_originals_2026-09-06), f390c2a5 "Writing with Claude list" (MailerLite Writers list + 0U4Pav slug), 0ed7096e "Marque AI website structure strategy" (deploy, CwC gate closed, forms unified, routing fix, commit 6be3a47), 360aa14c "WWC and CWC cover comparison" (v8 covers). All were folder-connected; files and log entries above landed here directly. No copies needed.
+- Proof renders of the toolkit PDFs (~45 PNGs) sit in the 82afaeeb outputs folder; derivative, not copied.
+
+
+## 2026-09-07 -- (auto) Overnight publish: 2 new blog posts live
+
+Nightly publisher run (05:34-05:37Z):
+- scanner-at-the-counter.html deployed
+- hack-not-a-lapse.html deployed
+- blog.html + index.html regenerated
+- Cloudflare Pages deploy confirmed (.wrangler cache updated 05:37Z)
+
+Blog restructure still agreed for Monday (today). Must update the nightly publisher script first or its 9:31 PM run undoes the change.
+
+
+## 2026-09-07 (evening) — First Hour live; ladder pages built (LOCAL, not deployed)
+
+- KDP: "Your First Hour with Claude" live, ASIN B0HJ3XW5MM, $0.99, KDP Select (90-day term from
+  9/7 — the ebook must NOT be given away on the site until ~Dec 6). CwC republished with the
+  9/4 categories/keywords and the "Marque AI Collection" cover line on all three formats.
+- New pages (src/pages + targeted render to site/, NOT `npm run build`): /toolkit/ (starter-kit
+  landing, Makers form By4UIw), /reader/ (noindex; readers from the book's cards/back matter;
+  Makers form), /workshop/ (holding page, "first to know", Makers form), /downloads/cwc-reader/
+  (noindex; 14 PDFs: ten chapter quick-reference cards re-footered to /reader + ethics guide,
+  before-you-hit-send, deep research template, win tracker; stamped via new
+  scripts/stamp_cwc_reader.py; originals in downloads_originals_2026-09-07/cwc-reader/).
+  _headers + robots.txt updated for /downloads/cwc-reader/ and /reader/.
+- site/creating-with-claude/index.html (direct edit): hero "Start here for a dollar" tile ->
+  Amazon B0HJ3XW5MM; toolkit/signup copy now matches the drip (starter kit on signup, rest over the
+  week) instead of "six tools in your inbox". New asset site/your-first-hour-cover.jpg.
+- src/pages/books.html: Your First Hour entry added above CwC (rendered).
+- MailerLite: new automation "Welcome — Makers (Creating with Claude) — 5 emails"
+  (197980985088803893): days 0/1/3/5/7, all five bodies loaded via connector, dry run clean.
+  E1 delivers the two starter PDFs + the reader-resources URL; E2 prompt library + First Hour
+  Kindle link; E3 custom instructions + CwC; E4 verification checklist + CwC; E5 meeting prep +
+  workshop interest (reply) + review ask. Old 1-email Makers welcome PAUSED. Old dark form
+  "Creators Signup" (5UgLqq) DELETED — zero site references. Default sender name still
+  "Marque Publishing, LLC" -> Chris to change to "Chris Thatcher" and ACTIVATE the new automation
+  (dashboard only; connector/browser could not).
+- Guard --check: only the cosmetic Scheduled-folder ENOENT in the sandbox. Deploy: Chris runs
+  `npm run deploy` (no build step). Then commit.
+- Open: Facebook launch post waits for WWC; A+ content for First Hour + CwC (copy/images in
+  16_With_Claude_Series/0-Your-First-Hour-with-Claude/aplus/); Amazon series page; blog
+  restructure (agreed for today, not started — nightly publisher script first).
+
+
+## 2026-09-07 -- Site pages built, deploy waiting; books page QA pass
+
+**Session: 0be110f4 "Claude books marketing strategy" (continuation) + 2c2e7b06 "Website content deployment"**
+
+### What was done
+- Built and rendered into site/: /toolkit, /reader (unlisted), /workshop, reader-resources download page with 14 PDFs stamped to house rule
+- "Start here for a dollar" CWC tile added to CWC page
+- First Hour with Claude added to Books page
+- CWC signup copy corrected to match what the welcome emails actually send
+- Deploy guard integrated into the build
+- QA pass: all five book covers confirmed rendering correctly on Books page (CwC, First Hour, WwC, CRBR, THL, Deal Me In)
+- downloads_originals_2026-09-07/ created with CWC reader resources
+
+### Decisions
+- Pages built but NOT deployed yet -- three-step deploy process required
+
+### Open items
+- DEPLOY (three steps in order): (1) MailerLite sender name -> "Chris Thatcher" + activate "Welcome -- Makers (Creating with Claude) -- 5 emails" automation, (2) `npm run deploy`, (3) test signup at /toolkit
+- Blog restructure (agreed for Mon 9/7) still pending -- do AFTER this deploy lands
+- THL page signup still routes to Makers list (Chris decides fiction group vs newsletter)
+
+### Next action
+Deploy the site, then blog restructure.
+
+
+## 2026-09-07 — [scavenged from "Claude books marketing strategy" (0be110f4, fifth reuse)] Site build: toolkit + reader + workshop + stamped PDFs
+
+- Out-of-folder session, folder-connected to website project. Pages built and rendered to site/: /toolkit (CWC signup with MailerLite form), /reader (unlisted reader-resources landing), /workshop, reader-resources download page with all 14 PDFs stamped (mark + copyright + "Not for redistribution"), "Start here for a dollar" tile on CWC page, First Hour entry on Books page, CWC signup copy corrected. MailerLite 5-email automation content updated via API.
+- Deploy waiting: (1) MailerLite sender name → "Chris Thatcher" + activate "Welcome — Makers — 5 emails", (2) npm run deploy, (3) test at /toolkit. downloads_originals_2026-09-07/ and scripts/__pycache__/ untracked.
+- Blog restructure (/blog → hub with stream cards) agreed for after deploy lands. Update nightly publisher script first or its 9:31 PM run undoes the change.
+- Source: transcript of 0be110f4, also logged in 16_With_Claude_Series\SESSION-LOG.md.
+
+## 2026-09-07 — [scavenged from "Website content deployment" (2c2e7b06)] Post-deploy site QA — all covers confirmed
+
+- Out-of-folder session. Chris asked to verify current book covers. Full visual QA via Chrome confirmed all six covers rendering crisp on the Books page: Creating with Claude, Your First Hour with Claude ($0.99 Kindle button), Writing with Claude (concept, "In production"), Cyber Risk is Business Risk, The Treasure Hunter's Legacy (buy buttons live), Deal Me In ("On the way"). Homepage, blog page, and all layouts clean. No files created.
+- Source: transcript of 2c2e7b06.
+
+
+## 2026-09-08 -- Site deployed (untracked activity)
+
+Chris ran `npm run deploy` at approximately 05:35 EDT. Files updated: site/index.html, site/blog.html, site/blog/astra-cra-collision.html, .wrangler/cache/pages.json. This means /toolkit, /reader, /workshop, reader-resources, the "Start here for a dollar" CWC tile, First Hour on the Books page, and the corrected CWC signup copy are now LIVE on marquepublishing.com. The astra-cra-collision blog post also deployed with this push.
+
+**Open items:**
+- Verify MailerLite sender name changed to "Chris Thatcher" and the 5-email welcome automation is activated
+- Test: sign up at /toolkit with a fresh address, confirm email 1 arrives with PDF buttons
+- Blog restructure (agreed Mon 9/7): /blog becomes a hub with stream cards -- do this next
+- Monday shelf check: CwC under Generative AI, Amazon.ca paperback stock, Kindle pricing, Author Central bio, Bowker LCCN
+
+## 2026-09-15 -- Homepage redesign agreed; CwC gate live; WWC MailerLite list created
+
+**What was done:**
+- CwC content gate finalized: all tool links/blog posts now route to signup; welcome email is the only path to tools; calculator stays public; mislabeled "free sample" link removed
+- Homepage redesign agreed in principle: hero (lozenge + "Stories. Software. Games." + new invitation copy) -> "Meet the Publisher" (photo/bio/credentials) -> "What We Do" three-track (Publishing, Labs, Thinking Out Loud) -> single signup at bottom
+- Books page becoming a catalog grid (not full repeated text)
+- Dedicated Marque AI Collection page planned under Publishing
+- WWC MailerLite list created: group "Writers -- Writing with Claude," form slug 0U4Pav, double opt-in, automation OFF pending activation
+- Soft gate design confirmed (noindex + robots Disallow + X-Robots-Tag; honor-system P.S. in email)
+- Site QA: all 6 book covers confirmed rendering on books page
+- Automated blog deploy: index.html + blog.html updated 9/15 12:55 PM
+
+**Decisions:**
+- Homepage structure locked (pending scope decisions below)
+- Workshops live on Marque AI Collection page, not a new nav item
+- Soft gate is sufficient for now; hard gate is future scope
+
+**Open items:**
+- Chris decides: services page scope (full page now or homepage sentence + contact page)
+- Chris decides: Labs page (own page or homepage card)
+- Chris decides: THL signup routing (fiction group vs. general newsletter; magnet choice)
+- Verify contact page works
+- Chris must activate MailerLite automation and run npm run deploy for WWC pages
+
+**Next action:** Build homepage mockup after Chris settles scope decisions; test before pushing live.
+
+## 2026-09-15 - Homepage + Labs redesign LIVE
+- Homepage cut from 9 sections to 4: hero (lozenge, 'Stories. Software. Games.', original paragraph + Chris's two new paragraphs, ONE 'Email us' button, no hero signup, no links), 'Meet the publisher' (photo, creds line '30 years in cybersecurity - Writer - Advisor - AI coach', books-page bio), 'What we do / Three Tracks, One Standard' (Publishing: books + services mailto; Labs: Meet the engineer + software/games coming soon; Thinking Out Loud: cyber blog + Creating with AI blog), one bottom signup (Makers By4UIw). Removed: authority strip, division cards, featured-books grid, about preview, blog preview trio.
+- Labs: 'Meet the Engineer' section with Jayden's desk photo (site/jayden.jpg, 1400x1050; original in brand_assets/photos/) and his bio as Chris wrote it (Scratch at 7, Code Ninjas Black Belt at 15, Lua/Java/JavaScript/C#/Python, Unity + Godot, One Piece with Dad, Pokemon tournaments).
+- Process: mockup built in mockup/ -> rendered to preview/ (gitignored, outside site/) -> served on http://127.0.0.1:8787 -> Chris reviewed two rounds -> mockup/install.js promoted to src/pages + site/ -> sync check clean -> deploy + purge. Originals in _archive/pre-redesign-2026-09-15/.
+- Scheduled task publish-blog-content/SKILL.md updated: homepage has no blog preview, do not touch site/index.html; Makers form slug By4UIw; tool posts link to #signup.
+- Decisions (Chris): services = homepage sentence + contact email for now; Labs card links to the Labs page; no Marque AI hub this month.
+- Next: books catalog cleanup (grid, one line each, link to book pages); blog restructure (/blog hub + per-stream indexes + homepage latest-per-stream, nightly task rewritten); THL signup group decision.

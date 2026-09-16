@@ -428,6 +428,28 @@ ml('account', '2453958');
 </nav>
 
 
+<style>
+/* ─── Redesign additions (2026-09-15 mockup) ─── */
+.hero-invite p.hero-sub { margin-top: 1rem; }
+.hero-cta { margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.publisher { display: grid; grid-template-columns: 260px 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; max-width: 62rem; margin-inline: auto; }
+.publisher .photo-frame { width: 260px; }
+.publisher-body p { color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+.publisher-creds { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin: 0 0 1.5rem; font-family: var(--sans); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.publisher-creds span:not(:last-child)::after { content: '\00B7'; margin-left: 1.25rem; color: var(--text-subtle); }
+@media (max-width: 720px) { .publisher { grid-template-columns: 1fr; text-align: center; } .publisher .photo-frame { margin-inline: auto; } .publisher-creds { justify-content: center; } }
+.track-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; max-width: 66rem; margin-inline: auto; }
+.track-card { background: var(--card-bg); border-radius: 12px; box-shadow: var(--card-shadow); padding: 2rem 1.75rem; display: flex; flex-direction: column; }
+.track-card .division-icon { width: 36px; height: 36px; color: var(--accent); margin-bottom: 1rem; }
+.track-card h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin-bottom: 0.4rem; }
+.track-card p { color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1; }
+.track-links { display: flex; flex-direction: column; gap: 0.6rem; }
+.track-links a { font-family: var(--sans); font-size: 0.92rem; font-weight: 500; color: var(--accent); }
+.track-links a:hover { color: var(--accent-hover); }
+.track-links .soon { color: var(--text-subtle); font-size: 0.85rem; }
+@media (max-width: 860px) { .track-grid { grid-template-columns: 1fr; max-width: 28rem; } }
+</style>
+
 <main id="main-content">
 <!-- ─── Hero ─── -->
 <section class="home-hero">
@@ -436,16 +458,12 @@ ml('account', '2453958');
       <p class="hero-kicker">Independent publisher &amp; creative studio</p>
       <h1>Stories. Software. <em>Games.</em></h1>
       <p class="hero-sub">Every great creation begins as an idea. We create books, software, games, and learning experiences that help turn ideas into something real. We're proving every day that it's never too late to build something meaningful.</p>
-      <div class="hero-actions">
-        <div class="hero-signup">
-          <p class="hero-signup-label">Free: the <em>Creating with Claude</em> toolkit &mdash; prompts, checklists, and a 10-minute self-assessment to start building with AI</p>
-          <div class="ml-embedded" data-form="By4UIw"></div>
-        </div>
+      <div class="hero-invite">
+        <p class="hero-sub">We hope you'll join us on this adventure. Email us and tell us what you're building, what else you'd like to see from us, and, of course, what you think of our work.</p>
+        <p class="hero-sub">If you're an author struggling with your project, we can help. We can't offer the name recognition of a big label, but we will give you personalized service and help you get published. We can even give you your own author page. Contact us for more information.</p>
       </div>
-      <div class="hero-links">
-        <a href="/books" class="link-secondary" style="color: #9AA4AE; border-bottom-color: rgba(232,228,220,0.2);">Explore our books</a>
-        <span style="color: #4A5968;">·</span>
-        <a href="/about" class="link-secondary" style="color: #9AA4AE; border-bottom-color: rgba(232,228,220,0.2);">Meet the team</a>
+      <div class="hero-cta">
+        <a href="mailto:chris@marquepublishing.com" class="btn-primary">Email us</a>
       </div>
     </div>
   </div>
@@ -459,53 +477,41 @@ ml('account', '2453958');
 </section>
 
 
-<!-- ─── Dagger divider ─── -->
-<div class="dagger-divider" style="padding: 2rem 0;">
-  <span class="dagger-line"></span>
-  <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <line x1="8" y1="0" x2="8" y2="8" stroke="var(--accent)" stroke-width="1.5"/>
-    <line x1="3" y1="8" x2="13" y2="8" stroke="var(--accent)" stroke-width="1.5"/>
-    <line x1="8" y1="8" x2="8" y2="25" stroke="var(--accent)" stroke-width="1.5"/>
-    <path d="M8 28 L6 24 L10 24 Z" fill="var(--accent)"/>
-  </svg>
-  <span class="dagger-line"></span>
-</div>
-
-<!-- ─── Authority Strip ─── -->
-<section class="section-pad" style="padding-block: 2.5rem;">
+<!-- ─── Meet the publisher ─── -->
+<section class="section-pad">
   <div class="container">
-    <div class="authority-strip fade-in">
-      <div class="authority-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        30 years in cybersecurity
+    <div class="section-header fade-in">
+      <p class="section-kicker">Meet the publisher</p>
+      <h2>Chris Thatcher</h2>
+    </div>
+    <div class="publisher fade-in">
+      <div class="photo-frame">
+        <img src="/author.jpg" alt="Chris Thatcher, founder of Marque Publishing" loading="lazy">
       </div>
-      <div class="authority-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        5 books in the works
-      </div>
-      <div class="authority-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        Fortune 500 advisor
-      </div>
-      <div class="authority-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Author &middot; Speaker &middot; Advisor
+      <div class="publisher-body">
+        <div class="publisher-creds">
+          <span>30 years in cybersecurity</span><span>Writer</span><span>Advisor</span><span>AI coach</span>
+        </div>
+        <p>I spent thirty years in cybersecurity &mdash; advising executives, building programs, and trying to make complicated things simple. Somewhere along the way I realized I had more to say than I could put into a whitepaper or blog. Writing was always part of how I expressed myself, but lately it's become something bigger. It's a way to share what I've learned and what I've been carrying around inside for years.</p>
+        <p>Last year, a good friend and mentor gave me a nudge and told me I needed to write my book. Here I am today with multiple books in the works. They aren't just about security or business. They are the stories and ideas that wouldn't leave me alone. If something I have to say speaks to you, I hope you'll reach out and share your own story.</p>
+        <a href="/about" class="link-secondary">More about Marque &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── What we do — Division cards ─── -->
-<section class="section-pad">
+
+<!-- ─── What we do ─── -->
+<section class="section-pad" style="background: var(--bg-alt);">
   <div class="container">
     <div class="section-header fade-in">
       <p class="section-kicker">What we do</p>
-      <h2>Three Divisions, One Standard</h2>
-      <p>Everything we publish, build, or ship reflects the same care — whether it's a book, a piece of software, or a game.</p>
+      <h2>Three Tracks, One Standard</h2>
+      <p>Everything we publish, build, or write reflects the same care &mdash; whether it's a book, a piece of software, or a post.</p>
     </div>
 
-    <div class="division-grid">
-      <a href="/books" class="division-card fade-in">
+    <div class="track-grid">
+      <div class="track-card fade-in">
         <svg class="division-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
@@ -513,11 +519,14 @@ ml('account', '2453958');
           <line x1="8" y1="11" x2="13" y2="11"/>
         </svg>
         <h3>Publishing</h3>
-        <p>Fiction and nonfiction across genres — cybersecurity, historical thriller, poker, and whatever comes next.</p>
-        <span class="link-secondary">View our books &rarr;</span>
-      </a>
+        <p>Fiction and nonfiction across genres &mdash; and personalized help for authors who want to get their own book out the door.</p>
+        <div class="track-links">
+          <a href="/books">See our books &rarr;</a>
+          <a href="mailto:chris@marquepublishing.com?subject=Publishing%20services">See our services &rarr;</a>
+        </div>
+      </div>
 
-      <a href="/labs" class="division-card fade-in">
+      <div class="track-card fade-in">
         <svg class="division-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="3" width="20" height="14" rx="2"/>
           <line x1="8" y1="21" x2="16" y2="21"/>
@@ -525,150 +534,25 @@ ml('account', '2453958');
           <polyline points="7 8 10 11 7 14"/>
           <line x1="12" y1="14" x2="17" y2="14"/>
         </svg>
-        <h3>Software</h3>
-        <p>Tools and applications built to solve real problems. Practical, well-crafted, and designed to last.</p>
-        <span class="link-secondary">Coming soon &rarr;</span>
-      </a>
+        <h3>Labs</h3>
+        <p>Software and games, built with the same care we put into our books. Practical tools. Games worth your time.</p>
+        <div class="track-links">
+          <a href="/labs">Meet the engineer &rarr;</a>
+          <span class="soon">Software &amp; games &middot; coming soon</span>
+        </div>
+      </div>
 
-      <a href="/labs" class="division-card fade-in">
+      <div class="track-card fade-in">
         <svg class="division-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="4" width="20" height="16" rx="2"/>
-          <path d="M8 10l2 2-2 2"/>
-          <path d="M16 10l-2 2 2 2"/>
-          <circle cx="12" cy="12" r="1"/>
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
-        <h3>Games</h3>
-        <p>Interactive experiences that are worth your time. Led by a team that plays as hard as they build.</p>
-        <span class="link-secondary">Coming soon &rarr;</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ─── Featured Books ─── -->
-<section class="section-pad" style="background: var(--bg-alt);">
-  <div class="container">
-    <div class="section-header fade-in">
-      <p class="section-kicker">In the works</p>
-      <h2>Five Books, Five Obsessions</h2>
-      <p>Each one started as an idea that wouldn't let go. Now they're becoming real.</p>
-    </div>
-
-    <div class="featured-books fade-in">
-      <a href="/creating-with-claude/" class="featured-book">
-        <div class="featured-book-cover">
-          <img src="/creating-with-claude-cover.png" alt="Cover of Creating with Claude, a practical guide to building with AI by Chris Thatcher" loading="lazy">
+        <h3>Thinking Out Loud</h3>
+        <p>Cybersecurity insights from 30 years in the field, and lessons from building real things with AI.</p>
+        <div class="track-links">
+          <a href="/blog">Cybersecurity &rarr;</a>
+          <a href="/creating-with-claude/blog">Creating with AI &rarr;</a>
         </div>
-        <h3>Creating With Claude</h3>
-        <p>A practical guide to building real things with AI — from curious beginner to confident creator through projects you can build from day one.</p>
-        <span class="badge badge-accent mt-1">Available now</span>
-      </a>
-
-      <a href="/writing-with-claude/" class="featured-book">
-        <div class="featured-book-cover">
-          <img src="/writing-with-claude-cover.png" alt="Concept cover of Writing with Claude, book two of the Marque AI Collection by Chris Thatcher" loading="lazy">
-        </div>
-        <h3>Writing With Claude</h3>
-        <p>Your voice, amplified — not replaced. The sequel to Creating with Claude teaches Claude to sound like you, so you write with a partner instead of from a prompt.</p>
-        <span class="badge mt-1">In production &middot; free toolkit</span>
-      </a>
-
-      <a href="/cyber-risk/" class="featured-book">
-        <div class="featured-book-cover">
-          <img src="/cyber-risk-cover.jpg" alt="Cover of Cyber Risk is Business Risk, a cybersecurity leadership book by Chris Thatcher" loading="lazy">
-        </div>
-        <h3>Cyber Risk is Business Risk</h3>
-        <p>Three decades in the field, distilled for the people who have to make the decisions.</p>
-        <span class="badge badge-accent mt-1">Available now</span>
-      </a>
-
-      <a href="/treasure-hunter/" class="featured-book">
-        <div class="featured-book-cover">
-          <img src="/treasure-hunter-cover.png" alt="Cover of The Treasure Hunter's Legacy, a historical thriller novel by Chris Thatcher" loading="lazy">
-        </div>
-        <h3>The Treasure Hunter's Legacy</h3>
-        <p>A former Marine turned cybersecurity expert finds a three-hundred-year-old secret. The trail ends in a sea cave that's been keeping a pirate's secret since 1722.</p>
-        <span class="badge badge-accent mt-1">Available now</span>
-      </a>
-
-      <a href="/books#deal-me-in" class="featured-book">
-        <div class="featured-book-cover">
-          <img src="/deal-me-in-cover.png" alt="Cover of Deal Me In, a poker strategy book by Chris Thatcher" loading="lazy">
-        </div>
-        <h3>Deal Me In</h3>
-        <p>The poker math that wins hands — for players who'd rather enjoy the game than memorize a chart.</p>
-        <span class="badge mt-1">On the way</span>
-      </a>
-    </div>
-
-    <div class="text-center mt-4 fade-in">
-      <a href="/books" class="btn-outline">See all books &rarr;</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ─── About Preview ─── -->
-<section class="section-pad">
-  <div class="container">
-    <div class="about-preview fade-in">
-      <div class="photo-frame">
-        <img src="/author.jpg" alt="Chris Thatcher, founder of Marque Publishing" loading="lazy">
       </div>
-      <div class="about-text">
-        <p class="section-kicker">About the founder</p>
-        <h2>Chris Thatcher</h2>
-        <p>Thirty years in cybersecurity taught me how to take complicated things and make them plain. Now I'm doing the same with books — and building a studio around the kind of work I'd want to put my name on.</p>
-        <p>Author, speaker, advisor, and president of Marque Publishing.</p>
-        <a href="/about" class="link-secondary">Read more about the team &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ─── Blog Preview ─── -->
-<section class="section-pad" style="background: var(--bg-alt);">
-  <div class="container">
-    <div class="section-header fade-in">
-      <p class="section-kicker">From the blog</p>
-      <h2>Thinking Out Loud</h2>
-      <p>Cybersecurity insights from 30 years in the field, the publishing journey, and whatever else won't leave me alone.</p>
-    </div>
-
-    <div class="blog-preview-grid fade-in">
-      <a href="/blog/ctrack-backup-you-didnt-know" class="blog-card">
-        <div class="blog-card-body">
-          <p class="blog-card-meta">September 2026 &middot; Cybersecurity</p>
-          <h3>The Backup Copy You Did Not Know Your Vendor Kept</h3>
-          <p>Thomson Reuters' C-Track breach exposed court records from 11 states — including backup copies the courts didn't know existed.</p>
-          <span class="blog-card-link">Read more &rarr;</span>
-        </div>
-      </a>
-
-      <a href="/blog/aesto-health-data-you-forgot" class="blog-card">
-        <div class="blog-card-body">
-          <p class="blog-card-meta">September 2026 &middot; Cybersecurity</p>
-          <h3>The Records You Stopped Using Are Still Yours to Lose</h3>
-          <p>Aesto Health's breach of 9.5 million patient records exposes the blind spot in third-party risk: archived data at vendors nobody reviews.</p>
-          <span class="blog-card-link">Read more &rarr;</span>
-        </div>
-      </a>
-
-      <a href="/creating-with-claude/blog/what-should-i-build-idea-generator" class="blog-card">
-        <div class="blog-card-body">
-          <p class="blog-card-meta">July 2026 &middot; Creating with AI</p>
-          <h3>What Should I Build? AI Project Idea Generator</h3>
-          <p>A free interactive tool that helps you find the right first AI project based on your skills, interests, and available time.</p>
-          <span class="blog-card-link">Read more &rarr;</span>
-        </div>
-      </a>
-
-    </div>
-
-    <div class="text-center mt-4 fade-in">
-      <a href="/blog" class="btn-outline">Visit the blog &rarr;</a>
     </div>
   </div>
 </section>
@@ -742,64 +626,5 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 </script>
-
-<!-- ─── Scroll-triggered signup modal ─── -->
-<div id="signup-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Newsletter signup">
-  <div class="modal-card">
-    <button class="modal-close" aria-label="Close" onclick="dismissModal()">&times;</button>
-    <p class="section-kicker" style="text-align:left;">Free toolkit</p>
-    <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">The Creating with Claude Toolkit</h3>
-    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">Prompts, checklists, and a 10-minute self-assessment to start building real things with AI. Yours free.</p>
-    <div class="ml-embedded" data-form="By4UIw"></div>
-    <p style="font-size: 0.8rem; color: var(--text-subtle); margin-top: 0.75rem;">No spam. Unsubscribe anytime.</p>
-  </div>
-</div>
-
-<script>
-// Scroll-triggered modal — shows once per session after 50% scroll or 30s
-(function() {
-  if (sessionStorage.getItem('modal-dismissed')) return;
-
-  var shown = false;
-  function showModal() {
-    if (shown) return;
-    shown = true;
-    var m = document.getElementById('signup-modal');
-    m.classList.add('active');
-    m.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function checkScroll() {
-    var scrollPct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    if (scrollPct > 0.5) {
-      showModal();
-      window.removeEventListener('scroll', checkScroll);
-    }
-  }
-
-  window.addEventListener('scroll', checkScroll);
-  setTimeout(function() { showModal(); }, 30000);
-})();
-
-function dismissModal() {
-  var m = document.getElementById('signup-modal');
-  m.classList.remove('active');
-  m.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-  sessionStorage.setItem('modal-dismissed', '1');
-}
-
-// Close on overlay click
-document.getElementById('signup-modal').addEventListener('click', function(e) {
-  if (e.target === this) dismissModal();
-});
-
-// Close on Escape
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') dismissModal();
-});
-</script>
-
 </body>
 </html>

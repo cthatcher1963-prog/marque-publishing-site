@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One HTTP Request Away From Everything — Marque Publishing</title>
+<meta name="description" content="A CVSS 10.0 GitLab vulnerability lets unauthenticated attackers read every file on the server with one HTTP request. What boards need to know about developer platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="One HTTP Request Away From Everything">
+<meta property="og:description" content="One unauthenticated HTTP request could read every file on a GitLab server">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/one-http-request-away">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/one-http-request-away">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">September 2026</time>
+      </div>
+      <h1>One HTTP Request Away From Everything</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">On September 10, GitLab shipped an emergency patch for CVE-2026-85706 — a path traversal vulnerability in its repository commits API that earned the maximum possible severity score: CVSS 10.0. Within hours of disclosure, security firm watchTowr confirmed that attackers were already probing exposed servers in the wild. By September 11, CISA had added it to the Known Exploited Vulnerabilities catalog.</p>
+
+      <p>The technical details are worth stating plainly. A single unauthenticated HTTP request to a self-managed GitLab server could read any file on the system. No credentials required. No social engineering. No sophisticated exploit chain. One request. Every file.</p>
+
+      <p>If you are an executive or a board member, that sentence should land differently than it does for the engineers in the room. Because the question is not whether your GitLab server has source code on it. The question is <em>what else</em> is stored there — and whether anyone in your organization has inventoried what a complete read of that filesystem would expose.</p>
+
+      <h2>Your Source Code Platform Is a Vault — Treat It Like One</h2>
+
+      <p>Most executives think of GitLab or GitHub as "where the developers work." That framing misses the risk entirely. A self-managed GitLab instance is a vault. It holds your source code, yes. But it also holds SSH keys, database credentials, cloud access tokens, deploy configurations, API secrets, CI/CD pipeline definitions, and — in many organizations — internal documentation, architecture diagrams, and customer data embedded in test environments.</p>
+
+      <p>Security researchers estimate that more than 20,000 self-managed GitLab instances sit exposed on the public internet right now. Every one of them running an unpatched version before September 10 was an open vault with no lock on the door.</p>
+
+      <p>This is the second critical GitLab vulnerability in less than a month. In August, CVE-2026-19478 — rated CVSS 9.4 — allowed unauthenticated attackers to delete or rewrite public projects on self-managed servers. Two maximum-severity vulnerabilities in the same platform within weeks is not a coincidence. It is a pattern. And patterns demand a different conversation than one-off incidents.</p>
+
+      <h2>The Speed Gap the Board Needs to Understand</h2>
+
+      <p>Here is the timeline that matters. GitLab released the patch on September 10. By 06:00 UTC on September 11 — less than twenty-four hours later — watchTowr confirmed active exploitation probes in the wild. CISA added it to the KEV catalog the same day.</p>
+
+      <p>In <em>Cyber Risk Is Business Risk</em>, I describe this as the speed asymmetry — the structural gap between how fast attackers weaponize a vulnerability and how fast defenders can patch it. That gap has been compressing for years. AI-powered vulnerability scanning is accelerating it further. But even without AI, the GitLab timeline tells the story: less than a day from patch to exploitation probes. Your patching window is no longer measured in weeks or even days. It is measured in hours.</p>
+
+      <p>The board-level question is not "Did we patch it?" It is "How long were we exposed, and do we know what was accessed during that window?" If your security team cannot answer both halves of that question, your incident response capability has a gap that no compliance checkbox will close.</p>
+
+      <h2>The Three Questions, Applied</h2>
+
+      <p>I built the Three Questions framework for exactly this kind of moment — when a vulnerability makes headlines and the instinct is to ask "Are we affected?" That is the wrong first question. The right sequence is:</p>
+
+      <p><strong>What are we protecting?</strong> Not "GitLab" in the abstract. Specifically: what data, credentials, intellectual property, and access tokens live on your self-managed GitLab instance? Has anyone ever inventoried the secrets stored in CI/CD variables, repository files, and server configuration? In most organizations, the honest answer is no — and that means no one knows the blast radius of a compromise.</p>
+
+      <p><strong>How well are we protecting it?</strong> If your GitLab server is reachable from the public internet — and more than 20,000 are — you have already answered this question, and the answer is not good enough. But even behind a VPN, the absence of authentication on this API endpoint means that any compromised internal account, any lateral movement from a phished employee, gives an attacker the same one-request access to everything. Defense in depth is not optional for platforms that hold your crown jewels.</p>
+
+      <p><strong>What happens if we fail?</strong> A complete filesystem read on a GitLab server is not a data breach in the traditional sense — no customer records may be involved. But it is potentially worse. Stolen source code enables future attacks. Harvested credentials unlock cloud infrastructure, databases, and production systems. Exfiltrated CI/CD configurations reveal your entire deployment pipeline. The downstream exposure from a developer platform compromise can dwarf the initial incident by orders of magnitude.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>If this story prompts one conversation in your organization, make it this one:</p>
+
+      <p>First, ask whether your developer platforms — GitLab, GitHub, Bitbucket, Jenkins, whatever your teams use — are exposed to the public internet. If they are, ask why, and ask what the plan is to change that. Internet-facing developer infrastructure is a risk that most organizations accept by default rather than by decision.</p>
+
+      <p>Second, ask about secrets management. Are credentials, API keys, and access tokens stored directly in repositories or CI/CD variables? Or does your organization use a dedicated secrets vault with rotation policies? The GitLab vulnerability did not just expose source code. It exposed every secret that developers stored alongside it.</p>
+
+      <p>Third, ask about your patching timeline for developer tools specifically. Many organizations have rigorous patching programs for production systems but treat internal development infrastructure as a lower priority. This vulnerability is proof that attackers do not share that prioritization.</p>
+
+      <h2>The Bigger Picture</h2>
+
+      <p>This is not just a GitLab story. It is a pattern repeating across every category of enterprise software. In the same week, MikroTik patched six RouterOS vulnerabilities — two of which could be chained to take full control of routers without authentication, with over 122,000 devices exposed and active exploitation confirmed since early September. cPanel disclosed a SQL injection flaw that could give a single hosting account root-level control of an entire server. The N-able N-central remote monitoring platform shipped an emergency patch for a pre-authenticated remote code execution flaw.</p>
+
+      <p>The common thread: critical infrastructure software, exposed to the internet, exploited within days or hours of disclosure. The velocity of exploitation is outpacing the velocity of defense. That is a governance problem, not just a technical one.</p>
+
+      <p>Boards that treat cybersecurity as an IT concern are governing with a blind spot that regulators, insurers, and shareholders are increasingly unwilling to tolerate. The EU Cyber Resilience Act's mandatory vulnerability reporting obligations went live on September 11 — the same day attackers began probing this GitLab flaw. CISA is finalizing CIRCIA's 72-hour incident reporting rule this month. The regulatory walls are closing in because the threat environment demands it.</p>
+
+      <p>One HTTP request. Every file on the server. That is the risk your developers live with when the tools they rely on are not treated as critical infrastructure. The question is whether your board knows it.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>

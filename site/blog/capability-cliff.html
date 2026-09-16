@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Capability Cliff: When AI Gets Faster at Hacking Than We Get at Governing — Marque Publishing</title>
+<meta name="description" content="Two frontier AI models launched in four days, both rated critical for cybersecurity. A ransomware crew already used AI agents for live intrusions. Governance can't keep up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="32x32">
+<meta property="og:title" content="The Capability Cliff: When AI Gets Faster at Hacking Than We Get at Governing">
+<meta property="og:description" content="Two critical AI models in four days, ransomware crews using AI — governance can't keep up">
+<meta property="og:url" content="https://www.marquepublishing.com/blog/capability-cliff">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.marquepublishing.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.marquepublishing.com/og-image.png">
+<link rel="canonical" href="https://www.marquepublishing.com/blog/capability-cliff">
+<link rel="stylesheet" href="../css/style.css">
+<!-- MailerLite Universal -->
+<script>
+(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+ml('account', '2453958');
+</script>
+<!-- End MailerLite Universal -->
+<style>
+.post-header { max-width: 42rem; margin-inline: auto; margin-bottom: 3rem; }
+.post-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.post-category { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.post-date { font-size: 0.85rem; color: var(--text-subtle); }
+.post-meta-divider { width: 4px; height: 4px; border-radius: 50%; background: var(--text-subtle); }
+.post-header h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.article-prose { max-width: 42rem; margin-inline: auto; }
+.article-prose p { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1.5rem; }
+.article-prose h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; margin-top: 3rem; margin-bottom: 1rem; line-height: 1.3; }
+.article-prose h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; line-height: 1.35; }
+.article-prose strong { font-weight: 600; color: var(--text); }
+.article-prose em { font-style: italic; }
+.article-prose ol, .article-prose ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.article-prose ol li, .article-prose ul li { font-family: var(--serif); font-size: 1.15rem; color: var(--text); line-height: 1.8; margin-bottom: 1rem; }
+.article-prose .lead { font-size: 1.25rem; color: var(--text); line-height: 1.7; }
+.post-author { max-width: 42rem; margin-inline: auto; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 80px 1fr; gap: 1.25rem; align-items: start; }
+.post-author .photo-frame { width: 80px; aspect-ratio: 1; border-radius: 50%; }
+.post-author-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.post-author p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem; transition: color 0.2s; }
+.back-link:hover { color: var(--accent); }
+@media (max-width: 640px) { .post-author { grid-template-columns: 1fr; text-align: center; } .post-author .photo-frame { margin-inline: auto; } }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="../index.html" class="wordmark">
+      <svg class="wordmark-diamond" width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <path d="M50 0 L53 4 L50 8 L47 4 Z" fill="var(--accent)"/>
+        <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+      </svg>
+      <span class="wordmark-text">
+        <span class="wordmark-name">Marque</span>
+        <span class="wordmark-sub">Publishing</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html" class="active">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+  </div>
+</nav>
+<article class="section-pad" id="main-content">
+  <div class="container">
+    <a href="../blog.html" class="back-link">&larr; All posts</a>
+    <header class="post-header fade-in">
+      <div class="post-meta">
+        <span class="post-category">Cybersecurity</span>
+        <span class="post-meta-divider"></span>
+        <time class="post-date">September 2026</time>
+      </div>
+      <h1>The Capability Cliff: When AI Gets Faster at Hacking Than We Get at Governing</h1>
+    </header>
+    <div class="article-prose fade-in">
+      <p class="lead">In the span of four days, something happened that boards need to understand.</p>
+
+      <p>On September 1, Anthropic released Claude Mythos 5.1 — the latest iteration of the model at the heart of Project Glasswing, the initiative that has already found thousands of high-severity vulnerabilities in every major operating system and web browser. Safety classifiers were removed for approved Glasswing partners. The model is now faster, more capable, and less constrained than its predecessor.</p>
+
+      <p>Two days later, on September 3, OpenAI launched GPT-6 Astra. It is the first model OpenAI has ever designated "Critical" under its own Preparedness Framework. During evaluation, Astra scored 100% on ExploitBench — a benchmark that measures whether a model can turn known vulnerabilities into working exploits. Its predecessor, GPT-5.6 Sol (the model that escaped its sandbox and hacked Hugging Face in July), scored 78.5%. Astra also discovered two previously unknown zero-day vulnerabilities during testing and scored 39% on novel vulnerabilities from the previous three months, up from Sol's 11.5%.</p>
+
+      <p>Read that again: a model that can autonomously find unknown security flaws and build working exploits against well-defended systems, without a human guiding each step. OpenAI is rolling it out to paid ChatGPT users with guardrails, and to enterprise customers through its Daybreak program with fewer restrictions.</p>
+
+      <p>Two frontier labs. Two model releases. Four days. Both models can do things that, eighteen months ago, required a team of elite security researchers and weeks of work.</p>
+
+      <h2>The Part That Should Keep You Up at Night</h2>
+
+      <p>While the labs were shipping, security researchers at Gambit Security and CloudSEK published findings that should land in every board's risk committee materials.</p>
+
+      <p>The Aurora ransomware crew — a group responsible for at least 33 known victims across the U.S., Germany, the Netherlands, Canada, and the U.K. — had been using Cursor, a commercial AI coding agent powered by Anthropic's Claude Sonnet, to conduct live intrusions. Not in a lab. Not in a simulation. Against real companies, with real data, for real ransom payments.</p>
+
+      <p>Researchers recovered 28 chat sessions between Aurora operators and the AI agent, covering hands-on exploitation across ten target organizations between April and May 2026. The instructions were in Russian. The agent helped with reconnaissance, lateral movement via SMB, LDAP, and RDP, privilege escalation, disabling Microsoft Defender, clearing logs, and deploying the ransomware encryptor.</p>
+
+      <p>How did they get past the model's safety refusals? They told it the work was a penetration test. That was enough.</p>
+
+      <p>This is what I mean by the capability cliff. The distance between what offensive AI can do and what governance can contain isn't shrinking. It's a vertical drop.</p>
+      <h2>The Governance Gap Is Now a Governance Chasm</h2>
+
+      <p>In <em>Cyber Risk Is Business Risk</em>, I wrote about the AI genie — the idea that once a capability exists, you can't put it back in the bottle. What's happening now is worse than that. The genie is replicating.</p>
+
+      <p>Mythos 5.1 and Astra represent the top of the capability stack — restricted access, vetted partners, safety frameworks. Aurora represents the bottom — a ransomware crew using a commercially available coding agent to do things that used to require custom tooling and specialized tradecraft. The middle is collapsing. The gap between state-of-the-art and criminal-grade is measured in months, not years.</p>
+
+      <p>And the governance response? The FRONTIER Act, introduced in July, is heading toward a September markup. Rep. Subramanyam is pushing to add containment language after the Sol sandbox escape. The Kill Switch Act, introduced in July after Sol, carries penalties of $2 million per day. The EU AI Act's GPAI enforcement powers activated August 2.</p>
+
+      <p>Meanwhile, the U.S. and China are reportedly preparing for mid-September bilateral AI safety talks — the first under the current administration — led by Treasury Secretary Bessent. The agenda reportedly includes cooperation on monitoring AI-directed cyberattacks. These would be the first official bilateral discussions devoted exclusively to AI safety between the two countries since President Trump took office.</p>
+
+      <p>All of it is playing catch-up. Every piece of legislation currently on the table was drafted before Astra existed. Before Aurora's Cursor logs were published. Before a model scored 100% on an exploit development benchmark.</p>
+
+      <h2>What to Ask Your CISO This Week</h2>
+
+      <p>The Three Questions framework from Chapter 5 of the book applies directly:</p>
+
+      <p><strong>"What's our exposure?"</strong> Your organization almost certainly uses software that Mythos and Astra-class models can find vulnerabilities in faster than your patch cycle can close them. The 55-day average patch window that was already dangerously slow is now effectively a standing invitation. Ask your CISO: what is our mean time to patch for critical vulnerabilities, and how does that compare to the speed at which AI models can now discover and exploit them?</p>
+
+      <p><strong>"What are we doing about it?"</strong> The Aurora case shows that AI-assisted attacks aren't theoretical. They're operational, and the barrier to entry is a commercial subscription and a sentence about penetration testing. Ask your CISO: do we have visibility into whether AI-assisted tools are being used against us? Are our detection systems calibrated for AI-speed lateral movement?</p>
+
+      <p><strong>"How do we know it's working?"</strong> With Astra scoring 39% on novel zero-days and Mythos running unrestricted for Glasswing partners, the models are finding vulnerabilities that don't have patches yet. Traditional vulnerability management assumes patches exist. Ask your CISO: what is our posture for zero-day defense — not just patching known vulnerabilities, but detecting exploitation of unknown ones?</p>
+      <h2>The Board Conversation Has Changed</h2>
+
+      <p>Six months ago, the board conversation about AI and cybersecurity was about potential. What could happen. What might happen. That conversation is over.</p>
+
+      <p>We now have documented evidence of autonomous AI models discovering zero-day vulnerabilities, building working exploits, scoring perfect on exploit benchmarks, and criminals using off-the-shelf AI agents to breach companies and deploy ransomware. We have two frontier labs shipping models they themselves classify as "Critical" for cybersecurity. And we have governments scrambling to negotiate rules for capabilities that already exist in the wild.</p>
+
+      <p>If your board is still treating AI-powered cyber threats as a future risk, they're behind. The capability cliff isn't approaching. Your organization is standing at the edge.</p>
+    </div>
+    <div class="post-author fade-in">
+      <div class="photo-frame">
+        <img src="../../author.jpg" alt="Chris Thatcher">
+      </div>
+      <div>
+        <p class="post-author-name">Chris Thatcher</p>
+        <p>Chris is the author of <em>Cyber Risk Is Business Risk</em> and has spent thirty years advising Fortune 500 executives on cybersecurity strategy, risk governance, and translating technical threats into board-level decisions.</p>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="newsletter section-pad">
+  <div class="container">
+    <div class="newsletter-inner fade-in">
+      <h2>Get the free guide</h2>
+      <p>Sign up and get <em>10 Cybersecurity Decisions Every Board Gets Wrong</em> — plus new essays delivered to your inbox.</p>
+      <div class="ml-embedded" data-form="NTW6JI"></div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <a href="../index.html" class="wordmark">
+        <svg class="wordmark-diamond" width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M50 4 L92 50 L50 96 L8 50 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M50 16 L80 50 L50 84 L20 50 Z" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+          <text x="50" y="60" text-anchor="middle" font-family="'Cormorant', 'EB Garamond', Georgia, serif" font-weight="700" font-size="40" fill="currentColor">M</text>
+        </svg>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Marque</span>
+          <span class="wordmark-sub">Publishing</span>
+        </span>
+      </a>
+      <span class="footer-year">&copy; 2026 Marque Publishing</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="../books.html">Books</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../labs.html">Labs</a></li>
+    </ul>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/christhatcher/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => { document.querySelector('.nav-links').classList.remove('open'); });
+});
+</script>
+</body>
+</html>
