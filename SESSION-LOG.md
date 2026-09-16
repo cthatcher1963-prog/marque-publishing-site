@@ -456,3 +456,12 @@ Chris ran `npm run deploy` at approximately 05:35 EDT. Files updated: site/index
 - Scheduled task publish-blog-content/SKILL.md updated: homepage has no blog preview, do not touch site/index.html; Makers form slug By4UIw; tool posts link to #signup.
 - Decisions (Chris): services = homepage sentence + contact email for now; Labs card links to the Labs page; no Marque AI hub this month.
 - Next: books catalog cleanup (grid, one line each, link to book pages); blog restructure (/blog hub + per-stream indexes + homepage latest-per-stream, nightly task rewritten); THL signup group decision.
+
+## 2026-09-15 (later) - Blog restructure LIVE
+- /blog is now a GENERATED hub: three stream cards (Cybersecurity -> /blog/cybersecurity/, Creating with AI -> /creating-with-claude/blog, Writing with AI -> coming soon) each showing its latest post + 'All N posts', then a six-card 'New This Month' grid alternating streams. Generator: scripts/build_blog_hub.js (reads both stream indexes, fills HUB:START/END markers in src/pages/blog.html, writes site/blog.html). NEVER hand-edit site/blog.html.
+- New cyber stream index /blog/cybersecurity/ (96 posts, Executives guide form). Post URLs unchanged (/blog/<slug>). AI banner removed.
+- Homepage 'Thinking Out Loud' card: Cybersecurity link -> /blog/cybersecurity/.
+- Nightly task Scheduled/publish-blog-content/SKILL.md rewritten: cyber cards go to site/blog/cybersecurity/index.html, AI cards to the AI index only, then run build_blog_hub.js, then sync. Homepage untouched.
+- One-off: scripts/restructure_blog_20260915.js (+ fix_hub_css.js). Originals in _archive/pre-redesign-2026-09-15/.
+- Verified live: hub 3 stream cards + 6 latest; cyber index 96 cards; old post URLs 200.
+- Still open: books catalog cleanup; THL signup group; services page (later).
