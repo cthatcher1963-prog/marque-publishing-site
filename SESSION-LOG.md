@@ -465,3 +465,8 @@ Chris ran `npm run deploy` at approximately 05:35 EDT. Files updated: site/index
 - One-off: scripts/restructure_blog_20260915.js (+ fix_hub_css.js). Originals in _archive/pre-redesign-2026-09-15/.
 - Verified live: hub 3 stream cards + 6 latest; cyber index 96 cards; old post URLs 200.
 - Still open: books catalog cleanup; THL signup group; services page (later).
+
+## 2026-09-15 (late) - Books catalog LIVE
+- /books is now a catalog: four shelves (Marque AI Collection: First Hour / CwC / WwC; Business: CRBR; Fiction: THL; On the way: Deal Me In). Each card = cover (links to book page), title, tagline, status badge, 'Book page' + Amazon. Full-length copy and the author bio removed (bio lives on the homepage). Source mockup/books-main.html, installer mockup/books_preview.js --install. Originals in _archive/pre-redesign-2026-09-15/.
+- All links verified live before push (5 site pages + 4 Amazon listings, all 200).
+- Open: THL signup group decision; services page (later); Deal Me In page when there is one.
