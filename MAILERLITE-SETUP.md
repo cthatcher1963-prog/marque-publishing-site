@@ -107,3 +107,8 @@ P.S. The files are free for readers. Please don't repost them — send a friend 
 - Makers form is now **By4UIw** (id 197878758427854030), Executives form is **xmtcNh** (id 197878777449023173), Newsletter form is **KBp3sy** (id 197879891714115182, 'Stay in the Loop', feeds Newsletter - All). All three are duplicates of the Writers form 0U4Pav, repointed to their groups, headings/text rewritten in the editor. Old 5UgLqq / HWaBaq / NTW6JI are no longer on the site; the blog generator templates were updated too.
 - Writers form 0U4Pav heading fixed: 'Your Voice, Amplified' + free-briefs text (it had been carrying the Creators copy).
 - Free WwC gate now delivers ONLY the two brief templates; reference guides + worksheets ship with the book (reader-only page later). Welcome email must be updated to match (blocked while the automation is active).
+
+## 2026-09-15 - Fiction readers list
+- Group 'Readers - Fiction' (id 198726115752150454). Form 'Fiction - Readers Signup (light)' slug **QflOKB** (id 198726238703977758), duplicated from the Writers form, heading 'Be First to Hear About Book Two'. Now on /treasure-hunter/ (was the Makers form).
+- Automation 'Welcome - Readers (Fiction)' (id 198726429901325807): one email, 'You're on the list for book two' (Amazon link + review ask). INACTIVE until Chris activates: https://dashboard.mailerlite.com/automations/198726429901325807
+- Leftover from another session, both empty and unused: group 'Readers - The Pargo Expeditions' (197882507356537880) and unfinished form 'The Pargo Expeditions - Readers Signup' (197882514331665481). Chris to delete or keep.
